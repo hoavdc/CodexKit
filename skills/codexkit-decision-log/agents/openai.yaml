@@ -1,0 +1,4 @@
+interface:
+  display_name: "Decision Log"
+  short_description: "Record decisions with RAPID roles, options analysis, and communication plan."
+  brand_color: "#4F46E5"

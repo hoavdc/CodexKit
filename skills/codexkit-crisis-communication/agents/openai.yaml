@@ -1,0 +1,4 @@
+interface:
+  display_name: "Crisis Communication"
+  short_description: "Draft crisis responses with holding statements, Q&A, and stakeholder updates."
+  brand_color: "#B91C1C"

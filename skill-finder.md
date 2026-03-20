@@ -1,6 +1,6 @@
 # Skill Finder — "I need to… → Use this skill"
 
-> Quick reference for all 66 CodexKit skills grouped by what you're trying to accomplish.
+> Quick reference for all 81 CodexKit skills grouped by what you're trying to accomplish.
 
 ---
 
@@ -124,6 +124,10 @@
 | I need to… | Skill | What it does |
 |---|---|---|
 | Design a rigorous A/B test | `codexkit-a-b-test-planner` | Hypothesis, sample sizing, MDE, guardrail metrics, rollout playbook |
+| Design a KPI dashboard | `codexkit-dashboard-kpi-designer` | SMART KPIs, visualization selection, alert thresholds, data dictionary |
+| Audit data quality | `codexkit-data-quality-auditor` | Six DAMA dimensions, issue log, remediation plan, monitoring rules |
+| Analyze survey or feedback data | `codexkit-survey-analyzer` | Distributions, segment comparison, theme extraction, action recommendations |
+| Build an analytical SQL query | `codexkit-sql-query-builder` | CTEs, window functions, performance notes, output documentation |
 
 ---
 
@@ -137,3 +141,35 @@
 | Harden test coverage | `codexkit-test-hardening` | Edge cases and regressions without noisy tests |
 | Hunt and fix a bug | `codexkit-bug-hunt` | Reproduce, isolate, patch, verify |
 | Ship documentation with code | `codexkit-docs-shipper` | README, changelog, migration notes |
+| Document an architecture decision | `codexkit-architecture-decision-writer` | ADR format, options comparison, consequences, review date |
+| Write a blameless postmortem | `codexkit-incident-postmortem` | SRE methodology, 5 Whys, timeline, impact, action items |
+| Review an API design | `codexkit-api-design-reviewer` | Naming, versioning, errors, pagination, breaking changes |
+
+---
+
+## 🖥️ IT & Admin
+
+| I need to… | Skill | What it does |
+|---|---|---|
+| Compare and evaluate vendors/tools | `codexkit-vendor-comparison-matrix` | Weighted scoring, TCO analysis, recommendation memo |
+| Plan organizational change adoption | `codexkit-change-management-plan` | ADKAR assessment, communication calendar, adoption metrics |
+
+---
+
+## 🎓 Training & Development
+
+| I need to… | Skill | What it does |
+|---|---|---|
+| Assess training needs across teams | `codexkit-training-needs-analyzer` | Gap analysis, Bloom's objectives, Kirkpatrick evaluation |
+| Design and facilitate a workshop | `codexkit-workshop-facilitator` | Time‑blocked agenda, facilitation notes, participant materials |
+
+---
+
+## 🔗 Cross-Functional
+
+| I need to… | Skill | What it does |
+|---|---|---|
+| Record and track a decision | `codexkit-decision-log` | RAPID roles, options analysis, communication plan |
+| Draft crisis communications | `codexkit-crisis-communication` | Holding statements, Q&A, stakeholder‑specific messaging |
+| Write a business case for investment | `codexkit-business-case-writer` | NPV/ROI/Payback, risk assessment, implementation roadmap |
+| Author a policy or SOP | `codexkit-policy-document-writer` | ISO document control, compliance monitoring, review schedule |

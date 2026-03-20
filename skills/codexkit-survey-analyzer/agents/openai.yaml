@@ -1,0 +1,4 @@
+interface:
+  display_name: "Survey Analyzer"
+  short_description: "Analyze survey data with statistics, segmentation, and theme extraction."
+  brand_color: "#8B5CF6"

@@ -11,7 +11,7 @@ echo.
 echo    Turn Codex and ChatGPT into disciplined
 echo    specialists for your daily work.
 echo.
-echo    66 skills  ^|  9 playbooks  ^|  10 templates
+echo    81 skills  ^|  9 playbooks  ^|  10 templates
 echo    10 automations  ^|  6 starter workspaces
 echo.
 echo ================================================
@@ -63,7 +63,7 @@ echo.
 echo  Next steps:
 echo.
 echo    1. Restart Codex (or close and reopen the terminal)
-echo    2. Type /skills in Codex to confirm all 66 skills
+echo    2. Type /skills in Codex to confirm all 81 skills
 echo    3. Open skill-finder.md to browse skills by situation
 echo    4. Optional: double-click CREATE-WORKSPACE-WINDOWS.cmd
 echo       to scaffold a department workspace

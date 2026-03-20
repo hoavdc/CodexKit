@@ -1,0 +1,4 @@
+interface:
+  display_name: "Policy Document Writer"
+  short_description: "Author policies and SOPs with ISO document control and compliance monitoring."
+  brand_color: "#64748B"

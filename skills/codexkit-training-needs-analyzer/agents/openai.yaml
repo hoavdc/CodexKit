@@ -1,0 +1,4 @@
+interface:
+  display_name: "Training Needs Analyzer"
+  short_description: "Assess training gaps with ADDIE, Bloom's taxonomy, and Kirkpatrick evaluation."
+  brand_color: "#10B981"

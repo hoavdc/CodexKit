@@ -1,0 +1,4 @@
+interface:
+  display_name: "SQL Query Builder"
+  short_description: "Build analytical SQL with CTEs, window functions, and performance notes."
+  brand_color: "#F59E0B"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Incident Postmortem"
+  short_description: "Write blameless postmortems with 5 Whys, timeline, and action items."
+  brand_color: "#DC2626"

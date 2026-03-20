@@ -1,0 +1,4 @@
+interface:
+  display_name: "Workshop Facilitator"
+  short_description: "Design workshops with time-blocked agendas and facilitation guides."
+  brand_color: "#F97316"

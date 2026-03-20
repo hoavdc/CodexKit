@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-03-20
+
+### Added
+
+- **15 new skills** (Wave 3 — expanded domain coverage to 81 total skills):
+  - **Data & Analytics (4)**: `codexkit-dashboard-kpi-designer` (SMART KPIs + visualization selection), `codexkit-data-quality-auditor` (DAMA six dimensions + remediation), `codexkit-survey-analyzer` (distributions + segmentation + theme extraction), `codexkit-sql-query-builder` (CTEs + window functions + performance docs).
+  - **Engineering (3)**: `codexkit-architecture-decision-writer` (ADR format + options comparison), `codexkit-incident-postmortem` (SRE + 5 Whys + action items), `codexkit-api-design-reviewer` (REST/GraphQL naming + versioning + errors + pagination).
+  - **IT & Admin (2, new domain)**: `codexkit-vendor-comparison-matrix` (weighted scoring + TCO), `codexkit-change-management-plan` (ADKAR + Kotter + adoption metrics).
+  - **Training & Development (2, new domain)**: `codexkit-training-needs-analyzer` (ADDIE + Bloom's + Kirkpatrick), `codexkit-workshop-facilitator` (Design Thinking + Liberating Structures).
+  - **Cross-Functional (4, new domain)**: `codexkit-decision-log` (RAPID framework + options analysis), `codexkit-crisis-communication` (holding statements + Q&A), `codexkit-business-case-writer` (NPV/ROI/Payback + risk assessment), `codexkit-policy-document-writer` (ISO document control + compliance monitoring).
+
+### Changed
+
+- Skill count increased from 66 to 81.
+- Domain coverage expanded from 10 to 13 categories (added IT & Admin, Training & Development, Cross-Functional).
+- `skill-finder.md` updated to include all 81 skills across 13 domains.
+
 ## [0.6.0] - 2026-03-20
 
 ### Added
@@ -114,7 +131,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Cross-platform skill installation scripts and a validation script.
 - New docs site positioned for OpenAI Codex and ChatGPT users.
 
-[Unreleased]: https://github.com/hoavdc/CodexKit/compare/v0.6.0...HEAD
+[Unreleased]: https://github.com/hoavdc/CodexKit/compare/v0.7.0...HEAD
+[0.7.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.7.0
 [0.6.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.6.0
 [0.5.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.5.0
 [0.4.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.4.0

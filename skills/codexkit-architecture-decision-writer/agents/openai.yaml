@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architecture Decision Writer"
+  short_description: "Write ADRs with options comparison, rationale, and consequences."
+  brand_color: "#059669"

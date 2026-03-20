@@ -2,11 +2,11 @@
 
 Open-source operating kit for people using OpenAI Codex and ChatGPT to think, write, analyze, decide, automate routine work, and ship better output with more consistency.
 
-CodexKit is a fresh project rebuilt around the surfaces that matter in Codex today: local Skills, high-signal playbooks, automation recipes, operational templates, department starter workspaces, repo guardrails, and MCP onboarding guidance. The pack now covers engineering workflows, high-reasoning work, and low-reasoning office automation across project management, finance, legal, HR, operations, supply chain, strategy, analytics, marketing, data, and customer success. It includes deep sub-skills for SAFe PI Planning, Earned Value Management, stakeholder registers, rolling forecasts, audit readiness, legal due diligence, structured interviews, onboarding plans, supplier evaluation, procurement RFPs, Porter/PESTEL/SWOT strategic analysis, competitive intelligence, campaign briefs, A/B test planning, and churn risk analysis — in addition to Wave 1 depth skills for Scrum, Kanban, OKR, FP&A, contract drafting, performance reviews, process improvement, root cause analysis, and customer journey mapping. It follows the official Codex Skills layout with `SKILL.md`, optional `agents/openai.yaml`, and standard `.agents/skills` discovery paths.
+CodexKit is a fresh project rebuilt around the surfaces that matter in Codex today: local Skills, high-signal playbooks, automation recipes, operational templates, department starter workspaces, repo guardrails, and MCP onboarding guidance. The pack covers 81 skills across 13 domains: engineering workflows, high-reasoning work, and low-reasoning office automation across project management, finance, legal, HR, operations, supply chain, strategy, analytics, marketing, data, customer success, IT & admin, training & development, and cross-functional work. It follows the official Codex Skills layout with `SKILL.md`, optional `agents/openai.yaml`, and standard `.agents/skills` discovery paths.
 
 ## What is included
 
-- `skills/`: 66 installable Codex Skills across engineering, high-reasoning business work, and low-reasoning office automation.
+- `skills/`: 81 installable Codex Skills across 13 domains — engineering, high-reasoning business work, and low-reasoning office automation.
 - `playbooks/`: copy-ready prompts for clarify, execute, review, decision, delegation, and release work.
 - `automations/`: recurring task recipes for engineering plus weekly business, close, hiring, legal intake, operations, and marketing routines.
 - `mcp/`: practical guidance for choosing and rolling out MCP servers without overloading the team.
@@ -31,12 +31,12 @@ CodexKit is a fresh project rebuilt around the surfaces that matter in Codex tod
 If you do not want to use Git commands or remember terminal steps, use the GitHub release package:
 
 1. Open the Releases page for this repository.
-2. Download `codexkit-starter-pack-v0.6.0.zip`.
+2. Download `codexkit-starter-pack-v0.7.0.zip`.
 3. Unzip it anywhere on your computer.
 4. On Windows, double-click `START-HERE-WINDOWS.cmd`.
    - If Codex is not installed, the script will show installation instructions.
 5. Restart Codex.
-6. In Codex, type `/skills` to confirm all 66 skills appear.
+6. In Codex, type `/skills` to confirm all 81 skills appear.
 7. Open `skill-finder.md` to browse skills by situation.
 7. Optional: double-click `CREATE-WORKSPACE-WINDOWS.cmd` to create a starter workspace.
 
@@ -111,7 +111,27 @@ npm --prefix web install
 npm run dev
 ```
 
-### 4. Start from a department workspace
+### 4. Update to the latest version
+
+Git users:
+
+```bash
+bash ./scripts/update-codexkit.sh
+```
+
+Windows:
+
+```powershell
+.\scripts\update-codexkit.ps1
+```
+
+Or double-click `UPDATE-WINDOWS.cmd`.
+
+The update script auto-detects your install method:
+- **Git clone**: Runs `git pull` + re-installs all skills with `--force`.
+- **Zip download**: Fetches the latest release from GitHub, extracts new skills, and overwrites the installed ones.
+
+### 5. Start from a department workspace
 
 Copy one folder from `workspaces/` into your own repo or operating folder, then adapt the files to your context. Each starter workspace is opinionated on cadence, core artifacts, and the mix of high-reasoning versus routine automation work.
 
@@ -189,7 +209,7 @@ CodexKit/
 - Replace placeholder maintainer details where needed.
 - Add screenshots or a short demo GIF to the docs site.
 - Commit and push the release candidate branch or `main`.
-- Tag `v0.6.0` after validating the pack and docs build.
+- Tag `v0.7.0` after validating the pack and docs build.
 - Push the tag to trigger the GitHub release workflow.
 
 ## Release process
@@ -197,11 +217,11 @@ CodexKit/
 1. Update `package.json`, `web/package.json`, and `CHANGELOG.md`.
 2. Run `npm run check`.
 3. Commit and push the release commit.
-4. Create the tag: `git tag v0.6.0`
-5. Push the tag: `git push origin v0.6.0`
+4. Create the tag: `git tag v0.7.0`
+5. Push the tag: `git push origin v0.7.0`
 6. GitHub Actions publishes:
-   `codexkit-source-v0.6.0.zip`
-   `codexkit-starter-pack-v0.6.0.zip`
+   `codexkit-source-v0.7.0.zip`
+   `codexkit-starter-pack-v0.7.0.zip`
 
 ## Related files
 

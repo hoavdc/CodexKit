@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vendor Comparison Matrix"
+  short_description: "Evaluate vendors with weighted scoring, TCO analysis, and recommendation."
+  brand_color: "#0891B2"

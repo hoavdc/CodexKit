@@ -1,0 +1,4 @@
+interface:
+  display_name: "Business Case Writer"
+  short_description: "Build investment cases with NPV, ROI, risk analysis, and implementation roadmap."
+  brand_color: "#0D9488"

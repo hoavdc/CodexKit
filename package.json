@@ -1,12 +1,12 @@
 {
   "name": "codexkit",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/hoavdc/CodexKit.git"
   },
-  "homepage": "https://github.com/hoavdc/CodexKit",
+  "homepage": "https://codexkit.pages.dev",
   "bugs": {
     "url": "https://github.com/hoavdc/CodexKit/issues"
   },

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dashboard & KPI Designer"
+  short_description: "Design KPI dashboards with targets, thresholds, and visualization selection."
+  brand_color: "#0EA5E9"

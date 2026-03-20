@@ -1,0 +1,4 @@
+interface:
+  display_name: "Change Management Plan"
+  short_description: "Build change plans with ADKAR assessment, stakeholder mapping, and adoption metrics."
+  brand_color: "#D97706"

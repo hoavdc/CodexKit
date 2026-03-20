@@ -1,0 +1,4 @@
+interface:
+  display_name: "API Design Reviewer"
+  short_description: "Review API designs for naming, versioning, errors, and breaking changes."
+  brand_color: "#7C3AED"

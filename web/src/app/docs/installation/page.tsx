@@ -63,10 +63,10 @@ cd CodexKit`}</code>
       <section className="mb-12 panel p-8">
         <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Fastest path for non-coders</h2>
         <ol className="mt-5 space-y-4 text-sm leading-7 text-muted-foreground">
-          <li>1. Open the <a href="https://github.com/hoavdc/CodexKit/releases" target="_blank" rel="noreferrer" className="font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 dark:text-zinc-50 dark:decoration-zinc-700">GitHub Releases page</a> and download <code>codexkit-starter-pack-v0.6.0.zip</code>.</li>
+          <li>1. Open the <a href="https://github.com/hoavdc/CodexKit/releases" target="_blank" rel="noreferrer" className="font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 dark:text-zinc-50 dark:decoration-zinc-700">GitHub Releases page</a> and download <code>codexkit-starter-pack-v0.7.0.zip</code>.</li>
           <li>2. Unzip the package anywhere on your machine.</li>
           <li>3. On Windows, double-click <code>START-HERE-WINDOWS.cmd</code>. On macOS or Linux, run <code>bash ./START-HERE.sh</code>.</li>
-          <li>4. Restart Codex and type <code>/skills</code> to confirm all 66 skills appear.</li>
+          <li>4. Restart Codex and type <code>/skills</code> to confirm all 81 skills appear.</li>
           <li>5. Open <code>skill-finder.md</code> to browse skills by situation.</li>
           <li>6. Optional: create a starter workspace with <code>CREATE-WORKSPACE-WINDOWS.cmd</code> or <code>bash ./CREATE-WORKSPACE.sh</code>.</li>
         </ol>
@@ -102,6 +102,28 @@ node ./scripts/validate-pack.mjs`}</code>
             Use <code>--force</code> or <code>CODEXKIT_FORCE=1</code> only when you want to overwrite an existing installed skill folder.
           </p>
         </div>
+      </section>
+
+      <section className="mb-12 panel p-8">
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Updating CodexKit</h2>
+        <p className="mt-4 text-sm leading-7 text-muted-foreground">
+          CodexKit ships with update scripts that auto-detect your install method and pull the latest skills without re-downloading everything.
+        </p>
+        <div className="mt-5 grid gap-4 lg:grid-cols-2">
+          <div className="rounded-3xl border border-border/80 bg-[#161617] p-5">
+            <div className="text-xs uppercase tracking-[0.2em] text-[#c5b89b] mb-3">Git users</div>
+            <code className="text-sm text-[#f8f3ea]">bash ./scripts/update-codexkit.sh</code>
+          </div>
+          <div className="rounded-3xl border border-border/80 bg-[#161617] p-5">
+            <div className="text-xs uppercase tracking-[0.2em] text-[#c5b89b] mb-3">Windows</div>
+            <code className="text-sm text-[#f8f3ea]">.\scripts\update-codexkit.ps1</code>
+            <div className="mt-2 text-xs text-zinc-500">Or double-click <code>UPDATE-WINDOWS.cmd</code></div>
+          </div>
+        </div>
+        <ul className="mt-5 space-y-2 text-sm leading-7 text-muted-foreground">
+          <li><strong>Git clone:</strong> Runs <code>git pull</code> + re-installs all skills with <code>--force</code>.</li>
+          <li><strong>Zip download:</strong> Fetches the latest release from GitHub, extracts new skills, and overwrites installed ones.</li>
+        </ul>
       </section>
 
       <section className="mb-12 panel p-8">
