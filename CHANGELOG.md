@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-03-20
+
+### Added
+
+- **15 new deep sub-skills** (Wave 1 — high-impact professional skills):
+  - **PM Domain (5)**: `codexkit-scrum-retrospective` (5 retro formats by maturity), `codexkit-backlog-refiner` (INVEST + Given/When/Then), `codexkit-okr-writer` (cascade + check-in), `codexkit-risk-register` (P×I scoring + ROAM), `codexkit-kanban-flow-analyzer` (Little's Law + Monte Carlo).
+  - **Finance (2)**: `codexkit-fpa-scenario-modeling` (Base/Bull/Bear + sensitivity), `codexkit-financial-statement-analyzer` (ratio analysis + DuPont).
+  - **Legal (2)**: `codexkit-contract-drafter` (clause library + risk calibration), `codexkit-legal-memo-writer` (IRAC framework).
+  - **HR (2)**: `codexkit-job-description-writer` (SHRM + inclusive language), `codexkit-performance-review-writer` (SBI feedback + bias check).
+  - **Marketing (1)**: `codexkit-go-to-market-planner` (TAM/SAM/SOM + positioning + launch timeline).
+  - **Operations (2)**: `codexkit-process-mapper` (swimlane + 8 Lean Wastes), `codexkit-root-cause-analyzer` (5 Whys + Fishbone + Pareto + CAPA).
+  - **CX (1)**: `codexkit-customer-journey-mapper` (7 stages + Moments of Truth + emotion curve).
+
+### Changed
+
+- Skill count increased from 36 to 51.
+- `skill-finder.md` updated to include all 51 skills across 8 categories.
+- README updated with new skill descriptions and v0.5.0 references.
+
 ## [0.4.0] - 2026-03-20
 
 ### Added
@@ -74,9 +93,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Cross-platform skill installation scripts and a validation script.
 - New docs site positioned for OpenAI Codex and ChatGPT users.
 
-[Unreleased]: https://example.com/codexkit/compare/v0.4.0...HEAD
+[Unreleased]: https://example.com/codexkit/compare/v0.5.0...HEAD
+[0.5.0]: https://example.com/codexkit/releases/tag/v0.5.0
 [0.4.0]: https://example.com/codexkit/releases/tag/v0.4.0
 [0.3.1]: https://example.com/codexkit/releases/tag/v0.3.1
 [0.3.0]: https://example.com/codexkit/releases/tag/v0.3.0
 [0.2.0]: https://example.com/codexkit/releases/tag/v0.2.0
 [0.1.0]: https://example.com/codexkit/releases/tag/v0.1.0
+

@@ -1,6 +1,6 @@
 # Skill Finder — "I need to… → Use this skill"
 
-> Quick reference for all 36 CodexKit skills grouped by what you're trying to accomplish.
+> Quick reference for all 51 CodexKit skills grouped by what you're trying to accomplish.
 
 ---
 
@@ -25,6 +25,11 @@
 | Set up project governance / charter | `codexkit-project-governance-pilot` | Charter, decision rights, stakeholder map, RAID, PMBOK 8 |
 | Build a portfolio risk view | `codexkit-portfolio-risk-radar` | Multi‑project RAID / RAG across milestones and dependencies |
 | Plan a sprint | `codexkit-sprint-planning-assistant` | Backlog organization, effort estimation, sprint commitment |
+| Refine backlog items into user stories | `codexkit-backlog-refiner` | INVEST criteria, Given/When/Then acceptance criteria, story points |
+| Run a sprint retrospective | `codexkit-scrum-retrospective` | 5 retro formats by team maturity, action items, health tracking |
+| Write and cascade OKRs | `codexkit-okr-writer` | Outcome-based KRs, cascade alignment, check-in templates |
+| Build a project risk register | `codexkit-risk-register` | P×I scoring, response strategies, ROAM board integration |
+| Analyze Kanban flow metrics | `codexkit-kanban-flow-analyzer` | Cycle time, throughput, WIP, bottlenecks, Monte Carlo forecast |
 | Create an execution plan | `codexkit-execution-planner` | Assumptions, sequence, acceptance checks, rollback |
 | Design a recurring automation | `codexkit-automation-designer` | Safe Codex automations with schedules and gating |
 | Delegate work to Codex tasks | `codexkit-cloud-delegation` | Bounded tasks with ownership and integration checkpoints |
@@ -38,6 +43,8 @@
 | Explain budget vs actual variance | `codexkit-finance-variance-story` | Management‑ready narrative with drivers and actions |
 | Explain my budget numbers in plain English | `codexkit-budget-variance-explainer` | Plain‑language variance explanations with actions for non‑finance managers |
 | Coordinate month‑end / quarter‑end close | `codexkit-finance-close-coordinator` | Close blockers, reconciliations, owners, evidence |
+| Build scenario financial models | `codexkit-fpa-scenario-modeling` | Base/Bull/Bear P&L, cash flow, sensitivity analysis |
+| Analyze financial statements | `codexkit-financial-statement-analyzer` | Ratio analysis, DuPont decomposition, trend, red flags |
 
 ---
 
@@ -48,6 +55,8 @@
 | Review a contract for risks | `codexkit-contract-risk-review` | Red flags, obligations, fallback positions |
 | Route an incoming contract request | `codexkit-contract-intake-router` | Request type, missing info, priority, review queue |
 | Check compliance against a framework | `codexkit-compliance-gap-review` | Gap matrix, control checklist, remediation priorities |
+| Draft a new contract from scratch | `codexkit-contract-drafter` | Clause library, risk calibration, negotiation guide |
+| Write a legal analysis memo | `codexkit-legal-memo-writer` | IRAC framework, risk-tiered conclusions, actionable advice |
 
 ---
 
@@ -57,6 +66,8 @@
 |---|---|---|
 | Prepare talent review / 9-box calibration | `codexkit-talent-review-calibrator` | Performance, potential, readiness, risks, dev actions |
 | Coordinate hiring operations | `codexkit-hiring-ops-coordinator` | Interview loops, schedules, feedback, next steps |
+| Write a job description | `codexkit-job-description-writer` | SHRM competency alignment, inclusive language check |
+| Write a performance review | `codexkit-performance-review-writer` | SBI feedback model, SMART goals, bias check |
 
 ---
 
@@ -77,6 +88,8 @@
 | Run S&OP / business planning cycle | `codexkit-sandop-facilitator` | Demand, supply, inventory, capacity alignment |
 | Package operations KPIs | `codexkit-ops-kpi-packager` | KPI snapshots, exception flags, owner follow‑ups |
 | Run a Lean Six Sigma improvement | `codexkit-dmaic-improvement-charter` | DMAIC charter, SIPOC, baseline, improvement path |
+| Map a business process end-to-end | `codexkit-process-mapper` | Swimlane diagrams, 8 Lean Wastes, process efficiency |
+| Find root cause of recurring problems | `codexkit-root-cause-analyzer` | 5 Whys, Fishbone, Pareto, CAPA corrective actions |
 
 ---
 
@@ -86,7 +99,9 @@
 |---|---|---|
 | Build brand positioning | `codexkit-brand-positioning-canvas` | Audience, category, differentiators, messaging pillars |
 | Assemble a content calendar | `codexkit-content-calendar-assembler` | Structured calendar and workback plan from inputs |
+| Plan a go‑to‑market launch | `codexkit-go-to-market-planner` | TAM/SAM/SOM, positioning, messaging, channel strategy |
 | Prepare a customer QBR | `codexkit-cx-qbr-preparer` | Outcome tracking, adoption health, ROI, next‑quarter plan |
+| Map the customer journey | `codexkit-customer-journey-mapper` | 7 lifecycle stages, Moments of Truth, emotion curve |
 
 ---
 

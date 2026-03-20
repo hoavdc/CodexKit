@@ -1,0 +1,4 @@
+interface:
+  display_name: "FP&A Scenario Modeling"
+  short_description: "Build Base/Bull/Bear financial scenarios for business decisions."
+  brand_color: "#059669"

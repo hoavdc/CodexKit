@@ -1,0 +1,4 @@
+interface:
+  display_name: "Customer Journey Mapper"
+  short_description: "Map customer lifecycle stages with touchpoints, emotions, and Moments of Truth."
+  brand_color: "#0891B2"

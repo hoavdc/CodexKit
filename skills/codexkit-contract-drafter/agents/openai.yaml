@@ -1,0 +1,4 @@
+interface:
+  display_name: "Contract Drafter"
+  short_description: "Draft contracts with balanced clauses, risk annotations, and negotiation guide."
+  brand_color: "#92400E"

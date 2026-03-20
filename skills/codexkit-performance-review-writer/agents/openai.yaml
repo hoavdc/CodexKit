@@ -1,0 +1,4 @@
+interface:
+  display_name: "Performance Review Writer"
+  short_description: "Write evidence-based performance reviews with SBI feedback and bias check."
+  brand_color: "#9333EA"

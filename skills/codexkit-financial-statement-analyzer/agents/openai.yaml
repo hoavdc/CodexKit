@@ -1,0 +1,4 @@
+interface:
+  display_name: "Financial Statement Analyzer"
+  short_description: "Analyze P&L, Balance Sheet, and Cash Flow with key ratios and narrative."
+  brand_color: "#059669"

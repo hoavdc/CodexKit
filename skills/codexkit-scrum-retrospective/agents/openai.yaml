@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sprint Retrospective Facilitator"
+  short_description: "Choose retro format, facilitate session, and capture improvement actions."
+  brand_color: "#0F766E"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Process Mapper"
+  short_description: "Map business processes, identify waste, and recommend improvements."
+  brand_color: "#0369A1"

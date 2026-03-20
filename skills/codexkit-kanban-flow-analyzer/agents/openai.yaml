@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kanban Flow Analyzer"
+  short_description: "Analyze flow metrics, find bottlenecks, and forecast delivery dates."
+  brand_color: "#2563EB"

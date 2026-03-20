@@ -1,0 +1,4 @@
+interface:
+  display_name: "Risk Register Manager"
+  short_description: "Identify, score, and manage project risks with response strategies."
+  brand_color: "#DC2626"

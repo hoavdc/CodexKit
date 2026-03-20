@@ -1,0 +1,4 @@
+interface:
+  display_name: "Go-to-Market Planner"
+  short_description: "Build GTM plans with market sizing, positioning, and launch timeline."
+  brand_color: "#D97706"

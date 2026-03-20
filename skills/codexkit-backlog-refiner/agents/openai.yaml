@@ -1,0 +1,4 @@
+interface:
+  display_name: "Backlog Refiner"
+  short_description: "Write INVEST user stories with acceptance criteria and story point estimates."
+  brand_color: "#0F766E"

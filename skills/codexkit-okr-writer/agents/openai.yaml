@@ -1,0 +1,4 @@
+interface:
+  display_name: "OKR Writer"
+  short_description: "Write measurable OKRs with cascade alignment and check-in cadence."
+  brand_color: "#7C3AED"

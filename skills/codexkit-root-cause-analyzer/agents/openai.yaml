@@ -1,0 +1,4 @@
+interface:
+  display_name: "Root Cause Analyzer"
+  short_description: "Find root causes using 5 Whys, Fishbone, and Pareto with CAPA actions."
+  brand_color: "#DC2626"

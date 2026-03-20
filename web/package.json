@@ -1,6 +1,6 @@
 {
   "name": "codexkit-docs",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "description": "Documentation site for CodexKit, an open-source operating kit for engineering, high-reasoning work, and office automation.",
   "engines": {

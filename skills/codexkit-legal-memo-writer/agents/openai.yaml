@@ -1,0 +1,4 @@
+interface:
+  display_name: "Legal Memo Writer"
+  short_description: "Write IRAC legal memos with risk-tiered conclusions and actionable advice."
+  brand_color: "#92400E"
