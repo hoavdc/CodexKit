@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-03-20
+
+### Added
+
+- Double-click and one-command launcher files so non-technical users can install CodexKit from a release package more easily.
+- Interactive workspace creation wrappers for Windows and shell environments.
+
+### Changed
+
+- README and installation docs now include a detailed release-download path for non-coders.
+- Install scripts now report counts and clearer next steps after completion.
+- CI now validates installed skill counts dynamically and smoke-tests workspace scaffolding.
+- Release packaging now ships a full starter pack with skills, templates, workspaces, playbooks, automations, MCP guides, scripts, and quick-start launchers.
+
 ## [0.3.0] - 2026-03-20
 
 ### Added
@@ -45,7 +59,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Cross-platform skill installation scripts and a validation script.
 - New docs site positioned for OpenAI Codex and ChatGPT users.
 
-[Unreleased]: https://example.com/codexkit/compare/v0.3.0...HEAD
+[Unreleased]: https://example.com/codexkit/compare/v0.3.1...HEAD
+[0.3.1]: https://example.com/codexkit/releases/tag/v0.3.1
 [0.3.0]: https://example.com/codexkit/releases/tag/v0.3.0
 [0.2.0]: https://example.com/codexkit/releases/tag/v0.2.0
 [0.1.0]: https://example.com/codexkit/releases/tag/v0.1.0

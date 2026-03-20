@@ -109,7 +109,8 @@ export default function Home() {
                   Starter commands
                 </div>
                 <pre className="overflow-x-auto text-sm leading-7 text-[#f8f3ea]">
-                  <code>{`.\\scripts\\install-skills.ps1
+                  <code>{`START-HERE-WINDOWS.cmd
+bash ./START-HERE.sh
 node ./scripts/validate-pack.mjs
 npm --prefix web run dev`}</code>
                 </pre>

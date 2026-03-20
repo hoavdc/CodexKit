@@ -24,6 +24,24 @@ CodexKit is a fresh project rebuilt around the surfaces that matter in Codex tod
 
 ## Quick start
 
+### Fastest path for non-coders
+
+If you do not want to use Git commands or remember terminal steps, use the GitHub release package:
+
+1. Open the Releases page for this repository.
+2. Download `codexkit-starter-pack-v0.3.1.zip`.
+3. Unzip it anywhere on your computer.
+4. On Windows, double-click `START-HERE-WINDOWS.cmd`.
+5. Restart Codex.
+6. In Codex, type `/skills` to confirm the pack appears.
+7. Optional: double-click `CREATE-WORKSPACE-WINDOWS.cmd` to create a starter workspace.
+
+For macOS or Linux, download the same release package, unzip it, then run:
+
+```bash
+bash ./START-HERE.sh
+```
+
 ### 1. Install CodexKit skills
 
 Windows PowerShell:
@@ -39,6 +57,16 @@ bash ./scripts/install-skills.sh
 ```
 
 By default, both scripts copy every folder from `skills/` into `$HOME/.agents/skills`, which matches the user-scope Codex Skills location documented by OpenAI.
+
+Windows double-click install is also available:
+
+- `START-HERE-WINDOWS.cmd`: installs the skills into `%USERPROFILE%\.agents\skills`
+- `CREATE-WORKSPACE-WINDOWS.cmd`: asks for a workspace starter and destination folder
+
+Shell shortcuts are also available for extracted release packages:
+
+- `START-HERE.sh`
+- `CREATE-WORKSPACE.sh`
 
 For repository-scoped discovery, install the pack into `.agents/skills` inside the repo:
 
@@ -57,6 +85,12 @@ CODEXKIT_DESTINATION=./.agents/skills bash ./scripts/install-skills.sh
 Codex scans `.agents/skills` from the current working directory up to the repository root, then also checks `$HOME/.agents/skills`. If an update does not appear immediately, restart Codex.
 
 Codex can use skills through explicit invocation or implicit description matching. In CLI and IDE workflows, use `/skills` or type `$` to mention a skill directly. CodexKit keeps `codexkit-cloud-delegation` and `codexkit-automation-designer` explicit-only to avoid accidental activation on sensitive workflows.
+
+If the install completed but the skills do not appear:
+
+1. Restart Codex.
+2. Check that the skills were copied into `%USERPROFILE%\.agents\skills` on Windows or `$HOME/.agents/skills` on macOS/Linux.
+3. In Codex, use `/skills` to verify discovery.
 
 ### 2. Validate the pack
 
@@ -88,6 +122,12 @@ You can also scaffold from the command line:
 bash ./scripts/quick-start.sh --list
 bash ./scripts/quick-start.sh --starter finance-performance-desk --destination ./acme-finance
 ```
+
+For Windows users who prefer prompts instead of command arguments:
+
+1. Double-click `CREATE-WORKSPACE-WINDOWS.cmd`.
+2. Copy the starter name from the list.
+3. Enter a destination folder such as `.\my-pmo` or `C:\Work\FinanceDesk`.
 
 ## Recommended adoption path
 
@@ -134,13 +174,27 @@ CodexKit/
 - release workflow with packaged skill-pack artifacts
 - Dependabot updates for GitHub Actions and the docs app
 - separate docs app ready to publish
+- release packages that can be downloaded and installed by non-technical users
 
 ## Publish checklist
 
 - Update repository URLs in docs and package metadata.
 - Replace placeholder maintainer details where needed.
 - Add screenshots or a short demo GIF to the docs site.
-- Tag `v0.3.0` after validating the pack and docs build.
+- Commit and push the release candidate branch or `main`.
+- Tag `v0.3.1` after validating the pack and docs build.
+- Push the tag to trigger the GitHub release workflow.
+
+## Release process
+
+1. Update `package.json`, `web/package.json`, and `CHANGELOG.md`.
+2. Run `npm run check`.
+3. Commit and push the release commit.
+4. Create the tag: `git tag v0.3.1`
+5. Push the tag: `git push origin v0.3.1`
+6. GitHub Actions publishes:
+   `codexkit-source-v0.3.1.zip`
+   `codexkit-starter-pack-v0.3.1.zip`
 
 ## Related files
 

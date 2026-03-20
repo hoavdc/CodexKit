@@ -39,7 +39,11 @@ jobs:
         run: |
           bash ./scripts/install-skills.sh --destination ./.tmp/skills --force
           test -f ./.tmp/skills/codexkit-execution-planner/SKILL.md
-          test "$(find ./.tmp/skills -mindepth 1 -maxdepth 1 -type d | wc -l)" -eq 9
+          expected="$(find ./skills -mindepth 1 -maxdepth 1 -type d | wc -l)"
+          actual="$(find ./.tmp/skills -mindepth 1 -maxdepth 1 -type d | wc -l)"
+          test "$actual" -eq "$expected"
+          bash ./scripts/quick-start.sh --starter project-management-office --destination ./.tmp/pmo --force
+          test -f ./.tmp/pmo/README.md
 
       - name: Smoke install on Windows
         if: runner.os == 'Windows'
@@ -47,8 +51,11 @@ jobs:
         run: |
           ./scripts/install-skills.ps1 -Destination .\.tmp\skills -Force
           if (-not (Test-Path .\.tmp\skills\codexkit-execution-planner\SKILL.md)) { throw "Missing installed skill." }
-          $count = (Get-ChildItem .\.tmp\skills -Directory).Count
-          if ($count -ne 9) { throw "Expected 9 installed skills, got $count." }
+          $expected = (Get-ChildItem .\skills -Directory).Count
+          $actual = (Get-ChildItem .\.tmp\skills -Directory).Count
+          if ($actual -ne $expected) { throw "Expected $expected installed skills, got $actual." }
+          ./scripts/quick-start.ps1 -Starter project-management-office -Destination .\.tmp\pmo -Force
+          if (-not (Test-Path .\.tmp\pmo\README.md)) { throw "Missing scaffolded workspace." }
 
   docs:
     name: Docs Build

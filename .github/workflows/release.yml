@@ -34,11 +34,11 @@ jobs:
       - name: Package release assets
         run: |
           git archive --format=zip --output "codexkit-source-${GITHUB_REF_NAME}.zip" HEAD
-          mkdir -p release/codexkit-skill-pack
-          cp -R skills scripts release/codexkit-skill-pack/
-          cp README.md LICENSE NOTICE.md release/codexkit-skill-pack/
+          mkdir -p release/codexkit-starter-pack
+          cp -R skills templates workspaces playbooks automations mcp scripts release/codexkit-starter-pack/
+          cp README.md LICENSE NOTICE.md START-HERE-WINDOWS.cmd START-HERE.sh CREATE-WORKSPACE-WINDOWS.cmd CREATE-WORKSPACE.sh release/codexkit-starter-pack/
           cd release
-          zip -r "../codexkit-skill-pack-${GITHUB_REF_NAME}.zip" codexkit-skill-pack
+          zip -r "../codexkit-starter-pack-${GITHUB_REF_NAME}.zip" codexkit-starter-pack
 
       - name: Publish GitHub release
         env:
@@ -46,6 +46,6 @@ jobs:
         run: |
           gh release create "$GITHUB_REF_NAME" \
             "codexkit-source-${GITHUB_REF_NAME}.zip" \
-            "codexkit-skill-pack-${GITHUB_REF_NAME}.zip" \
+            "codexkit-starter-pack-${GITHUB_REF_NAME}.zip" \
             --generate-notes \
             --verify-tag

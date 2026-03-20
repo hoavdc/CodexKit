@@ -31,6 +31,17 @@ export default function InstallationPage() {
         </p>
       </div>
 
+      <section className="mb-12 panel p-8">
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Fastest path for non-coders</h2>
+        <ol className="mt-5 space-y-4 text-sm leading-7 text-muted-foreground">
+          <li>1. Open the GitHub Releases page and download <code>codexkit-starter-pack-v0.3.1.zip</code>.</li>
+          <li>2. Unzip the package anywhere on your machine.</li>
+          <li>3. On Windows, double-click <code>START-HERE-WINDOWS.cmd</code>. On macOS or Linux, run <code>bash ./START-HERE.sh</code>.</li>
+          <li>4. Restart Codex and type <code>/skills</code> to confirm installation.</li>
+          <li>5. Optional: create a starter workspace with <code>CREATE-WORKSPACE-WINDOWS.cmd</code> or <code>bash ./CREATE-WORKSPACE.sh</code>.</li>
+        </ol>
+      </section>
+
       <section className="mb-8 grid gap-4 lg:grid-cols-2">
         <div className="panel p-6">
           <h2 className="text-xl font-semibold">Windows PowerShell</h2>
@@ -58,6 +69,15 @@ node ./scripts/validate-pack.mjs`}</code>
             Use <code>--force</code> or <code>CODEXKIT_FORCE=1</code> only when you want to overwrite an existing installed skill folder.
           </p>
         </div>
+      </section>
+
+      <section className="mb-12 panel p-8">
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Release packaging</h2>
+        <ul className="mt-5 space-y-3 text-sm leading-7 text-muted-foreground">
+          <li>GitHub tags matching <code>v*</code> trigger the release workflow.</li>
+          <li>Each release publishes both a full source archive and a starter pack archive meant for end users.</li>
+          <li>The starter pack now includes skills, templates, workspaces, playbooks, automations, MCP guides, scripts, and quick-start launcher files.</li>
+        </ul>
       </section>
 
       <section className="mb-12 panel p-8">
