@@ -1,0 +1,4 @@
+interface:
+  display_name: "Onboarding Plan Creator"
+  short_description: "Create 30-60-90 day onboarding plans with pre-boarding and milestones."
+  brand_color: "#9333EA"

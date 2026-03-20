@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stakeholder Register Builder"
+  short_description: "Map stakeholders, analyze power/interest, and plan engagement strategies."
+  brand_color: "#0F766E"

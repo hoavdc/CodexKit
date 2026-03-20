@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Readiness Checker"
+  short_description: "Assess audit readiness with assertion mapping, RAG scoring, and remediation plan."
+  brand_color: "#059669"

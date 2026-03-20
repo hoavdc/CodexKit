@@ -1,0 +1,4 @@
+interface:
+  display_name: "A/B Test Planner"
+  short_description: "Design experiments with sample sizing, guardrails, and decision rules."
+  brand_color: "#2563EB"

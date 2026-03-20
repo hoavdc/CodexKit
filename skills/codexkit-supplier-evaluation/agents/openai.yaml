@@ -1,0 +1,4 @@
+interface:
+  display_name: "Supplier Evaluation Scorecard"
+  short_description: "Score suppliers on 5 criteria, classify tiers, and generate improvement plans."
+  brand_color: "#D97706"

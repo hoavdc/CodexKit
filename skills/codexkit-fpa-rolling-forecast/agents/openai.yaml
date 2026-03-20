@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rolling Forecast Builder"
+  short_description: "Build rolling forecasts with waterfall bridge and assumption tracking."
+  brand_color: "#059669"

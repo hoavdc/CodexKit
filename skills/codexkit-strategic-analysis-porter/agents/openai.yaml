@@ -1,0 +1,4 @@
+interface:
+  display_name: "Strategic Analysis (Porter + PESTEL + SWOT)"
+  short_description: "Analyze competitive forces, macro environment, and generate ranked strategic options."
+  brand_color: "#7C3AED"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "SAFe PI Planning Facilitator"
+  short_description: "Facilitate PI Planning: objectives, program board, dependencies, and confidence vote."
+  brand_color: "#0F766E"

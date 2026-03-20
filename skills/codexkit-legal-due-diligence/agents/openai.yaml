@@ -1,0 +1,4 @@
+interface:
+  display_name: "Legal Due Diligence Analyst"
+  short_description: "Conduct 9-workstream legal DD with risk matrix and deal-breaker flags."
+  brand_color: "#92400E"

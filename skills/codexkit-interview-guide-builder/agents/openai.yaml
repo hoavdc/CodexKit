@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interview Guide Builder"
+  short_description: "Build STAR interview guides with scoring rubrics and bias safeguards."
+  brand_color: "#9333EA"

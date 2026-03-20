@@ -7,6 +7,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-03-20
+
+### Added
+
+- **15 new depth sub-skills** (Wave 2 — advanced professional skills):
+  - **PM (3)**: `codexkit-safe-pi-planning` (SAFe PI Planning + ART sync), `codexkit-pmbok8-earned-value` (EVM + CPI/SPI forecasting), `codexkit-pmbok8-stakeholder-register` (stakeholder analysis + RACI).
+  - **Finance (2)**: `codexkit-fpa-rolling-forecast` (12–18 mo rolling forecast + waterfall bridge), `codexkit-audit-readiness-checker` (assertion mapping + RAG scoring).
+  - **Legal (1)**: `codexkit-legal-due-diligence` (9 workstreams + deal-breaker flags).
+  - **HR (2)**: `codexkit-onboarding-plan-creator` (30-60-90 day plan + pre-boarding), `codexkit-interview-guide-builder` (STAR method + scoring rubrics).
+  - **Supply Chain (2)**: `codexkit-supplier-evaluation` (weighted scorecard + tier classification), `codexkit-procurement-rfp-writer` (evaluation methodology + ISO 20400).
+  - **Strategy (2)**: `codexkit-strategic-analysis-porter` (Five Forces + PESTEL + SWOT), `codexkit-competitor-intelligence` (CI cycle + battle cards + positioning map).
+  - **Marketing (1)**: `codexkit-campaign-brief-writer` (SMART objectives + audience persona + KPIs).
+  - **Data (1)**: `codexkit-a-b-test-planner` (hypothesis + sample sizing + MDE + guardrails).
+  - **CX (1)**: `codexkit-churn-risk-analyzer` (health scoring + segmentation + intervention playbooks).
+
+### Changed
+
+- Skill count increased from 51 to 66.
+- `skill-finder.md` updated to include all 66 skills across 10 categories (added Data & Analytics).
+- README updated with new skill descriptions and v0.6.0 references.
+
 ## [0.5.0] - 2026-03-20
 
 ### Added
@@ -93,7 +114,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Cross-platform skill installation scripts and a validation script.
 - New docs site positioned for OpenAI Codex and ChatGPT users.
 
-[Unreleased]: https://example.com/codexkit/compare/v0.5.0...HEAD
+[Unreleased]: https://example.com/codexkit/compare/v0.6.0...HEAD
+[0.6.0]: https://example.com/codexkit/releases/tag/v0.6.0
 [0.5.0]: https://example.com/codexkit/releases/tag/v0.5.0
 [0.4.0]: https://example.com/codexkit/releases/tag/v0.4.0
 [0.3.1]: https://example.com/codexkit/releases/tag/v0.3.1

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Procurement RFP Writer"
+  short_description: "Write structured RFPs with evaluation methodology and submission templates."
+  brand_color: "#D97706"

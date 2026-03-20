@@ -1,0 +1,4 @@
+interface:
+  display_name: "Campaign Brief Writer"
+  short_description: "Write agency-standard campaign briefs with SMART objectives and KPIs."
+  brand_color: "#DB2777"

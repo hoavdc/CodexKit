@@ -1,0 +1,4 @@
+interface:
+  display_name: "Churn Risk Analyzer"
+  short_description: "Score customer health, segment churn risk, and generate intervention plays."
+  brand_color: "#DC2626"

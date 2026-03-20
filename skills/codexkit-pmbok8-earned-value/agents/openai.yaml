@@ -1,0 +1,4 @@
+interface:
+  display_name: "Earned Value Management Analyst"
+  short_description: "Calculate EVM metrics, forecast EAC, and generate corrective action reports."
+  brand_color: "#0F766E"
