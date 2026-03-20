@@ -31,7 +31,7 @@ CodexKit is a fresh project rebuilt around the surfaces that matter in Codex tod
 If you do not want to use Git commands or remember terminal steps, use the GitHub release package:
 
 1. Open the Releases page for this repository.
-2. Download `codexkit-starter-pack-v0.7.0.zip`.
+2. Download `codexkit-starter-pack-v0.7.1.zip`.
 3. Unzip it anywhere on your computer.
 4. On Windows, double-click `START-HERE-WINDOWS.cmd`.
    - If Codex is not installed, the script will show installation instructions.
@@ -127,6 +127,12 @@ Windows:
 
 Or double-click `UPDATE-WINDOWS.cmd`.
 
+For macOS / Linux, run:
+
+```bash
+bash ./UPDATE.sh
+```
+
 The update script auto-detects your install method:
 - **Git clone**: Runs `git pull` + re-installs all skills with `--force`.
 - **Zip download**: Fetches the latest release from GitHub, extracts new skills, and overwrites the installed ones.
@@ -176,7 +182,9 @@ CodexKit/
 |-- web/
 |-- skill-finder.md
 |-- HUONG-DAN-NHANH.md
-`-- START-HERE-WINDOWS.cmd / START-HERE.sh
+|-- START-HERE-WINDOWS.cmd / START-HERE.sh
+|-- UPDATE-WINDOWS.cmd / UPDATE.sh
+`-- CREATE-WORKSPACE-WINDOWS.cmd / CREATE-WORKSPACE.sh
 ```
 
 ## Design principles
@@ -209,7 +217,7 @@ CodexKit/
 - Replace placeholder maintainer details where needed.
 - Add screenshots or a short demo GIF to the docs site.
 - Commit and push the release candidate branch or `main`.
-- Tag `v0.7.0` after validating the pack and docs build.
+- Tag `v0.7.1` after validating the pack and docs build.
 - Push the tag to trigger the GitHub release workflow.
 
 ## Release process
@@ -217,11 +225,11 @@ CodexKit/
 1. Update `package.json`, `web/package.json`, and `CHANGELOG.md`.
 2. Run `npm run check`.
 3. Commit and push the release commit.
-4. Create the tag: `git tag v0.7.0`
-5. Push the tag: `git push origin v0.7.0`
+4. Create the tag: `git tag v0.7.1`
+5. Push the tag: `git push origin v0.7.1`
 6. GitHub Actions publishes:
-   `codexkit-source-v0.7.0.zip`
-   `codexkit-starter-pack-v0.7.0.zip`
+   `codexkit-source-v0.7.1.zip`
+   `codexkit-starter-pack-v0.7.1.zip`
 
 ## Related files
 

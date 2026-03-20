@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.7.1] - 2026-03-20
+
+### Fixed
+
+- **Codex CLI detection**: Installer no longer falsely reports "Codex CLI was not detected" when Codex is installed via npm global but not in the CMD shell PATH. Both Windows and shell launchers now use 4-method fallback detection (PATH check, common npm global paths, npx resolution, npm root -g).
+- **Version display**: Launcher scripts now read version dynamically from `package.json` instead of hardcoding — eliminates version drift between scripts and package metadata.
+- **Release packaging**: Starter pack ZIP now includes `package.json`, `CHANGELOG.md`, `skill-finder.md`, `HUONG-DAN-NHANH.md`, `UPDATE-WINDOWS.cmd`, and `UPDATE.sh` — previously missing, which broke the update flow for ZIP users.
+
+### Added
+
+- `UPDATE.sh`: Update wrapper for macOS and Linux users (previously only `UPDATE-WINDOWS.cmd` existed).
+- `/release` workflow: Automated pre-release checklist covering version sync, CHANGELOG entry, pack validation, build verification, and tagging.
+
 ## [0.7.0] - 2026-03-20
 
 ### Added
@@ -131,7 +144,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Cross-platform skill installation scripts and a validation script.
 - New docs site positioned for OpenAI Codex and ChatGPT users.
 
-[Unreleased]: https://github.com/hoavdc/CodexKit/compare/v0.7.0...HEAD
+[Unreleased]: https://github.com/hoavdc/CodexKit/compare/v0.7.1...HEAD
+[0.7.1]: https://github.com/hoavdc/CodexKit/releases/tag/v0.7.1
 [0.7.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.7.0
 [0.6.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.6.0
 [0.5.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.5.0

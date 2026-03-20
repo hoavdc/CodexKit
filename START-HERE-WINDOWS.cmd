@@ -1,11 +1,20 @@
 @echo off
-setlocal
+setlocal enabledelayedexpansion
 cd /d "%~dp0"
-title CodexKit v0.6.0
+
+REM ---- Read version from package.json ----
+set "CODEXKIT_VERSION=unknown"
+if exist "%~dp0package.json" (
+    for /f "usebackq delims=" %%v in (`powershell -NoProfile -Command "(Get-Content '%~dp0package.json' | ConvertFrom-Json).version"`) do (
+        set "CODEXKIT_VERSION=%%v"
+    )
+)
+
+title CodexKit v%CODEXKIT_VERSION%
 
 echo.
 echo ================================================
-echo    CodexKit v0.6.0 - Work Operating Kit
+echo    CodexKit v%CODEXKIT_VERSION% - Work Operating Kit
 echo ================================================
 echo.
 echo    Turn Codex and ChatGPT into disciplined
@@ -18,8 +27,34 @@ echo ================================================
 echo.
 
 REM ---- Check if Codex CLI is installed ----
+set "CODEX_FOUND=0"
+
+REM Method 1: where codex (works if codex is in system PATH)
 where codex >nul 2>&1
-if errorlevel 1 (
+if not errorlevel 1 set "CODEX_FOUND=1"
+
+REM Method 2: Check common npm global install paths
+if "%CODEX_FOUND%"=="0" (
+    if exist "%APPDATA%\npm\codex.cmd" set "CODEX_FOUND=1"
+)
+if "%CODEX_FOUND%"=="0" (
+    if exist "%LOCALAPPDATA%\npm\codex.cmd" set "CODEX_FOUND=1"
+)
+
+REM Method 3: Try npx resolution
+if "%CODEX_FOUND%"=="0" (
+    npx --no-install codex --version >nul 2>&1
+    if not errorlevel 1 set "CODEX_FOUND=1"
+)
+
+REM Method 4: Check if node_modules/.bin has it (fnm/nvm setups)
+if "%CODEX_FOUND%"=="0" (
+    for /f "delims=" %%p in ('npm root -g 2^>nul') do (
+        if exist "%%p\..\codex.cmd" set "CODEX_FOUND=1"
+    )
+)
+
+if "%CODEX_FOUND%"=="0" (
     echo  [!] Codex CLI was not detected on this system.
     echo.
     echo  CodexKit requires OpenAI Codex to work.
@@ -43,7 +78,7 @@ echo  [OK] Codex detected. Proceeding with skill installation...
 echo.
 
 REM ---- Show where skills will go ----
-echo  This will install 36 CodexKit skills into:
+echo  This will install CodexKit skills into:
 echo    %USERPROFILE%\.agents\skills
 echo.
 

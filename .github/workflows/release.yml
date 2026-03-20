@@ -36,7 +36,10 @@ jobs:
           git archive --format=zip --output "codexkit-source-${GITHUB_REF_NAME}.zip" HEAD
           mkdir -p release/codexkit-starter-pack
           cp -R skills templates workspaces playbooks automations mcp scripts release/codexkit-starter-pack/
-          cp README.md LICENSE NOTICE.md START-HERE-WINDOWS.cmd START-HERE.sh CREATE-WORKSPACE-WINDOWS.cmd CREATE-WORKSPACE.sh release/codexkit-starter-pack/
+          cp README.md LICENSE NOTICE.md package.json CHANGELOG.md skill-finder.md HUONG-DAN-NHANH.md release/codexkit-starter-pack/
+          cp START-HERE-WINDOWS.cmd START-HERE.sh release/codexkit-starter-pack/
+          cp UPDATE-WINDOWS.cmd UPDATE.sh release/codexkit-starter-pack/
+          cp CREATE-WORKSPACE-WINDOWS.cmd CREATE-WORKSPACE.sh release/codexkit-starter-pack/
           cd release
           zip -r "../codexkit-starter-pack-${GITHUB_REF_NAME}.zip" codexkit-starter-pack
 
