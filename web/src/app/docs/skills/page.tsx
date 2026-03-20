@@ -18,6 +18,10 @@ export default function SkillsPage() {
     "Finance, Legal & Risk",
     "People, Operations & Supply Chain",
     "Strategy, Analytics & Growth",
+    "Data & Analytics",
+    "IT & Admin",
+    "Training & Development",
+    "Cross-Functional",
   ];
 
   return (

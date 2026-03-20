@@ -327,6 +327,81 @@
   {
     "name": "codexkit-a-b-test-planner",
     "description": "Design rigorous A/B tests with hypothesis, sample sizing, MDE, guardrail metrics, and rollout playbook.",
-    "category": "Strategy, Analytics & Growth"
+    "category": "Data & Analytics"
+  },
+  {
+    "name": "codexkit-dashboard-kpi-designer",
+    "description": "Design KPI dashboards with SMART metrics, visualization selection, alert thresholds, and data dictionary.",
+    "category": "Data & Analytics"
+  },
+  {
+    "name": "codexkit-data-quality-auditor",
+    "description": "Audit data quality using DAMA DMBOK six dimensions with scoring, issue log, and remediation plan.",
+    "category": "Data & Analytics"
+  },
+  {
+    "name": "codexkit-survey-analyzer",
+    "description": "Analyze survey and feedback data with distributions, segment comparison, theme extraction, and action recommendations.",
+    "category": "Data & Analytics"
+  },
+  {
+    "name": "codexkit-sql-query-builder",
+    "description": "Build analytical SQL queries with CTEs, window functions, performance notes, and output documentation.",
+    "category": "Data & Analytics"
+  },
+  {
+    "name": "codexkit-architecture-decision-writer",
+    "description": "Document architecture decisions in ADR format with options comparison, consequences, and review dates.",
+    "category": "Engineering Delivery"
+  },
+  {
+    "name": "codexkit-incident-postmortem",
+    "description": "Write blameless postmortems with SRE methodology, 5 Whys, timeline, impact analysis, and action items.",
+    "category": "Engineering Delivery"
+  },
+  {
+    "name": "codexkit-api-design-reviewer",
+    "description": "Review API designs for naming conventions, versioning, error handling, pagination, and breaking changes.",
+    "category": "Engineering Delivery"
+  },
+  {
+    "name": "codexkit-vendor-comparison-matrix",
+    "description": "Compare and evaluate vendors with weighted scoring, TCO analysis, and recommendation memo.",
+    "category": "IT & Admin"
+  },
+  {
+    "name": "codexkit-change-management-plan",
+    "description": "Plan organizational change adoption with ADKAR assessment, communication calendar, and adoption metrics.",
+    "category": "IT & Admin"
+  },
+  {
+    "name": "codexkit-training-needs-analyzer",
+    "description": "Assess training needs across teams with gap analysis, Bloom's objectives, and Kirkpatrick evaluation.",
+    "category": "Training & Development"
+  },
+  {
+    "name": "codexkit-workshop-facilitator",
+    "description": "Design and facilitate workshops with time-blocked agendas, facilitation notes, and participant materials.",
+    "category": "Training & Development"
+  },
+  {
+    "name": "codexkit-decision-log",
+    "description": "Record and track decisions with RAPID framework, options analysis, and communication plan.",
+    "category": "Cross-Functional"
+  },
+  {
+    "name": "codexkit-crisis-communication",
+    "description": "Draft crisis responses with holding statements, Q&A preparation, and stakeholder-specific messaging.",
+    "category": "Cross-Functional"
+  },
+  {
+    "name": "codexkit-business-case-writer",
+    "description": "Write business cases with NPV/ROI/Payback analysis, risk assessment, and implementation roadmap.",
+    "category": "Cross-Functional"
+  },
+  {
+    "name": "codexkit-policy-document-writer",
+    "description": "Author policies and SOPs with ISO document control, compliance monitoring, and review schedule.",
+    "category": "Cross-Functional"
   }
 ]
