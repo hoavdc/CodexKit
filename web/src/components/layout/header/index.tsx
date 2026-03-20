@@ -4,7 +4,7 @@ import MobileMenu from "@/components/layout/header/components/mobile-menu";
 import SearchDialog from "@/components/layout/header/components/search-dialog";
 import ThemeToggle from "@/components/layout/header/components/theme-toggle";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 
 export default function Header() {
   return (
@@ -52,6 +52,15 @@ export default function Header() {
             <div className="md:hidden">
               <SearchDialog />
             </div>
+            <a
+              href="https://github.com/hoavdc/CodexKit"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full p-2 text-muted-foreground hover:bg-card/70 hover:text-foreground transition-colors"
+              aria-label="View on GitHub"
+            >
+              <Github className="h-5 w-5" />
+            </a>
             <Link href="/docs/installation" className="hidden sm:block">
               <Button className="rounded-full">
                 Install

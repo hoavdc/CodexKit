@@ -50,6 +50,16 @@
     "category": "Knowledge Work & Communication"
   },
   {
+    "name": "codexkit-report-summarizer",
+    "description": "Condense long reports into structured summaries with key findings, implications, and actions.",
+    "category": "Knowledge Work & Communication"
+  },
+  {
+    "name": "codexkit-presentation-outliner",
+    "description": "Structure presentations into slide-by-slide outlines with key messages and data callouts.",
+    "category": "Knowledge Work & Communication"
+  },
+  {
     "name": "codexkit-inbox-priority-triage",
     "description": "Sort inboxes, request queues, and ad hoc asks into clear priorities, owners, and response buckets.",
     "category": "Routine Automation & Office Ops"
@@ -95,6 +105,11 @@
     "category": "Routine Automation & Office Ops"
   },
   {
+    "name": "codexkit-email-composer",
+    "description": "Draft clear, professional business emails from rough notes, context, or instructions.",
+    "category": "Routine Automation & Office Ops"
+  },
+  {
     "name": "codexkit-project-governance-pilot",
     "description": "Stand up governance, cadence, decision rights, and RAID structure for complex initiatives.",
     "category": "Project & Portfolio Management"
@@ -102,6 +117,51 @@
   {
     "name": "codexkit-portfolio-risk-radar",
     "description": "Build portfolio-level RAID and RAG views across workstreams, milestones, and dependencies.",
+    "category": "Project & Portfolio Management"
+  },
+  {
+    "name": "codexkit-sprint-planning-assistant",
+    "description": "Organize backlog, estimate effort, balance capacity, and produce sprint commitment summaries.",
+    "category": "Project & Portfolio Management"
+  },
+  {
+    "name": "codexkit-backlog-refiner",
+    "description": "Refine backlog items into INVEST-quality user stories with Given/When/Then acceptance criteria.",
+    "category": "Project & Portfolio Management"
+  },
+  {
+    "name": "codexkit-scrum-retrospective",
+    "description": "Facilitate sprint retrospectives using 5 formats matched to team maturity with action items.",
+    "category": "Project & Portfolio Management"
+  },
+  {
+    "name": "codexkit-okr-writer",
+    "description": "Write and cascade OKRs with outcome-based Key Results, alignment checks, and check-in templates.",
+    "category": "Project & Portfolio Management"
+  },
+  {
+    "name": "codexkit-risk-register",
+    "description": "Build a project risk register with P×I scoring, response strategies, and ROAM board integration.",
+    "category": "Project & Portfolio Management"
+  },
+  {
+    "name": "codexkit-kanban-flow-analyzer",
+    "description": "Analyze Kanban flow metrics — cycle time, throughput, WIP limits, bottlenecks, and Monte Carlo forecasting.",
+    "category": "Project & Portfolio Management"
+  },
+  {
+    "name": "codexkit-safe-pi-planning",
+    "description": "Facilitate SAFe PI Planning with ART sync, feature breakdown, ROAM risks, and PI objectives.",
+    "category": "Project & Portfolio Management"
+  },
+  {
+    "name": "codexkit-pmbok8-earned-value",
+    "description": "Track Earned Value with EVM calculations, CPI/SPI analysis, EAC forecasting, and corrective actions.",
+    "category": "Project & Portfolio Management"
+  },
+  {
+    "name": "codexkit-pmbok8-stakeholder-register",
+    "description": "Build and maintain a stakeholder register with engagement assessment and RACI alignment.",
     "category": "Project & Portfolio Management"
   },
   {
@@ -120,6 +180,46 @@
     "category": "Finance, Legal & Risk"
   },
   {
+    "name": "codexkit-budget-variance-explainer",
+    "description": "Turn budget vs actual data into plain-language explanations with actions for non-finance managers.",
+    "category": "Finance, Legal & Risk"
+  },
+  {
+    "name": "codexkit-fpa-scenario-modeling",
+    "description": "Build Base/Bull/Bear P&L scenarios with sensitivity analysis and cash flow projections.",
+    "category": "Finance, Legal & Risk"
+  },
+  {
+    "name": "codexkit-financial-statement-analyzer",
+    "description": "Analyze financial statements with ratio analysis, DuPont decomposition, trend spotting, and red flags.",
+    "category": "Finance, Legal & Risk"
+  },
+  {
+    "name": "codexkit-contract-drafter",
+    "description": "Draft contracts from a clause library with risk calibration and negotiation guides.",
+    "category": "Finance, Legal & Risk"
+  },
+  {
+    "name": "codexkit-legal-memo-writer",
+    "description": "Write legal analysis memos using the IRAC framework with risk-tiered conclusions.",
+    "category": "Finance, Legal & Risk"
+  },
+  {
+    "name": "codexkit-fpa-rolling-forecast",
+    "description": "Build 12–18 month rolling forecasts with waterfall bridge analysis and assumption logs.",
+    "category": "Finance, Legal & Risk"
+  },
+  {
+    "name": "codexkit-audit-readiness-checker",
+    "description": "Assess audit readiness with assertion mapping, RAG scoring, and remediation planning.",
+    "category": "Finance, Legal & Risk"
+  },
+  {
+    "name": "codexkit-legal-due-diligence",
+    "description": "Conduct legal due diligence across 9 workstreams with risk matrix and deal-breaker flags.",
+    "category": "Finance, Legal & Risk"
+  },
+  {
     "name": "codexkit-talent-review-calibrator",
     "description": "Structure talent reviews, succession risk, and development actions with evidence-based calibration.",
     "category": "People, Operations & Supply Chain"
@@ -132,6 +232,46 @@
   {
     "name": "codexkit-dmaic-improvement-charter",
     "description": "Define Lean Six Sigma improvement work with scope, baseline, CTQs, and improvement path.",
+    "category": "People, Operations & Supply Chain"
+  },
+  {
+    "name": "codexkit-job-description-writer",
+    "description": "Write job descriptions with SHRM competency alignment, inclusive language, and salary benchmarking.",
+    "category": "People, Operations & Supply Chain"
+  },
+  {
+    "name": "codexkit-performance-review-writer",
+    "description": "Write performance reviews using SBI feedback model, SMART goals, and bias checks.",
+    "category": "People, Operations & Supply Chain"
+  },
+  {
+    "name": "codexkit-process-mapper",
+    "description": "Map business processes end-to-end with swimlane diagrams, 8 Lean Wastes, and efficiency metrics.",
+    "category": "People, Operations & Supply Chain"
+  },
+  {
+    "name": "codexkit-root-cause-analyzer",
+    "description": "Find root cause using 5 Whys, Fishbone, Pareto analysis, and CAPA corrective actions.",
+    "category": "People, Operations & Supply Chain"
+  },
+  {
+    "name": "codexkit-onboarding-plan-creator",
+    "description": "Create 30-60-90 day onboarding plans with pre-boarding sequence and milestone checkpoints.",
+    "category": "People, Operations & Supply Chain"
+  },
+  {
+    "name": "codexkit-interview-guide-builder",
+    "description": "Build structured interview guides with STAR method, scoring rubrics, and bias safeguards.",
+    "category": "People, Operations & Supply Chain"
+  },
+  {
+    "name": "codexkit-supplier-evaluation",
+    "description": "Evaluate suppliers with weighted scorecards, tier classification, and improvement plans.",
+    "category": "People, Operations & Supply Chain"
+  },
+  {
+    "name": "codexkit-procurement-rfp-writer",
+    "description": "Write procurement RFPs/RFQs with evaluation methodology and ISO 20400 alignment.",
     "category": "People, Operations & Supply Chain"
   },
   {
@@ -155,28 +295,38 @@
     "category": "Strategy, Analytics & Growth"
   },
   {
-    "name": "codexkit-email-composer",
-    "description": "Draft clear, professional business emails from rough notes, context, or instructions.",
-    "category": "Routine Automation & Office Ops"
+    "name": "codexkit-go-to-market-planner",
+    "description": "Plan GTM launches with TAM/SAM/SOM analysis, positioning, messaging, and channel strategy.",
+    "category": "Strategy, Analytics & Growth"
   },
   {
-    "name": "codexkit-report-summarizer",
-    "description": "Condense long reports into structured summaries with key findings, implications, and actions.",
-    "category": "Knowledge Work & Communication"
+    "name": "codexkit-customer-journey-mapper",
+    "description": "Map 7 lifecycle stages with Moments of Truth, emotion curves, and CX improvements.",
+    "category": "Strategy, Analytics & Growth"
   },
   {
-    "name": "codexkit-sprint-planning-assistant",
-    "description": "Organize backlog, estimate effort, balance capacity, and produce sprint commitment summaries.",
-    "category": "Project & Portfolio Management"
+    "name": "codexkit-strategic-analysis-porter",
+    "description": "Run strategic analysis with Porter Five Forces, PESTEL macro scan, and SWOT cross-analysis.",
+    "category": "Strategy, Analytics & Growth"
   },
   {
-    "name": "codexkit-budget-variance-explainer",
-    "description": "Turn budget vs actual data into plain-language explanations with actions for non-finance managers.",
-    "category": "Finance, Legal & Risk"
+    "name": "codexkit-competitor-intelligence",
+    "description": "Build competitive intelligence briefs with CI cycle, feature matrix, and battle cards.",
+    "category": "Strategy, Analytics & Growth"
   },
   {
-    "name": "codexkit-presentation-outliner",
-    "description": "Structure presentations into slide-by-slide outlines with key messages and data callouts.",
-    "category": "Knowledge Work & Communication"
+    "name": "codexkit-campaign-brief-writer",
+    "description": "Write marketing campaign briefs with SMART objectives, audience personas, and KPI targets.",
+    "category": "Strategy, Analytics & Growth"
+  },
+  {
+    "name": "codexkit-churn-risk-analyzer",
+    "description": "Analyze churn risk with health scoring, customer segmentation, and intervention playbooks.",
+    "category": "Strategy, Analytics & Growth"
+  },
+  {
+    "name": "codexkit-a-b-test-planner",
+    "description": "Design rigorous A/B tests with hypothesis, sample sizing, MDE, guardrail metrics, and rollout playbook.",
+    "category": "Strategy, Analytics & Growth"
   }
 ]

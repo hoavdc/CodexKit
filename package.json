@@ -2,6 +2,14 @@
   "name": "codexkit",
   "version": "0.6.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoavdc/CodexKit.git"
+  },
+  "homepage": "https://github.com/hoavdc/CodexKit",
+  "bugs": {
+    "url": "https://github.com/hoavdc/CodexKit/issues"
+  },
   "description": "Open-source operating kit for people using OpenAI Codex and ChatGPT across engineering, high-reasoning work, and repeatable office operations.",
   "engines": {
     "node": ">=20.9.0",

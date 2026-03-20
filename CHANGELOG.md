@@ -114,12 +114,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Cross-platform skill installation scripts and a validation script.
 - New docs site positioned for OpenAI Codex and ChatGPT users.
 
-[Unreleased]: https://example.com/codexkit/compare/v0.6.0...HEAD
-[0.6.0]: https://example.com/codexkit/releases/tag/v0.6.0
-[0.5.0]: https://example.com/codexkit/releases/tag/v0.5.0
-[0.4.0]: https://example.com/codexkit/releases/tag/v0.4.0
-[0.3.1]: https://example.com/codexkit/releases/tag/v0.3.1
-[0.3.0]: https://example.com/codexkit/releases/tag/v0.3.0
-[0.2.0]: https://example.com/codexkit/releases/tag/v0.2.0
-[0.1.0]: https://example.com/codexkit/releases/tag/v0.1.0
+[Unreleased]: https://github.com/hoavdc/CodexKit/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.6.0
+[0.5.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.5.0
+[0.4.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.4.0
+[0.3.1]: https://github.com/hoavdc/CodexKit/releases/tag/v0.3.1
+[0.3.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.3.0
+[0.2.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.2.0
+[0.1.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.1.0
 

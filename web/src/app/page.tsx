@@ -71,6 +71,14 @@ export default function Home() {
                   Read the docs
                   <ArrowRight className="h-4 w-4" />
                 </Link>
+                <a
+                  href="https://github.com/hoavdc/CodexKit"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-transform hover:-translate-y-0.5"
+                >
+                  ⭐ GitHub
+                </a>
                 <Link
                   href="/docs/installation"
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-transform hover:-translate-y-0.5"

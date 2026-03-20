@@ -15,29 +15,58 @@ export default function InstallationPage() {
         <p className="mt-4 text-base leading-8 text-muted-foreground">
           CodexKit follows the official Codex Skills layout: each skill ships with <code>SKILL.md</code>, optional <code>agents/openai.yaml</code>, and standard <code>.agents/skills</code> discovery paths. The pack now covers engineering, high-reasoning work, low-reasoning office automation, department templates, and starter workspaces across project, finance, legal, operations, HR, strategy, analytics, marketing, and CX workflows.
         </p>
-        <p className="mt-4 text-sm leading-7 text-muted-foreground">
-          Reference:{" "}
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <a
-            href="https://developers.openai.com/codex/skills"
+            href="https://github.com/hoavdc/CodexKit"
             target="_blank"
             rel="noreferrer"
-            className="font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 dark:text-zinc-50 dark:decoration-zinc-700"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 dark:bg-zinc-50 dark:text-zinc-900"
           >
-            OpenAI Codex Skills documentation
+            ⭐ View on GitHub
           </a>
-        </p>
-        <p className="mt-4 text-sm leading-7 text-muted-foreground">
-          The docs app and local verification flow target Node <code>20.9+</code> and npm <code>10+</code>.
-        </p>
+          <a
+            href="https://github.com/hoavdc/CodexKit/releases"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-transform hover:-translate-y-0.5"
+          >
+            Download latest release
+          </a>
+        </div>
+        <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:gap-6 text-sm text-muted-foreground">
+          <span>
+            Reference:{" "}
+            <a
+              href="https://developers.openai.com/codex/skills"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 dark:text-zinc-50 dark:decoration-zinc-700"
+            >
+              OpenAI Codex Skills documentation
+            </a>
+          </span>
+          <span>Requires Node <code>20.9+</code> and npm <code>10+</code></span>
+        </div>
       </div>
+
+      <section className="mb-12 panel p-8">
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Clone from GitHub</h2>
+        <pre className="mt-5 overflow-x-auto rounded-3xl bg-[#161617] p-5 text-sm leading-7 text-[#f8f3ea]">
+          <code>{`git clone https://github.com/hoavdc/CodexKit.git
+cd CodexKit`}</code>
+        </pre>
+        <p className="mt-4 text-sm leading-7 text-muted-foreground">
+          This is the recommended way to get CodexKit. After cloning, follow the quick install steps below.
+        </p>
+      </section>
 
       <section className="mb-12 panel p-8">
         <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Fastest path for non-coders</h2>
         <ol className="mt-5 space-y-4 text-sm leading-7 text-muted-foreground">
-          <li>1. Open the GitHub Releases page and download <code>codexkit-starter-pack-v0.4.0.zip</code>.</li>
+          <li>1. Open the <a href="https://github.com/hoavdc/CodexKit/releases" target="_blank" rel="noreferrer" className="font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 dark:text-zinc-50 dark:decoration-zinc-700">GitHub Releases page</a> and download <code>codexkit-starter-pack-v0.6.0.zip</code>.</li>
           <li>2. Unzip the package anywhere on your machine.</li>
           <li>3. On Windows, double-click <code>START-HERE-WINDOWS.cmd</code>. On macOS or Linux, run <code>bash ./START-HERE.sh</code>.</li>
-          <li>4. Restart Codex and type <code>/skills</code> to confirm all 36 skills appear.</li>
+          <li>4. Restart Codex and type <code>/skills</code> to confirm all 66 skills appear.</li>
           <li>5. Open <code>skill-finder.md</code> to browse skills by situation.</li>
           <li>6. Optional: create a starter workspace with <code>CREATE-WORKSPACE-WINDOWS.cmd</code> or <code>bash ./CREATE-WORKSPACE.sh</code>.</li>
         </ol>
