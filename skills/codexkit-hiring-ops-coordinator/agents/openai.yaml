@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hiring Ops Coordinator"
+  short_description: "Track candidate flow, stale feedback, scheduling gaps, and recruiting next steps."
+  brand_color: "#0F766E"

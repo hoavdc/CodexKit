@@ -13,7 +13,21 @@ export default function InstallationPage() {
         <div className="eyebrow mb-5">Installation</div>
         <h1 className="section-title">Install CodexKit locally, then publish the docs when the pack matches your workflow.</h1>
         <p className="mt-4 text-base leading-8 text-muted-foreground">
-          Codex users get the most value by copying the skill folders into ~/.codex/skills. ChatGPT-heavy teams can still use the playbooks, templates, and automation recipes directly from the repo.
+          CodexKit follows the official Codex Skills layout: each skill ships with <code>SKILL.md</code>, optional <code>agents/openai.yaml</code>, and standard <code>.agents/skills</code> discovery paths. The pack now covers engineering, high-reasoning work, low-reasoning office automation, department templates, and starter workspaces across project, finance, legal, operations, HR, strategy, analytics, marketing, and CX workflows.
+        </p>
+        <p className="mt-4 text-sm leading-7 text-muted-foreground">
+          Reference:{" "}
+          <a
+            href="https://developers.openai.com/codex/skills"
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 dark:text-zinc-50 dark:decoration-zinc-700"
+          >
+            OpenAI Codex Skills documentation
+          </a>
+        </p>
+        <p className="mt-4 text-sm leading-7 text-muted-foreground">
+          The docs app and local verification flow target Node <code>20.9+</code> and npm <code>10+</code>.
         </p>
       </div>
 
@@ -21,49 +35,82 @@ export default function InstallationPage() {
         <div className="panel p-6">
           <h2 className="text-xl font-semibold">Windows PowerShell</h2>
           <pre className="mt-4 overflow-x-auto rounded-3xl bg-[#161617] p-5 text-sm leading-7 text-[#f8f3ea]">
-            <code>{`pwsh ./scripts/install-skills.ps1
+            <code>{`.\\scripts\\install-skills.ps1
+.\\scripts\\install-skills.ps1 -Destination .\\.agents\\skills
+.\\scripts\\quick-start.ps1 -List
+.\\scripts\\quick-start.ps1 -Starter project-management-office -Destination .\\acme-pmo
 node ./scripts/validate-pack.mjs`}</code>
           </pre>
+          <p className="mt-4 text-sm leading-7 text-muted-foreground">
+            The default command installs into <code>$HOME/.agents/skills</code>. The second command installs repo-local skills into <code>.agents/skills</code>.
+          </p>
         </div>
         <div className="panel p-6">
           <h2 className="text-xl font-semibold">macOS / Linux</h2>
           <pre className="mt-4 overflow-x-auto rounded-3xl bg-[#161617] p-5 text-sm leading-7 text-[#f8f3ea]">
             <code>{`bash ./scripts/install-skills.sh
+CODEXKIT_DESTINATION=./.agents/skills bash ./scripts/install-skills.sh
+bash ./scripts/quick-start.sh --list
+bash ./scripts/quick-start.sh --starter finance-performance-desk --destination ./acme-finance
 node ./scripts/validate-pack.mjs`}</code>
           </pre>
+          <p className="mt-4 text-sm leading-7 text-muted-foreground">
+            Use <code>--force</code> or <code>CODEXKIT_FORCE=1</code> only when you want to overwrite an existing installed skill folder.
+          </p>
         </div>
       </section>
 
       <section className="mb-12 panel p-8">
-        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Repo structure</h2>
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Discovery paths</h2>
+        <ul className="mt-5 space-y-3 text-sm leading-7 text-muted-foreground">
+          <li>Codex scans <code>.agents/skills</code> from your current working directory up to the repository root.</li>
+          <li>Codex also scans <code>$HOME/.agents/skills</code> for user-wide skills that should follow you across repos.</li>
+          <li>If a newly installed or updated skill does not appear, restart Codex.</li>
+        </ul>
+      </section>
+
+      <section className="mb-12 panel p-8">
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Skill structure</h2>
         <pre className="mt-5 overflow-x-auto rounded-3xl bg-[#161617] p-5 text-sm leading-7 text-[#f8f3ea]">
-          <code>{`CodexKit/
-├── skills/
-├── playbooks/
-├── automations/
-├── mcp/
-├── templates/
-├── scripts/
-└── web/`}</code>
+          <code>{`my-skill/
+|-- SKILL.md
+|-- agents/
+|   \`-- openai.yaml
+|-- references/
+|-- scripts/
+\`-- assets/`}</code>
         </pre>
+      </section>
+
+      <section className="mb-12 panel p-8">
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Starter workspace adoption</h2>
+        <ul className="mt-5 space-y-3 text-sm leading-7 text-muted-foreground">
+          <li>Choose the closest starter in <code>workspaces/</code> instead of beginning from an empty folder.</li>
+          <li>Keep the structure, but rename files and sections to match your team’s actual cadence and terminology.</li>
+          <li>Pair the workspace with one high-reasoning skill and one routine automation skill before adding more assets.</li>
+        </ul>
       </section>
 
       <section className="mb-12 grid gap-4 sm:grid-cols-2">
         <div className="panel p-6">
           <h3 className="text-lg font-semibold">For Codex users</h3>
           <p className="mt-3 text-sm leading-7 text-muted-foreground">
-            Install the skills directory into the local Codex home, then let the skill descriptions route naturally or invoke them when you need a specific workflow.
+            Use <code>$HOME/.agents/skills</code> for personal defaults and <code>.agents/skills</code> when a team wants repository-scoped skill discovery that travels with the codebase.
           </p>
         </div>
         <div className="panel p-6">
           <h3 className="text-lg font-semibold">For ChatGPT users</h3>
           <p className="mt-3 text-sm leading-7 text-muted-foreground">
-            Use playbooks, automations, and templates as copy-ready assets. The project still adds value even when local skill installation is unavailable.
+            Use playbooks, automations, templates, and starter workspaces as copy-ready assets. The project still adds value even when local skill installation is unavailable.
           </p>
         </div>
       </section>
 
       <section className="grid gap-4 sm:grid-cols-2">
+        <Link href="/docs/workspaces" className="panel p-6 transition-transform hover:-translate-y-0.5">
+          <h3 className="text-lg font-semibold">Workspaces</h3>
+          <p className="mt-2 text-sm leading-7 text-muted-foreground">Choose the starter kit that matches your department.</p>
+        </Link>
         <Link href="/docs/modes" className="panel p-6 transition-transform hover:-translate-y-0.5">
           <h3 className="text-lg font-semibold">Modes</h3>
           <p className="mt-2 text-sm leading-7 text-muted-foreground">Choose the right operating surface before adding more process.</p>

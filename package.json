@@ -1,8 +1,12 @@
 {
   "name": "codexkit",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "private": true,
-  "description": "Open-source operating kit for teams using OpenAI Codex and ChatGPT workflows.",
+  "description": "Open-source operating kit for people using OpenAI Codex and ChatGPT across engineering, high-reasoning work, and repeatable office operations.",
+  "engines": {
+    "node": ">=20.9.0",
+    "npm": ">=10"
+  },
   "license": "MIT",
   "keywords": [
     "codex",
@@ -11,9 +15,13 @@
     "skills",
     "automation",
     "mcp",
-    "developer-tools"
+    "developer-tools",
+    "project-management",
+    "operations",
+    "productivity"
   ],
   "scripts": {
+    "check": "node scripts/validate-pack.mjs && npm --prefix web run lint && npm --prefix web run build",
     "dev": "npm --prefix web run dev",
     "build": "npm --prefix web run build",
     "lint": "npm --prefix web run lint",

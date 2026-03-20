@@ -1,0 +1,4 @@
+interface:
+  display_name: "Finance Close Coordinator"
+  short_description: "Organize close blockers, reconciliations, evidence gaps, and owner actions."
+  brand_color: "#0F766E"

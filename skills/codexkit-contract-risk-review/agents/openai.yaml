@@ -1,0 +1,6 @@
+interface:
+  display_name: "Contract Risk Review"
+  short_description: "Review commercial agreements for risk, obligations, red flags, and negotiation fallback positions."
+  brand_color: "#0F766E"
+policy:
+  allow_implicit_invocation: false

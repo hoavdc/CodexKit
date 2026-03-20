@@ -1,0 +1,4 @@
+interface:
+  display_name: "Status Update Packager"
+  short_description: "Turn scattered progress and RAID notes into a clean weekly status update."
+  brand_color: "#0F766E"

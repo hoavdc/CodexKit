@@ -1,6 +1,6 @@
 param(
     [string]$SourceDir = (Join-Path $PSScriptRoot "..\\skills"),
-    [string]$Destination = (Join-Path $HOME ".codex\\skills"),
+    [string]$Destination = (Join-Path $HOME ".agents\\skills"),
     [switch]$Force
 )
 

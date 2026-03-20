@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Project Management Office",
+    "slug": "project-management-office",
+    "audience": "PMs, program managers, chiefs of staff",
+    "description": "Charter, RAID, steering updates, and cadence files for complex initiatives.",
+    "includes": "charter, RAID log, steering update, cadence and decision log"
+  },
+  {
+    "name": "Finance Performance Desk",
+    "slug": "finance-performance-desk",
+    "audience": "FP&A, controllers, finance business partners",
+    "description": "Close issues, metric packs, variance review, and finance decision logging.",
+    "includes": "metric pack, close issues, variance review, decision log"
+  },
+  {
+    "name": "HR People Ops Hub",
+    "slug": "hr-people-ops-hub",
+    "audience": "HRBPs, recruiters, people ops leads",
+    "description": "Hiring priorities, interview ops, talent reviews, and people risk tracking.",
+    "includes": "hiring plan, interview ops, talent review, policy and people risks"
+  },
+  {
+    "name": "Legal Ops Desk",
+    "slug": "legal-ops-desk",
+    "audience": "Legal ops, in-house counsel, compliance managers",
+    "description": "Intake queue, contract obligations, escalations, and approvals in one place.",
+    "includes": "intake queue, obligation log, risk escalations, approval matrix"
+  },
+  {
+    "name": "Operations Control Hub",
+    "slug": "operations-control-hub",
+    "audience": "Ops leads, process managers, supply chain teams",
+    "description": "KPI boards, exception logging, improvement pipeline, and routine calendar.",
+    "includes": "KPI board, exception log, improvement pipeline, routines"
+  },
+  {
+    "name": "Marketing Growth Studio",
+    "slug": "marketing-growth-studio",
+    "audience": "Growth marketers, brand teams, content leads",
+    "description": "Positioning, campaign calendar, review queue, and performance notes.",
+    "includes": "positioning, campaign calendar, review queue, performance notes"
+  }
+]

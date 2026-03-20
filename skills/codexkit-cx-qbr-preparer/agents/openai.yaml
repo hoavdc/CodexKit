@@ -1,0 +1,4 @@
+interface:
+  display_name: "CX QBR Preparer"
+  short_description: "Prepare QBRs and success reviews with adoption, ROI, risk, and next-quarter commitments."
+  brand_color: "#0F766E"

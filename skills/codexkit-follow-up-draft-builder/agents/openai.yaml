@@ -1,0 +1,4 @@
+interface:
+  display_name: "Follow-Up Draft Builder"
+  short_description: "Draft concise recap, reminder, and follow-up messages from existing context."
+  brand_color: "#0F766E"

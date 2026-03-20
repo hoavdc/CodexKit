@@ -2,46 +2,156 @@
   {
     "name": "codexkit-repo-onboarding",
     "description": "Map runtimes, entrypoints, quality gates, and risk zones before editing.",
-    "category": "Onboarding & Discovery"
+    "category": "Engineering Delivery"
   },
   {
     "name": "codexkit-execution-planner",
     "description": "Turn large requests into actionable slices with validation and rollback thinking.",
-    "category": "Planning & Delivery"
+    "category": "Engineering Delivery"
   },
   {
     "name": "codexkit-high-signal-review",
     "description": "Review changes with findings first and severity-ordered risk.",
-    "category": "Quality & Review"
+    "category": "Engineering Delivery"
   },
   {
     "name": "codexkit-bug-hunt",
     "description": "Reproduce, isolate, patch, and verify production-grade defects.",
-    "category": "Quality & Review"
+    "category": "Engineering Delivery"
   },
   {
     "name": "codexkit-test-hardening",
     "description": "Add narrow, behavior-focused tests around risky changes.",
-    "category": "Quality & Review"
+    "category": "Engineering Delivery"
   },
   {
     "name": "codexkit-docs-shipper",
     "description": "Update README, changelog, and operator-facing docs alongside code changes.",
-    "category": "Planning & Delivery"
+    "category": "Engineering Delivery"
   },
   {
     "name": "codexkit-automation-designer",
     "description": "Design recurring Codex tasks with guardrails and clear outputs.",
-    "category": "Operations & Integrations"
+    "category": "Engineering Delivery"
   },
   {
     "name": "codexkit-mcp-onboarding",
     "description": "Phase MCP adoption based on real workflow pain points and safe scopes.",
-    "category": "Operations & Integrations"
+    "category": "Engineering Delivery"
   },
   {
     "name": "codexkit-cloud-delegation",
     "description": "Split large work into bounded Codex delegation tasks with owned scopes.",
-    "category": "Planning & Delivery"
+    "category": "Engineering Delivery"
+  },
+  {
+    "name": "codexkit-executive-brief-writer",
+    "description": "Write one-page executive briefs and decision memos with recommendation, risks, and next steps.",
+    "category": "Knowledge Work & Communication"
+  },
+  {
+    "name": "codexkit-inbox-priority-triage",
+    "description": "Sort inboxes, request queues, and ad hoc asks into clear priorities, owners, and response buckets.",
+    "category": "Routine Automation & Office Ops"
+  },
+  {
+    "name": "codexkit-meeting-action-router",
+    "description": "Turn meeting notes or transcripts into decisions, actions, owners, due dates, and a follow-up queue.",
+    "category": "Routine Automation & Office Ops"
+  },
+  {
+    "name": "codexkit-follow-up-draft-builder",
+    "description": "Draft concise follow-up messages, nudges, and recap notes from open decisions and stale requests.",
+    "category": "Routine Automation & Office Ops"
+  },
+  {
+    "name": "codexkit-status-update-packager",
+    "description": "Convert scattered notes, RAID changes, and milestone movement into a clean weekly status update.",
+    "category": "Routine Automation & Office Ops"
+  },
+  {
+    "name": "codexkit-finance-close-coordinator",
+    "description": "Organize month-end close blockers, reconciliations, owners, and evidence chase into a routine control pack.",
+    "category": "Routine Automation & Office Ops"
+  },
+  {
+    "name": "codexkit-hiring-ops-coordinator",
+    "description": "Package interview loops, schedules, feedback follow-ups, and candidate next steps for recruiting operations.",
+    "category": "Routine Automation & Office Ops"
+  },
+  {
+    "name": "codexkit-contract-intake-router",
+    "description": "Standardize incoming legal requests into request type, missing info, priority, and review queue.",
+    "category": "Routine Automation & Office Ops"
+  },
+  {
+    "name": "codexkit-ops-kpi-packager",
+    "description": "Format recurring KPI snapshots, exception flags, and owner follow-ups for routine ops reviews.",
+    "category": "Routine Automation & Office Ops"
+  },
+  {
+    "name": "codexkit-content-calendar-assembler",
+    "description": "Turn launch dates, campaign inputs, and asset requests into a structured content calendar and workback plan.",
+    "category": "Routine Automation & Office Ops"
+  },
+  {
+    "name": "codexkit-project-governance-pilot",
+    "description": "Stand up governance, cadence, decision rights, and RAID structure for complex initiatives.",
+    "category": "Project & Portfolio Management"
+  },
+  {
+    "name": "codexkit-portfolio-risk-radar",
+    "description": "Build portfolio-level RAID and RAG views across workstreams, milestones, and dependencies.",
+    "category": "Project & Portfolio Management"
+  },
+  {
+    "name": "codexkit-finance-variance-story",
+    "description": "Turn budget or forecast variances into a management-ready finance narrative.",
+    "category": "Finance, Legal & Risk"
+  },
+  {
+    "name": "codexkit-contract-risk-review",
+    "description": "Review contracts for obligation clarity, risk allocation, and negotiation red flags.",
+    "category": "Finance, Legal & Risk"
+  },
+  {
+    "name": "codexkit-compliance-gap-review",
+    "description": "Map policies and evidence against AML, privacy, audit, or control requirements.",
+    "category": "Finance, Legal & Risk"
+  },
+  {
+    "name": "codexkit-talent-review-calibrator",
+    "description": "Structure talent reviews, succession risk, and development actions with evidence-based calibration.",
+    "category": "People, Operations & Supply Chain"
+  },
+  {
+    "name": "codexkit-sandop-facilitator",
+    "description": "Run integrated business planning with demand, supply, inventory, capacity, and executive tradeoffs.",
+    "category": "People, Operations & Supply Chain"
+  },
+  {
+    "name": "codexkit-dmaic-improvement-charter",
+    "description": "Define Lean Six Sigma improvement work with scope, baseline, CTQs, and improvement path.",
+    "category": "People, Operations & Supply Chain"
+  },
+  {
+    "name": "codexkit-strategy-scorecard-builder",
+    "description": "Translate strategy into a scorecard, strategy map, OKR bridge, and initiative portfolio.",
+    "category": "Strategy, Analytics & Growth"
+  },
+  {
+    "name": "codexkit-data-story-builder",
+    "description": "Turn KPI movement and analytics into a narrative leaders can interpret and act on.",
+    "category": "Strategy, Analytics & Growth"
+  },
+  {
+    "name": "codexkit-brand-positioning-canvas",
+    "description": "Build positioning, differentiation, proof, and message pillars for brand and GTM work.",
+    "category": "Strategy, Analytics & Growth"
+  },
+  {
+    "name": "codexkit-cx-qbr-preparer",
+    "description": "Prepare QBRs and success reviews with adoption, ROI, risk, and next-quarter commitments.",
+    "category": "Strategy, Analytics & Growth"
   }
 ]

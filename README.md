@@ -1,23 +1,25 @@
 # CodexKit
 
-Open-source operating kit for teams using OpenAI Codex and ChatGPT to ship software with more consistency.
+Open-source operating kit for people using OpenAI Codex and ChatGPT to think, write, analyze, decide, automate routine work, and ship better output with more consistency.
 
-CodexKit is a fresh project rebuilt around the surfaces that matter in Codex today: local Skills, high-signal playbooks, automation recipes, repo guardrails, and MCP onboarding guidance.
+CodexKit is a fresh project rebuilt around the surfaces that matter in Codex today: local Skills, high-signal playbooks, automation recipes, operational templates, department starter workspaces, repo guardrails, and MCP onboarding guidance. The pack now covers engineering workflows, high-reasoning work, and low-reasoning office automation across project management, finance, legal, HR, operations, strategy, analytics, marketing, and customer success. It follows the official Codex Skills layout with `SKILL.md`, optional `agents/openai.yaml`, and standard `.agents/skills` discovery paths.
 
 ## What is included
 
-- `skills/`: installable Codex Skills for onboarding, planning, review, debugging, testing, documentation, automation design, MCP setup, and cloud delegation.
-- `playbooks/`: copy-ready prompts for Ask, Code, Review, Debug, Delegate, and Release flows.
-- `automations/`: recurring task recipes for triage, release readiness, dependency watch, and docs drift.
+- `skills/`: installable Codex Skills across engineering, high-reasoning business work, and low-reasoning office automation.
+- `playbooks/`: copy-ready prompts for clarify, execute, review, decision, delegation, and release work.
+- `automations/`: recurring task recipes for engineering plus weekly business, close, hiring, legal intake, operations, and marketing routines.
 - `mcp/`: practical guidance for choosing and rolling out MCP servers without overloading the team.
-- `templates/`: reusable project brief and release checklist starters.
-- `scripts/`: cross-platform skill installers plus a pack validator.
+- `templates/`: reusable department templates for PM, finance, HR, legal, operations, marketing, and cross-functional work.
+- `workspaces/`: starter workspace kits for PM, finance, HR, legal, ops, and marketing teams.
+- `scripts/`: cross-platform skill installers, workspace quick-start scripts, and a pack validator.
 - `web/`: a Next.js docs site for publishing the kit as a public open-source project.
 
 ## Who it is for
 
-- Individual developers who want Codex to behave more like a disciplined staff engineer.
-- Teams using ChatGPT plus Codex-style workflows that need repeatable prompts, review standards, and operational templates.
+- Individual operators, analysts, managers, and developers who want Codex to behave more like a disciplined specialist.
+- Teams using ChatGPT plus Codex-style workflows that need repeatable prompts, review standards, and operational templates across knowledge work.
+- Office-heavy teams that want Codex to handle status assembly, follow-up drafting, intake routing, KPI packaging, and other repeatable workflow chores.
 - Maintainers who want a publishable starter repo instead of a private pile of prompts.
 
 ## Quick start
@@ -27,7 +29,7 @@ CodexKit is a fresh project rebuilt around the surfaces that matter in Codex tod
 Windows PowerShell:
 
 ```powershell
-pwsh ./scripts/install-skills.ps1
+.\scripts\install-skills.ps1
 ```
 
 macOS / Linux:
@@ -36,7 +38,25 @@ macOS / Linux:
 bash ./scripts/install-skills.sh
 ```
 
-By default, both scripts copy every folder from `skills/` into `~/.codex/skills`.
+By default, both scripts copy every folder from `skills/` into `$HOME/.agents/skills`, which matches the user-scope Codex Skills location documented by OpenAI.
+
+For repository-scoped discovery, install the pack into `.agents/skills` inside the repo:
+
+Windows PowerShell:
+
+```powershell
+.\scripts\install-skills.ps1 -Destination .\.agents\skills
+```
+
+macOS / Linux:
+
+```bash
+CODEXKIT_DESTINATION=./.agents/skills bash ./scripts/install-skills.sh
+```
+
+Codex scans `.agents/skills` from the current working directory up to the repository root, then also checks `$HOME/.agents/skills`. If an update does not appear immediately, restart Codex.
+
+Codex can use skills through explicit invocation or implicit description matching. In CLI and IDE workflows, use `/skills` or type `$` to mention a skill directly. CodexKit keeps `codexkit-cloud-delegation` and `codexkit-automation-designer` explicit-only to avoid accidental activation on sensitive workflows.
 
 ### 2. Validate the pack
 
@@ -46,36 +66,58 @@ node ./scripts/validate-pack.mjs
 
 ### 3. Run the documentation site
 
+Use Node `20.9+` and npm `10+` for the docs app and local validation workflow.
+
 ```bash
 npm --prefix web install
 npm run dev
 ```
 
+### 4. Start from a department workspace
+
+Copy one folder from `workspaces/` into your own repo or operating folder, then adapt the files to your context. Each starter workspace is opinionated on cadence, core artifacts, and the mix of high-reasoning versus routine automation work.
+
+You can also scaffold from the command line:
+
+```powershell
+.\scripts\quick-start.ps1 -List
+.\scripts\quick-start.ps1 -Starter project-management-office -Destination .\acme-pmo
+```
+
+```bash
+bash ./scripts/quick-start.sh --list
+bash ./scripts/quick-start.sh --starter finance-performance-desk --destination ./acme-finance
+```
+
 ## Recommended adoption path
 
-1. Install the skills into your local Codex environment.
-2. Pick two or three playbooks that match your most common workflow.
-3. Tailor the automation recipes to your repo and operating cadence.
-4. Add the project brief and release checklist templates to your delivery process.
-5. Publish the docs site after replacing any placeholder organization metadata.
+1. Install the skills into `$HOME/.agents/skills` or copy selected skills into repo-local `.agents/skills`.
+2. Pick one starter workspace that matches your function and adapt its files to your real cadence.
+3. Start with one high-reasoning skill and one low-reasoning automation skill that match your most common workflow.
+4. Tailor the automation recipes to your repo and operating cadence.
+5. Add the department templates you will actually reuse, not every template in the pack.
+6. Publish the docs site after replacing any placeholder organization metadata.
 
 ## Folder map
 
 ```text
 CodexKit/
-├── automations/
-├── mcp/
-├── playbooks/
-├── scripts/
-├── skills/
-├── templates/
-└── web/
+|-- automations/
+|-- mcp/
+|-- playbooks/
+|-- scripts/
+|-- skills/
+|-- templates/
+|-- workspaces/
+`-- web/
 ```
 
 ## Design principles
 
 - Codex-first, not assistant-agnostic.
 - Small set of sharp assets over a giant pile of generic prompts.
+- High-reasoning knowledge work deserves first-class skills, not just code prompts.
+- Routine coordination work should be automated with low-noise, low-drama skills and templates.
 - Review output must be risk-ranked and actionable.
 - Automations must include guardrails, not just schedules.
 - MCP adoption should be intentional, observable, and reversible.
@@ -86,6 +128,11 @@ CodexKit/
 - contribution, security, and conduct docs included
 - install scripts for multiple environments
 - validation script for pack structure
+- skill metadata via `agents/openai.yaml` for better Codex app presentation
+- starter workspaces that help teams adopt CodexKit without designing their operating system from scratch
+- CI workflow for pack validation and docs build
+- release workflow with packaged skill-pack artifacts
+- Dependabot updates for GitHub Actions and the docs app
 - separate docs app ready to publish
 
 ## Publish checklist
@@ -93,7 +140,7 @@ CodexKit/
 - Update repository URLs in docs and package metadata.
 - Replace placeholder maintainer details where needed.
 - Add screenshots or a short demo GIF to the docs site.
-- Tag `v0.1.0` after validating the pack and docs build.
+- Tag `v0.3.0` after validating the pack and docs build.
 
 ## Related files
 
@@ -102,3 +149,4 @@ CodexKit/
 - [NOTICE.md](./NOTICE.md)
 - [templates/project-brief.md](./templates/project-brief.md)
 - [templates/release-checklist.md](./templates/release-checklist.md)
+- [workspaces/README.md](./workspaces/README.md)

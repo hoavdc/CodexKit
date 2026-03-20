@@ -1,0 +1,4 @@
+interface:
+  display_name: "Talent Review Calibrator"
+  short_description: "Structure talent reviews, succession risk, and development actions with evidence-based calibration."
+  brand_color: "#0F766E"

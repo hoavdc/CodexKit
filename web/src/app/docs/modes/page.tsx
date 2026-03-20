@@ -14,7 +14,7 @@ export default function ModesPage() {
         <div className="eyebrow mb-5">Modes</div>
         <h1 className="section-title">Choose the operating surface before choosing the prompt.</h1>
         <p className="mt-4 text-base leading-8 text-muted-foreground">
-          CodexKit is built around the idea that most delivery mistakes start from using the wrong mode: coding before clarifying, reviewing without a risk model, or delegating work that should have stayed on the critical path.
+          CodexKit is built around the idea that most work mistakes start from using the wrong mode: drafting before clarifying the decision, reviewing without a risk model, or delegating work that should have stayed on the critical path.
         </p>
       </div>
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Data Story Builder"
+  short_description: "Turn KPI movement and analytics into a narrative leaders can interpret and act on."
+  brand_color: "#0F766E"

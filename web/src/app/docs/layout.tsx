@@ -5,7 +5,7 @@ import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: "Documentation",
-  description: "Documentation for CodexKit: skills, modes, playbooks, automations, and MCP onboarding.",
+  description: "Documentation for CodexKit: skills, templates, workspaces, playbooks, automations, and MCP onboarding.",
 };
 
 export default function DocsLayout({
@@ -35,7 +35,8 @@ export default function DocsLayout({
               <div className="space-y-2 text-xs text-zinc-600 dark:text-zinc-400">
                 <p>Start with installation, then pick the mode your team uses most.</p>
                 <p>Skills are for local Codex installs.</p>
-                <p>Playbooks and templates stay portable for ChatGPT-heavy teams.</p>
+                <p>Templates and starter workspaces help teams adopt the kit without designing everything from zero.</p>
+                <p>Playbooks stay portable for ChatGPT-heavy teams.</p>
               </div>
             </div>
           </aside>

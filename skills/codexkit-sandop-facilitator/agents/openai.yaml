@@ -1,0 +1,4 @@
+interface:
+  display_name: "S&OP Facilitator"
+  short_description: "Run integrated business planning with demand, supply, inventory, capacity, and executive tradeoffs."
+  brand_color: "#0F766E"

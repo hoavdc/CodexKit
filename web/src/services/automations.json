@@ -18,5 +18,35 @@
     "name": "Docs drift check",
     "cadence": "Weekly",
     "description": "Detect when onboarding docs no longer match scripts, entrypoints, or setup flow."
+  },
+  {
+    "name": "Weekly project pulse",
+    "cadence": "Weekly",
+    "description": "Assemble status, RAID movement, and executive asks into a repeatable project pulse."
+  },
+  {
+    "name": "Monthly close watch",
+    "cadence": "Monthly",
+    "description": "Summarize finance close blockers, reconciliations at risk, and decisions that need escalation."
+  },
+  {
+    "name": "Hiring funnel check",
+    "cadence": "Weekly",
+    "description": "Collapse candidate stage movement, stale feedback, and scheduling bottlenecks into one operating view."
+  },
+  {
+    "name": "Contract intake digest",
+    "cadence": "Daily",
+    "description": "Route incoming legal requests into priority, missing information, and likely review path."
+  },
+  {
+    "name": "Ops exception scan",
+    "cadence": "Weekly",
+    "description": "Flag metric misses, recurring exceptions, and owner follow-ups for the next control review."
+  },
+  {
+    "name": "Content calendar refresh",
+    "cadence": "Weekly",
+    "description": "Turn launch and campaign changes into an updated publishing calendar, dependencies, and risks."
   }
 ]

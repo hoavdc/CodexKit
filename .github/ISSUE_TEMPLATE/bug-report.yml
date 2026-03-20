@@ -1,0 +1,59 @@
+name: Bug report
+description: Report a defect in a skill, script, docs page, or release asset.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not use this form for sensitive security reports. Follow `SECURITY.md` instead.
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Affected surface
+      description: Which part of CodexKit is broken?
+      options:
+        - Skill pack
+        - Install scripts
+        - Docs site
+        - Playbooks or templates
+        - Release packaging
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Current behavior
+      description: What actually happened?
+      placeholder: Describe the failure clearly and concretely.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: What should have happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Include commands, OS, and relevant file paths.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: validation
+    attributes:
+      label: Extra context
+      description: Logs, screenshots, or notes that narrow the failure.

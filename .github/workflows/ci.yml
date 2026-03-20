@@ -1,0 +1,75 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-pack:
+    name: Validate Pack (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate pack structure
+        run: node ./scripts/validate-pack.mjs
+
+      - name: Smoke install on Unix
+        if: runner.os != 'Windows'
+        run: |
+          bash ./scripts/install-skills.sh --destination ./.tmp/skills --force
+          test -f ./.tmp/skills/codexkit-execution-planner/SKILL.md
+          test "$(find ./.tmp/skills -mindepth 1 -maxdepth 1 -type d | wc -l)" -eq 9
+
+      - name: Smoke install on Windows
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          ./scripts/install-skills.ps1 -Destination .\.tmp\skills -Force
+          if (-not (Test-Path .\.tmp\skills\codexkit-execution-planner\SKILL.md)) { throw "Missing installed skill." }
+          $count = (Get-ChildItem .\.tmp\skills -Directory).Count
+          if ($count -ne 9) { throw "Expected 9 installed skills, got $count." }
+
+  docs:
+    name: Docs Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install docs dependencies
+        run: npm ci --prefix web
+
+      - name: Lint docs app
+        run: npm --prefix web run lint
+
+      - name: Build docs app
+        run: npm --prefix web run build

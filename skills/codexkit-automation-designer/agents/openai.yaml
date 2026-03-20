@@ -1,0 +1,6 @@
+interface:
+  display_name: "Automation Designer"
+  short_description: "Design safe recurring Codex automations with clear prompts, outputs, schedules, and gating rules."
+  brand_color: "#0F766E"
+policy:
+  allow_implicit_invocation: false

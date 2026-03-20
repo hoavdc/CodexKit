@@ -1,0 +1,4 @@
+interface:
+  display_name: "Content Calendar Assembler"
+  short_description: "Turn campaign inputs into a content calendar, workback plan, and dependency view."
+  brand_color: "#0F766E"

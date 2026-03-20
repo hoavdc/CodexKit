@@ -14,7 +14,7 @@ export default function AutomationsPage() {
         <div className="eyebrow mb-5">Automations</div>
         <h1 className="section-title">Recurring Codex work should have output owners and skip logic.</h1>
         <p className="mt-4 text-base leading-8 text-muted-foreground">
-          CodexKit treats automations as operational tools, not novelty demos. Every recipe should define who reads the output, when the task should stay quiet, and how to keep repeated runs from becoming background noise.
+          CodexKit treats automations as operational tools, not novelty demos. Every recipe should define who reads the output, when the task should stay quiet, and how to keep repeated runs from becoming background noise whether the work is engineering, finance close, hiring ops, legal intake, or weekly operating reviews.
         </p>
       </div>
 
@@ -39,6 +39,10 @@ export default function AutomationsPage() {
       </section>
 
       <section className="grid gap-4 sm:grid-cols-2">
+        <Link href="/docs/templates" className="panel p-6 transition-transform hover:-translate-y-0.5">
+          <h3 className="text-lg font-semibold">Templates</h3>
+          <p className="mt-2 text-sm leading-7 text-muted-foreground">Use templates to keep recurring automation output readable and consistent.</p>
+        </Link>
         <Link href="/docs/playbooks" className="panel p-6 transition-transform hover:-translate-y-0.5">
           <h3 className="text-lg font-semibold">Playbooks</h3>
           <p className="mt-2 text-sm leading-7 text-muted-foreground">Use playbooks to refine the human-readable version of the recurring task.</p>

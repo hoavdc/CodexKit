@@ -1,0 +1,50 @@
+name: Feature request
+description: Propose a narrowly scoped improvement to the skill pack, docs, or release process.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What workflow pain or user need is not covered today?
+      placeholder: Describe the concrete gap.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Target area
+      options:
+        - Skill pack
+        - Docs site
+        - Playbooks
+        - Automations
+        - MCP guides
+        - Release or CI
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Keep this bounded and implementation-aware.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What have you ruled out, and why?
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This proposal does not just add more prompt volume without a distinct workflow benefit.
+          required: true

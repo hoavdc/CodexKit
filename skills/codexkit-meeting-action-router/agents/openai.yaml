@@ -1,0 +1,4 @@
+interface:
+  display_name: "Meeting Action Router"
+  short_description: "Turn notes or transcripts into decisions, actions, owners, and recap text."
+  brand_color: "#0F766E"

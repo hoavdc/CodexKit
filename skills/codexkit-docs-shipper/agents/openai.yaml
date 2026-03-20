@@ -1,0 +1,4 @@
+interface:
+  display_name: "Docs Shipper"
+  short_description: "Update README, migration notes, changelogs, and operator-facing docs so shipped changes remain understandable after release."
+  brand_color: "#0F766E"

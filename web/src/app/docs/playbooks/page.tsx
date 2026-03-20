@@ -14,7 +14,7 @@ export default function PlaybooksPage() {
         <div className="eyebrow mb-5">Playbooks</div>
         <h1 className="section-title">Portable prompts for teams that need Codex discipline everywhere.</h1>
         <p className="mt-4 text-base leading-8 text-muted-foreground">
-          Playbooks are copy-ready prompt structures. They complement local skills and keep the operating model portable across ChatGPT, Code Review, and other places where you still need the same engineering standard.
+          Playbooks are copy-ready prompt structures. They complement local skills and keep the operating model portable across ChatGPT, Code Review, and other places where you still need the same operating standard.
         </p>
       </div>
 

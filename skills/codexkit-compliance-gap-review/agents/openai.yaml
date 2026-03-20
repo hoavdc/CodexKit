@@ -1,0 +1,6 @@
+interface:
+  display_name: "Compliance Gap Review"
+  short_description: "Map policies and evidence against AML, privacy, audit, or control requirements with remediation priorities."
+  brand_color: "#0F766E"
+policy:
+  allow_implicit_invocation: false

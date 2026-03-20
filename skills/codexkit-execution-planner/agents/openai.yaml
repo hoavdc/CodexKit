@@ -1,0 +1,4 @@
+interface:
+  display_name: "Execution Planner"
+  short_description: "Turn ambiguous requests into an executable implementation plan with assumptions, sequence, acceptance checks, and rollback thinking."
+  brand_color: "#0F766E"

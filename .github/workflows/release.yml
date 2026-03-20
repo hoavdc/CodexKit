@@ -1,0 +1,51 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install docs dependencies
+        run: npm ci --prefix web
+
+      - name: Validate release candidate
+        run: npm run check
+
+      - name: Package release assets
+        run: |
+          git archive --format=zip --output "codexkit-source-${GITHUB_REF_NAME}.zip" HEAD
+          mkdir -p release/codexkit-skill-pack
+          cp -R skills scripts release/codexkit-skill-pack/
+          cp README.md LICENSE NOTICE.md release/codexkit-skill-pack/
+          cd release
+          zip -r "../codexkit-skill-pack-${GITHUB_REF_NAME}.zip" codexkit-skill-pack
+
+      - name: Publish GitHub release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            "codexkit-source-${GITHUB_REF_NAME}.zip" \
+            "codexkit-skill-pack-${GITHUB_REF_NAME}.zip" \
+            --generate-notes \
+            --verify-tag

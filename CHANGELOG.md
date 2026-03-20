@@ -7,6 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-03-20
+
+### Added
+
+- Nine low-reasoning office automation skills for inbox triage, meeting action routing, follow-up drafting, status packaging, finance close coordination, hiring ops, contract intake, KPI packaging, and content calendar assembly.
+- Department templates for PM, finance, HR, legal, operations, marketing, and repeatable cross-functional update work.
+- Starter workspaces for PM, finance, HR, legal, operations, and marketing teams.
+- Additional automation recipes for recurring business workflows.
+
+### Changed
+
+- CodexKit is now positioned as a work operating system for engineering, high-reasoning knowledge work, and routine office operations.
+- Pack validation now checks starter workspace structure in addition to skills, playbooks, automations, MCP guides, and templates.
+
+## [0.2.0] - 2026-03-20
+
+### Added
+
+- Thirteen new CodexKit skills for project governance, portfolio risk, executive briefs, finance variance analysis, contract review, compliance gap review, talent calibration, S&OP, strategy scorecards, data storytelling, brand positioning, DMAIC improvement, and CX QBR preparation.
+- GitHub issue templates, pull request template, CI workflow, release workflow, and Dependabot configuration for public maintenance.
+
+### Changed
+
+- CodexKit is now positioned as a work operating kit for both engineering and high-reasoning office work, not just software delivery.
+- Codex Skills installation and docs now follow `.agents/skills` discovery plus `agents/openai.yaml` metadata.
+- Docs app dependency policy now targets patched Next.js 16.2.0 line.
+
 ## [0.1.0] - 2026-03-20
 
 ### Added
@@ -18,5 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Cross-platform skill installation scripts and a validation script.
 - New docs site positioned for OpenAI Codex and ChatGPT users.
 
-[Unreleased]: https://example.com/codexkit/compare/v0.1.0...HEAD
+[Unreleased]: https://example.com/codexkit/compare/v0.3.0...HEAD
+[0.3.0]: https://example.com/codexkit/releases/tag/v0.3.0
+[0.2.0]: https://example.com/codexkit/releases/tag/v0.2.0
 [0.1.0]: https://example.com/codexkit/releases/tag/v0.1.0

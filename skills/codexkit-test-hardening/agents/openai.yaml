@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Hardening"
+  short_description: "Strengthen test coverage around changed behavior, edge cases, and regressions without writing noisy or brittle tests."
+  brand_color: "#0F766E"

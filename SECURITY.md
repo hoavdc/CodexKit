@@ -2,6 +2,12 @@
 
 If you find a security issue in CodexKit, please report it privately before opening a public issue.
 
+## Supported versions
+
+| Version | Supported |
+| --- | --- |
+| 0.1.x | Yes |
+
 ## What to report
 
 - scripts that write to unsafe locations
@@ -11,7 +17,7 @@ If you find a security issue in CodexKit, please report it privately before open
 
 ## How to report
 
-Open a private security advisory in your Git hosting platform or contact the maintainers through the repository security channel after publishing.
+Open a private security advisory in your Git hosting platform. If private vulnerability reporting is not enabled yet, contact the maintainers through the repository security channel and avoid posting exploit details in a public issue.
 
 ## Response goals
 

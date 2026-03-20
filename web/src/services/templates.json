@@ -1,0 +1,52 @@
+[
+  {
+    "name": "project-brief",
+    "department": "Cross-functional",
+    "description": "Frame objective, users, constraints, non-goals, first slice, and acceptance criteria."
+  },
+  {
+    "name": "release-checklist",
+    "department": "Engineering",
+    "description": "Check verification, documentation, rollout path, and rollback readiness before shipping."
+  },
+  {
+    "name": "weekly-priority-digest",
+    "department": "Cross-functional",
+    "description": "Summarize top priorities, blockers, decisions needed, and owner actions for the week."
+  },
+  {
+    "name": "meeting-action-log",
+    "department": "Cross-functional",
+    "description": "Capture decisions, owners, due dates, follow-ups, and unresolved questions from meetings."
+  },
+  {
+    "name": "project-steering-update",
+    "department": "Project Management",
+    "description": "Package milestone movement, RAID changes, decisions needed, and executive attention points."
+  },
+  {
+    "name": "finance-monthly-variance-pack",
+    "department": "Finance",
+    "description": "Translate actual versus plan movement into drivers, actions, and decisions."
+  },
+  {
+    "name": "hr-talent-calibration-pack",
+    "department": "HR",
+    "description": "Structure talent health, succession risk, hiring movement, and development actions."
+  },
+  {
+    "name": "legal-contract-intake-summary",
+    "department": "Legal",
+    "description": "Standardize incoming contract requests, missing info, risk notes, and routing path."
+  },
+  {
+    "name": "ops-weekly-control-tower",
+    "department": "Operations",
+    "description": "Highlight KPI movement, exceptions, root causes in progress, and owner commitments."
+  },
+  {
+    "name": "marketing-campaign-brief",
+    "department": "Marketing",
+    "description": "Align audience, message, channels, launch timing, asset owners, and success measures."
+  }
+]

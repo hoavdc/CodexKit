@@ -2,12 +2,12 @@
   {
     "name": "ask-discover",
     "description": "Convert a fuzzy request into a brief with constraints, unknowns, and acceptance criteria.",
-    "surface": "Ask"
+    "surface": "Clarify"
   },
   {
     "name": "code-implement",
     "description": "Push Codex into implementation with explicit verification and limited edit scope.",
-    "surface": "Code"
+    "surface": "Execute"
   },
   {
     "name": "review-risk",
@@ -17,16 +17,31 @@
   {
     "name": "debug-production",
     "description": "Work from observed versus expected behavior toward a safe fix.",
-    "surface": "Code"
+    "surface": "Execute"
   },
   {
     "name": "delegate-cloud-task",
     "description": "Split a large task into safe delegated units with clear outputs.",
-    "surface": "Delegate"
+    "surface": "Delegation"
   },
   {
     "name": "prepare-release",
     "description": "Check build, tests, docs, rollback path, and release notes before shipping.",
     "surface": "Review"
+  },
+  {
+    "name": "write-decision-memo",
+    "description": "Turn a messy business choice into a concise decision memo with recommendation, tradeoffs, and asks.",
+    "surface": "Decision"
+  },
+  {
+    "name": "meeting-to-actions",
+    "description": "Convert notes, transcripts, or bullets into decisions, owners, dates, and a tight recap.",
+    "surface": "Execute"
+  },
+  {
+    "name": "status-synthesis",
+    "description": "Collapse scattered updates into a clear status narrative, risks, and next-step summary.",
+    "surface": "Execute"
   }
 ]

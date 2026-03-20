@@ -1,0 +1,4 @@
+interface:
+  display_name: "MCP Onboarding"
+  short_description: "Evaluate and phase MCP adoption with a bias toward the smallest set of integrations that materially improve engineering work."
+  brand_color: "#0F766E"

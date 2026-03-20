@@ -1,0 +1,4 @@
+interface:
+  display_name: "Contract Intake Router"
+  short_description: "Standardize incoming contract requests into routing, missing info, and priority."
+  brand_color: "#0F766E"

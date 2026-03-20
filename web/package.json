@@ -1,8 +1,12 @@
 {
   "name": "codexkit-docs",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "private": true,
-  "description": "Documentation site for CodexKit.",
+  "description": "Documentation site for CodexKit, an open-source operating kit for engineering, high-reasoning work, and office automation.",
+  "engines": {
+    "node": ">=20.9.0",
+    "npm": ">=10"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,11 +17,11 @@
     "@base-ui/react": "^1.1.0",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
-    "@next/mdx": "^16.1.6",
+    "@next/mdx": "^16.2.0",
     "@types/mdx": "^2.0.13",
     "class-variance-authority": "^0.7.1",
     "lucide-react": "^0.562.0",
-    "next": "16.1.3",
+    "next": "16.2.0",
     "next-themes": "^0.4.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -32,7 +36,7 @@
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
-    "eslint-config-next": "16.1.3",
+    "eslint-config-next": "16.2.0",
     "gray-matter": "^4.0.3",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-pretty-code": "^0.14.1",
@@ -41,5 +45,30 @@
     "shiki": "^3.22.0",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "overrides": {
+    "ajv": "^6.14.0",
+    "flatted": "^3.4.1",
+    "eslint": {
+      "minimatch": "^3.1.4"
+    },
+    "@eslint/config-array": {
+      "minimatch": "^3.1.4"
+    },
+    "@eslint/eslintrc": {
+      "minimatch": "^3.1.4"
+    },
+    "eslint-plugin-import": {
+      "minimatch": "^3.1.4"
+    },
+    "eslint-plugin-jsx-a11y": {
+      "minimatch": "^3.1.4"
+    },
+    "eslint-plugin-react": {
+      "minimatch": "^3.1.4"
+    },
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "^9.0.7"
+    }
   }
 }

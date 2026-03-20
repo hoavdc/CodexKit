@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ops KPI Packager"
+  short_description: "Format KPI snapshots, exception flags, and owner follow-ups for routine ops reviews."
+  brand_color: "#0F766E"

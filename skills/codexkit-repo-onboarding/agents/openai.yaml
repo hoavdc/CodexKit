@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repo Onboarding"
+  short_description: "Rapidly map a new codebase, identify the runtime model, risk zones, and first high-value next steps."
+  brand_color: "#0F766E"

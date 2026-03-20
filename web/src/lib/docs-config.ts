@@ -13,6 +13,14 @@ export const docsConfig = {
       href: "/docs/skills",
     },
     {
+      title: "Templates",
+      href: "/docs/templates",
+    },
+    {
+      title: "Workspaces",
+      href: "/docs/workspaces",
+    },
+    {
       title: "Playbooks",
       href: "/docs/playbooks",
     },
@@ -29,6 +37,10 @@ export const docsConfig = {
           title: "Installation",
           href: "/docs/installation",
         },
+        {
+          title: "Workspaces",
+          href: "/docs/workspaces",
+        },
       ],
     },
     {
@@ -41,6 +53,10 @@ export const docsConfig = {
         {
           title: "Skills",
           href: "/docs/skills",
+        },
+        {
+          title: "Templates",
+          href: "/docs/templates",
         },
         {
           title: "Playbooks",

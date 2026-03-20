@@ -1,0 +1,28 @@
+name: Docs improvement
+description: Report confusing, missing, or inaccurate documentation.
+title: "[Docs]: "
+labels:
+  - documentation
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page or file
+      description: Which docs page or markdown file needs work?
+      placeholder: README.md or /docs/installation
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is unclear or incorrect?
+      placeholder: Explain what a user would misunderstand.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested fix
+      description: Include wording or structure changes if you have them.

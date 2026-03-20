@@ -1,0 +1,4 @@
+interface:
+  display_name: "High-Signal Review"
+  short_description: "Review changes with a risk-first mindset that prioritizes bugs, regressions, missing tests, and operational gaps."
+  brand_color: "#0F766E"

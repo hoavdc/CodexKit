@@ -1,0 +1,4 @@
+interface:
+  display_name: "DMAIC Improvement Charter"
+  short_description: "Define a Lean Six Sigma improvement project with scope, baseline, CTQs, and improvement path."
+  brand_color: "#0F766E"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Finance Variance Story"
+  short_description: "Turn budget or forecast variances into an actionable finance narrative with drivers and actions."
+  brand_color: "#0F766E"

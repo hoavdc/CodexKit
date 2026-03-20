@@ -4,6 +4,7 @@ import {
   Bot,
   Boxes,
   Clock3,
+  FolderKanban,
   Radar,
   ShieldCheck,
   Sparkles,
@@ -13,29 +14,33 @@ import automations from "@/services/automations.json";
 import modes from "@/services/modes.json";
 import playbooks from "@/services/playbooks.json";
 import skills from "@/services/skills.json";
+import templates from "@/services/templates.json";
+import workspaces from "@/services/workspaces.json";
 
 const pillars = [
   {
     icon: Bot,
     title: "Codex-native skills",
-    body: "Install the pack into your local Codex setup and keep the behavior close to real software delivery work.",
+    body: "Install the pack into $HOME/.agents/skills or repo-local .agents/skills and keep Codex close to real engineering, business, and office operations work.",
   },
   {
     icon: Workflow,
-    title: "High-signal playbooks",
-    body: "Prompt patterns for Ask, Code, Review, and Delegate flows without generic assistant fluff.",
+    title: "Two-speed operating model",
+    body: "Use high-reasoning skills for decisions and analysis, then pair them with low-reasoning automation skills for routine coordination work.",
   },
   {
     icon: ShieldCheck,
     title: "Operational guardrails",
-    body: "Automation recipes, release templates, and MCP guidance focused on control, not novelty.",
+    body: "Automation recipes, department templates, starter workspaces, and MCP guidance focused on control, not novelty.",
   },
 ];
 
 const rollout = [
-  "Install the skills into ~/.codex/skills and restart Codex.",
-  "Adopt one playbook for planning and one for review.",
-  "Introduce automations only after output shape and owners are clear.",
+  "Install the skills into $HOME/.agents/skills or repo-local .agents/skills, then restart Codex if they do not appear.",
+  "Choose one starter workspace that matches your function before you add more process.",
+  "Use $skill or /skills when you want a specific workflow instead of relying on description matching.",
+  "Adopt one high-reasoning skill and one low-reasoning automation skill before expanding further.",
+  "Introduce automations only after output shape, owner, and skip logic are clear.",
 ];
 
 export default function Home() {
@@ -52,10 +57,10 @@ export default function Home() {
               </div>
               <div className="space-y-4">
                 <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-foreground sm:text-6xl">
-                  CodexKit turns prompt chaos into a repeatable engineering workflow.
+                  CodexKit turns prompt chaos into a repeatable work operating system.
                 </h1>
                 <p className="max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
-                  A Codex-first starter repo with installable skills, review playbooks, automation recipes, and MCP onboarding guides for teams that want a sharper engineering operating model.
+                  A Codex-first starter repo with installable skills, templates, and workspace kits for engineering, project management, finance, legal, HR, operations, strategy, analytics, marketing, and CX.
                 </p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">
@@ -73,7 +78,7 @@ export default function Home() {
                   Install the skill pack
                 </Link>
               </div>
-              <div className="grid gap-4 sm:grid-cols-3">
+              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
                 <div className="rounded-3xl border border-border/80 bg-card/70 p-5">
                   <div className="text-3xl font-semibold">{skills.length}</div>
                   <div className="mt-1 text-sm text-muted-foreground">Codex skills</div>
@@ -86,6 +91,14 @@ export default function Home() {
                   <div className="text-3xl font-semibold">{automations.length}</div>
                   <div className="mt-1 text-sm text-muted-foreground">Automation recipes</div>
                 </div>
+                <div className="rounded-3xl border border-border/80 bg-card/70 p-5">
+                  <div className="text-3xl font-semibold">{templates.length}</div>
+                  <div className="mt-1 text-sm text-muted-foreground">Templates</div>
+                </div>
+                <div className="rounded-3xl border border-border/80 bg-card/70 p-5">
+                  <div className="text-3xl font-semibold">{workspaces.length}</div>
+                  <div className="mt-1 text-sm text-muted-foreground">Starter workspaces</div>
+                </div>
               </div>
             </div>
 
@@ -96,7 +109,7 @@ export default function Home() {
                   Starter commands
                 </div>
                 <pre className="overflow-x-auto text-sm leading-7 text-[#f8f3ea]">
-                  <code>{`pwsh ./scripts/install-skills.ps1
+                  <code>{`.\\scripts\\install-skills.ps1
 node ./scripts/validate-pack.mjs
 npm --prefix web run dev`}</code>
                 </pre>
@@ -143,7 +156,7 @@ npm --prefix web run dev`}</code>
             </div>
             <h2 className="section-title">CodexKit starts with how Codex actually gets used.</h2>
             <p className="mt-4 text-base leading-8 text-muted-foreground">
-              Instead of inventing fantasy agent hierarchies, the kit centers the real working surfaces teams depend on: discovery, implementation, review, bounded delegation, and recurring background work.
+              Instead of inventing fantasy agent hierarchies, the kit centers the real working surfaces teams depend on: discovery, analysis, writing, decision support, delivery, bounded delegation, and recurring background work.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -164,15 +177,21 @@ npm --prefix web run dev`}</code>
             <div className="eyebrow mb-5">What ships</div>
             <div className="space-y-5">
               <div>
-                <h3 className="text-2xl font-semibold">Installable assets for Codex users</h3>
+                <h3 className="text-2xl font-semibold">Installable assets for knowledge work and delivery</h3>
                 <p className="mt-2 text-sm leading-7 text-muted-foreground">
-                  Skills live in plain folders with SKILL.md, references, and reusable guidance that can be installed into the local Codex environment.
+                  Skills ship as plain folders with <code>SKILL.md</code>, optional <code>agents/openai.yaml</code>, and reusable guidance for engineering, project governance, executive communication, finance, legal, people ops, supply chain, strategy, analytics, marketing, CX, and low-reasoning office work.
                 </p>
               </div>
               <div>
                 <h3 className="text-2xl font-semibold">Portable workflows for ChatGPT users</h3>
                 <p className="mt-2 text-sm leading-7 text-muted-foreground">
-                  Playbooks and templates work even when local skill installation is not available, which keeps the repo useful across the wider OpenAI workflow surface.
+                  Playbooks, templates, and starter workspaces work even when local skill installation is not available, which keeps the repo useful across the wider OpenAI workflow surface.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold">Starter kits for real teams</h3>
+                <p className="mt-2 text-sm leading-7 text-muted-foreground">
+                  Department workspaces give PM, finance, HR, legal, ops, and marketing teams a working spine instead of a blank folder and a vague prompt.
                 </p>
               </div>
             </div>
@@ -184,9 +203,20 @@ npm --prefix web run dev`}</code>
                 <div className="text-lg font-semibold">Skills</div>
                 <p className="mt-2 text-sm text-muted-foreground">Browse the installable CodexKit skill pack.</p>
               </Link>
+              <Link href="/docs/templates" className="rounded-3xl border border-border/80 bg-card/70 p-5 transition-transform hover:-translate-y-0.5">
+                <div className="text-lg font-semibold">Templates</div>
+                <p className="mt-2 text-sm text-muted-foreground">See department-ready outputs for routine work and operating reviews.</p>
+              </Link>
+              <Link href="/docs/workspaces" className="rounded-3xl border border-border/80 bg-card/70 p-5 transition-transform hover:-translate-y-0.5">
+                <div className="flex items-center gap-2 text-lg font-semibold">
+                  <FolderKanban className="h-4 w-4" />
+                  Workspaces
+                </div>
+                <p className="mt-2 text-sm text-muted-foreground">Start from a packaged workspace instead of inventing one from scratch.</p>
+              </Link>
               <Link href="/docs/playbooks" className="rounded-3xl border border-border/80 bg-card/70 p-5 transition-transform hover:-translate-y-0.5">
                 <div className="text-lg font-semibold">Playbooks</div>
-                <p className="mt-2 text-sm text-muted-foreground">See how Ask, Code, Review, and Delegate prompts are structured.</p>
+                <p className="mt-2 text-sm text-muted-foreground">See how structured prompts support analysis, review, delivery, and release work.</p>
               </Link>
               <Link href="/docs/mcp" className="rounded-3xl border border-border/80 bg-card/70 p-5 transition-transform hover:-translate-y-0.5">
                 <div className="text-lg font-semibold">MCP</div>

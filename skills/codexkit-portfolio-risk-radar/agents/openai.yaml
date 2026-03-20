@@ -1,0 +1,4 @@
+interface:
+  display_name: "Portfolio Risk Radar"
+  short_description: "Build a true portfolio health view across RAID, dependencies, milestones, and escalations."
+  brand_color: "#0F766E"

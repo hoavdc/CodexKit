@@ -1,0 +1,4 @@
+interface:
+  display_name: "Inbox Priority Triage"
+  short_description: "Sort request backlogs into priorities, owners, and next actions."
+  brand_color: "#0F766E"

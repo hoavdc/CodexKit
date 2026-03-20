@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bug Hunt"
+  short_description: "Reproduce, isolate, patch, and verify defects with explicit expected-versus-observed behavior."
+  brand_color: "#0F766E"

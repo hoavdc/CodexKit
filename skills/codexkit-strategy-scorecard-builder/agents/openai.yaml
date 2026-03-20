@@ -1,0 +1,4 @@
+interface:
+  display_name: "Strategy Scorecard Builder"
+  short_description: "Translate strategy into a scorecard, strategy map, OKR bridge, and initiative portfolio."
+  brand_color: "#0F766E"

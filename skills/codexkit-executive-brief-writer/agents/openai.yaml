@@ -1,0 +1,4 @@
+interface:
+  display_name: "Executive Brief Writer"
+  short_description: "Write one-page decision briefs with recommendation, options, risks, and next steps."
+  brand_color: "#0F766E"
