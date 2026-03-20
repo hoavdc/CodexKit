@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-03-20
+
+### Added
+
+- **Skill Finder**: `skill-finder.md` — situation-based index for all 36 skills, organized by 8 categories.
+- **5 new office-productivity skills**: `codexkit-email-composer`, `codexkit-report-summarizer`, `codexkit-sprint-planning-assistant`, `codexkit-budget-variance-explainer`, `codexkit-presentation-outliner`.
+- **Vietnamese quick-start guide**: `HUONG-DAN-NHANH.md` — localized onboarding for Vietnamese office users.
+
+### Changed
+
+- All 10 templates now include detailed field instructions, usage tips, and worked examples.
+- All 9 playbooks now include concrete, real-world prompt examples.
+- Skill count increased from 31 to 36.
+
+
 ## [0.3.1] - 2026-03-20
 
 ### Added
@@ -59,7 +74,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Cross-platform skill installation scripts and a validation script.
 - New docs site positioned for OpenAI Codex and ChatGPT users.
 
-[Unreleased]: https://example.com/codexkit/compare/v0.3.1...HEAD
+[Unreleased]: https://example.com/codexkit/compare/v0.4.0...HEAD
+[0.4.0]: https://example.com/codexkit/releases/tag/v0.4.0
 [0.3.1]: https://example.com/codexkit/releases/tag/v0.3.1
 [0.3.0]: https://example.com/codexkit/releases/tag/v0.3.0
 [0.2.0]: https://example.com/codexkit/releases/tag/v0.2.0

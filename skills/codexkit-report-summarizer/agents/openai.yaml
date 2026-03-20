@@ -1,0 +1,4 @@
+interface:
+  display_name: "Report Summarizer"
+  short_description: "Condense long reports into structured summaries with key findings and actions."
+  brand_color: "#0F766E"

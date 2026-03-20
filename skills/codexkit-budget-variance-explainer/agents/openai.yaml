@@ -1,0 +1,4 @@
+interface:
+  display_name: "Budget Variance Explainer"
+  short_description: "Turn budget vs actual data into plain-language explanations with actions."
+  brand_color: "#0F766E"

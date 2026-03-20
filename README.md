@@ -6,7 +6,7 @@ CodexKit is a fresh project rebuilt around the surfaces that matter in Codex tod
 
 ## What is included
 
-- `skills/`: installable Codex Skills across engineering, high-reasoning business work, and low-reasoning office automation.
+- `skills/`: 36 installable Codex Skills across engineering, high-reasoning business work, and low-reasoning office automation.
 - `playbooks/`: copy-ready prompts for clarify, execute, review, decision, delegation, and release work.
 - `automations/`: recurring task recipes for engineering plus weekly business, close, hiring, legal intake, operations, and marketing routines.
 - `mcp/`: practical guidance for choosing and rolling out MCP servers without overloading the team.
@@ -14,6 +14,8 @@ CodexKit is a fresh project rebuilt around the surfaces that matter in Codex tod
 - `workspaces/`: starter workspace kits for PM, finance, HR, legal, ops, and marketing teams.
 - `scripts/`: cross-platform skill installers, workspace quick-start scripts, and a pack validator.
 - `web/`: a Next.js docs site for publishing the kit as a public open-source project.
+- `skill-finder.md`: situation-based skill index — "I need to… → Use this skill".
+- `HUONG-DAN-NHANH.md`: Vietnamese quick-start guide for non-technical office users.
 
 ## Who it is for
 
@@ -29,11 +31,13 @@ CodexKit is a fresh project rebuilt around the surfaces that matter in Codex tod
 If you do not want to use Git commands or remember terminal steps, use the GitHub release package:
 
 1. Open the Releases page for this repository.
-2. Download `codexkit-starter-pack-v0.3.1.zip`.
+2. Download `codexkit-starter-pack-v0.4.0.zip`.
 3. Unzip it anywhere on your computer.
 4. On Windows, double-click `START-HERE-WINDOWS.cmd`.
+   - If Codex is not installed, the script will show installation instructions.
 5. Restart Codex.
-6. In Codex, type `/skills` to confirm the pack appears.
+6. In Codex, type `/skills` to confirm all 36 skills appear.
+7. Open `skill-finder.md` to browse skills by situation.
 7. Optional: double-click `CREATE-WORKSPACE-WINDOWS.cmd` to create a starter workspace.
 
 For macOS or Linux, download the same release package, unzip it, then run:
@@ -149,7 +153,10 @@ CodexKit/
 |-- skills/
 |-- templates/
 |-- workspaces/
-`-- web/
+|-- web/
+|-- skill-finder.md
+|-- HUONG-DAN-NHANH.md
+`-- START-HERE-WINDOWS.cmd / START-HERE.sh
 ```
 
 ## Design principles
@@ -182,7 +189,7 @@ CodexKit/
 - Replace placeholder maintainer details where needed.
 - Add screenshots or a short demo GIF to the docs site.
 - Commit and push the release candidate branch or `main`.
-- Tag `v0.3.1` after validating the pack and docs build.
+- Tag `v0.4.0` after validating the pack and docs build.
 - Push the tag to trigger the GitHub release workflow.
 
 ## Release process
@@ -190,11 +197,11 @@ CodexKit/
 1. Update `package.json`, `web/package.json`, and `CHANGELOG.md`.
 2. Run `npm run check`.
 3. Commit and push the release commit.
-4. Create the tag: `git tag v0.3.1`
-5. Push the tag: `git push origin v0.3.1`
+4. Create the tag: `git tag v0.4.0`
+5. Push the tag: `git push origin v0.4.0`
 6. GitHub Actions publishes:
-   `codexkit-source-v0.3.1.zip`
-   `codexkit-starter-pack-v0.3.1.zip`
+   `codexkit-source-v0.4.0.zip`
+   `codexkit-starter-pack-v0.4.0.zip`
 
 ## Related files
 

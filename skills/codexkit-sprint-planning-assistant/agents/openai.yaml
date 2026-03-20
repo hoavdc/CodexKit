@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sprint Planning Assistant"
+  short_description: "Organize backlog, estimate effort, and produce sprint commitments."
+  brand_color: "#0F766E"

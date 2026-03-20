@@ -1,0 +1,4 @@
+interface:
+  display_name: "Presentation Outliner"
+  short_description: "Structure presentations into slide-by-slide outlines with key messages."
+  brand_color: "#0F766E"

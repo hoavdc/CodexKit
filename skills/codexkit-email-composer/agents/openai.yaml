@@ -1,0 +1,4 @@
+interface:
+  display_name: "Email Composer"
+  short_description: "Draft clear, professional business emails from rough notes or instructions."
+  brand_color: "#0F766E"

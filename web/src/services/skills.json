@@ -153,5 +153,30 @@
     "name": "codexkit-cx-qbr-preparer",
     "description": "Prepare QBRs and success reviews with adoption, ROI, risk, and next-quarter commitments.",
     "category": "Strategy, Analytics & Growth"
+  },
+  {
+    "name": "codexkit-email-composer",
+    "description": "Draft clear, professional business emails from rough notes, context, or instructions.",
+    "category": "Routine Automation & Office Ops"
+  },
+  {
+    "name": "codexkit-report-summarizer",
+    "description": "Condense long reports into structured summaries with key findings, implications, and actions.",
+    "category": "Knowledge Work & Communication"
+  },
+  {
+    "name": "codexkit-sprint-planning-assistant",
+    "description": "Organize backlog, estimate effort, balance capacity, and produce sprint commitment summaries.",
+    "category": "Project & Portfolio Management"
+  },
+  {
+    "name": "codexkit-budget-variance-explainer",
+    "description": "Turn budget vs actual data into plain-language explanations with actions for non-finance managers.",
+    "category": "Finance, Legal & Risk"
+  },
+  {
+    "name": "codexkit-presentation-outliner",
+    "description": "Structure presentations into slide-by-slide outlines with key messages and data callouts.",
+    "category": "Knowledge Work & Communication"
   }
 ]
