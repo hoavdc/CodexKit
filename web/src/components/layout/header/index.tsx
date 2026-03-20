@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import MobileMenu from "@/components/layout/header/components/mobile-menu";
 import SearchDialog from "@/components/layout/header/components/search-dialog";
@@ -15,8 +16,20 @@ export default function Header() {
               <MobileMenu />
             </div>
 
-            <Link href="/" className="shrink-0 rounded-full border border-border/80 bg-card/75 px-3 py-1.5 text-sm font-semibold">
-              CodexKit
+            <Link
+              href="/"
+              className="shrink-0 inline-flex items-center gap-2 rounded-full border border-border/80 bg-card/75 px-2.5 py-1.5 text-sm font-semibold"
+              aria-label="CodexKit home"
+            >
+              <Image
+                src="/images/codexkit-mark.svg"
+                alt="CodexKit logo"
+                width={28}
+                height={28}
+                className="h-7 w-7"
+                priority
+              />
+              <span>CodexKit</span>
             </Link>
 
             <nav className="hidden md:flex items-center gap-2 text-sm text-muted-foreground">
