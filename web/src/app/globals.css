@@ -1,0 +1,144 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #faf2e5;
+  --foreground: #171717;
+  --accent: rgba(17, 24, 39, 0.06);
+  --accent-foreground: #171717;
+  --border: rgba(17, 24, 39, 0.12);
+  --card: rgba(255, 255, 255, 0.78);
+  --card-foreground: #171717;
+  --destructive: #dc2626;
+  --destructive-foreground: #fef2f2;
+  --info: #0f766e;
+  --info-foreground: #f0fdfa;
+  --input: rgba(17, 24, 39, 0.12);
+  --muted: rgba(17, 24, 39, 0.05);
+  --muted-foreground: #57534e;
+  --popover: rgba(255, 255, 255, 0.92);
+  --popover-foreground: #171717;
+  --primary: #121212;
+  --primary-foreground: #fff9ef;
+  --ring: rgba(15, 118, 110, 0.55);
+  --secondary: rgba(255, 255, 255, 0.68);
+  --secondary-foreground: #171717;
+  --success: #166534;
+  --success-foreground: #f0fdf4;
+  --warning: #c2410c;
+  --warning-foreground: #fff7ed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Space Grotesk", "Aptos", "Segoe UI Variable Text", "Segoe UI",
+    sans-serif;
+  --font-mono: "IBM Plex Mono", "Cascadia Code", "SFMono-Regular", Consolas,
+    monospace;
+  --animate-skeleton: skeleton 2s -1s infinite linear;
+  --color-warning-foreground: var(--warning-foreground);
+  --color-warning: var(--warning);
+  --color-success-foreground: var(--success-foreground);
+  --color-success: var(--success);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-ring: var(--ring);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-input: var(--input);
+  --color-info-foreground: var(--info-foreground);
+  --color-info: var(--info);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-destructive: var(--destructive);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+
+  @keyframes skeleton {
+    to {
+      background-position: -200% 0;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(13, 148, 136, 0.18), transparent 32%),
+    radial-gradient(circle at top right, rgba(234, 88, 12, 0.18), transparent 36%),
+    linear-gradient(180deg, #fff9ef 0%, #f7eedf 52%, #f0e4cf 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+.dark {
+  --background: #0f1415;
+  --foreground: #f4efe7;
+  --accent: rgba(255, 255, 255, 0.06);
+  --accent-foreground: #f4efe7;
+  --border: rgba(255, 255, 255, 0.1);
+  --card: rgba(15, 20, 21, 0.76);
+  --card-foreground: #f4efe7;
+  --destructive: #ef4444;
+  --destructive-foreground: #fff1f2;
+  --info: #2dd4bf;
+  --info-foreground: #0f172a;
+  --input: rgba(255, 255, 255, 0.12);
+  --muted: rgba(255, 255, 255, 0.05);
+  --muted-foreground: #d6d3d1;
+  --popover: rgba(15, 20, 21, 0.94);
+  --popover-foreground: #f4efe7;
+  --primary: #fff3e0;
+  --primary-foreground: #121212;
+  --ring: rgba(45, 212, 191, 0.55);
+  --secondary: rgba(255, 255, 255, 0.05);
+  --secondary-foreground: #f4efe7;
+  --success: #4ade80;
+  --success-foreground: #052e16;
+  --warning: #fb923c;
+  --warning-foreground: #431407;
+}
+
+.dark body {
+  background:
+    radial-gradient(circle at top left, rgba(45, 212, 191, 0.12), transparent 32%),
+    radial-gradient(circle at top right, rgba(251, 146, 60, 0.14), transparent 38%),
+    linear-gradient(180deg, #101517 0%, #0f1415 48%, #13191b 100%);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-[28px] border border-border/80 bg-card/85 shadow-[0_24px_90px_-42px_rgba(17,24,39,0.55)] backdrop-blur-md;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-border/80 bg-card/75 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground;
+  }
+
+  .section-title {
+    @apply text-3xl font-semibold tracking-tight text-foreground sm:text-4xl;
+  }
+}

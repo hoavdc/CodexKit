@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Docs and research",
+    "description": "Use MCP for official docs and architecture lookup where primary sources matter."
+  },
+  {
+    "name": "Repo ops",
+    "description": "Bring pull request, issue, and release metadata into the Codex workflow safely."
+  },
+  {
+    "name": "Integration policy",
+    "description": "Adopt the smallest useful server set, start read-only, and document ownership."
+  }
+]

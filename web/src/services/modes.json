@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Ask mode",
+    "description": "Clarify the problem, map tradeoffs, and prepare an implementation brief before editing code.",
+    "when": "Ambiguous requirements, architecture decisions, request shaping"
+  },
+  {
+    "name": "Code mode",
+    "description": "Inspect the repo, make focused edits, and run the tightest meaningful verification.",
+    "when": "Features, fixes, migrations, and scoped refactors"
+  },
+  {
+    "name": "Review mode",
+    "description": "Audit a change with findings first, ordered by risk instead of style commentary.",
+    "when": "PRs, generated patches, release candidate checks"
+  },
+  {
+    "name": "Cloud delegation",
+    "description": "Break a larger task into bounded Codex jobs, worktrees, or sidecar passes with explicit ownership.",
+    "when": "Parallelizable work that does not share a write scope"
+  },
+  {
+    "name": "Automations",
+    "description": "Schedule recurring Codex work with prompts, cadence, and guardrails that keep noise under control.",
+    "when": "Daily triage, weekly release checks, recurring documentation audits"
+  }
+]

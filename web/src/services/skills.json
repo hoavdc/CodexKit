@@ -1,0 +1,47 @@
+[
+  {
+    "name": "codexkit-repo-onboarding",
+    "description": "Map runtimes, entrypoints, quality gates, and risk zones before editing.",
+    "category": "Onboarding & Discovery"
+  },
+  {
+    "name": "codexkit-execution-planner",
+    "description": "Turn large requests into actionable slices with validation and rollback thinking.",
+    "category": "Planning & Delivery"
+  },
+  {
+    "name": "codexkit-high-signal-review",
+    "description": "Review changes with findings first and severity-ordered risk.",
+    "category": "Quality & Review"
+  },
+  {
+    "name": "codexkit-bug-hunt",
+    "description": "Reproduce, isolate, patch, and verify production-grade defects.",
+    "category": "Quality & Review"
+  },
+  {
+    "name": "codexkit-test-hardening",
+    "description": "Add narrow, behavior-focused tests around risky changes.",
+    "category": "Quality & Review"
+  },
+  {
+    "name": "codexkit-docs-shipper",
+    "description": "Update README, changelog, and operator-facing docs alongside code changes.",
+    "category": "Planning & Delivery"
+  },
+  {
+    "name": "codexkit-automation-designer",
+    "description": "Design recurring Codex tasks with guardrails and clear outputs.",
+    "category": "Operations & Integrations"
+  },
+  {
+    "name": "codexkit-mcp-onboarding",
+    "description": "Phase MCP adoption based on real workflow pain points and safe scopes.",
+    "category": "Operations & Integrations"
+  },
+  {
+    "name": "codexkit-cloud-delegation",
+    "description": "Split large work into bounded Codex delegation tasks with owned scopes.",
+    "category": "Planning & Delivery"
+  }
+]

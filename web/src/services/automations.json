@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Daily triage",
+    "cadence": "Weekdays",
+    "description": "Collapse failures, urgent issues, and review backlog into one compact daily update."
+  },
+  {
+    "name": "Release readiness",
+    "cadence": "Weekly",
+    "description": "Check whether a branch or milestone is genuinely ready to ship."
+  },
+  {
+    "name": "Dependency watch",
+    "cadence": "Weekly",
+    "description": "Surface meaningful dependency drift instead of version churn."
+  },
+  {
+    "name": "Docs drift check",
+    "cadence": "Weekly",
+    "description": "Detect when onboarding docs no longer match scripts, entrypoints, or setup flow."
+  }
+]

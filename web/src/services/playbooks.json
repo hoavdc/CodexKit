@@ -1,0 +1,32 @@
+[
+  {
+    "name": "ask-discover",
+    "description": "Convert a fuzzy request into a brief with constraints, unknowns, and acceptance criteria.",
+    "surface": "Ask"
+  },
+  {
+    "name": "code-implement",
+    "description": "Push Codex into implementation with explicit verification and limited edit scope.",
+    "surface": "Code"
+  },
+  {
+    "name": "review-risk",
+    "description": "Drive a review that prioritizes correctness and regression risk over taste.",
+    "surface": "Review"
+  },
+  {
+    "name": "debug-production",
+    "description": "Work from observed versus expected behavior toward a safe fix.",
+    "surface": "Code"
+  },
+  {
+    "name": "delegate-cloud-task",
+    "description": "Split a large task into safe delegated units with clear outputs.",
+    "surface": "Delegate"
+  },
+  {
+    "name": "prepare-release",
+    "description": "Check build, tests, docs, rollback path, and release notes before shipping.",
+    "surface": "Review"
+  }
+]
