@@ -2,6 +2,7 @@
 name: codexkit-fpa-scenario-modeling
 description: Build structured 3-scenario financial models (Base / Bull / Bear) for business planning or investment decisions. Sensitize revenue and cost drivers across scenarios, produce P&L summaries, cash flow bridges, and executive narratives. Aligns with FP&A 2.0 and CIMA Management Accounting standards. Use when leadership needs to understand the financial impact range of a decision. Do not use for statutory financial reporting or audit-ready financials.
 version: 1.0.0
+category: data
 ---
 
 # FP&A Scenario Modeling
@@ -69,3 +70,29 @@ Transform business assumptions into a structured 3-scenario financial model that
 - "Model 3 scenarios for our SaaS expansion into Southeast Asia over 3 years."
 - "What happens to EBITDA if raw material costs increase 15% (bear case)?"
 - "Build a scenario model for the board comparing organic growth vs. acquisition."
+
+## Quality Criteria
+
+- [ ] Data sources and assumptions are explicitly stated
+- [ ] Calculations are reproducible from provided inputs
+- [ ] Visualizations or tables have clear labels, units, and time ranges
+- [ ] Caveats and confidence levels are documented for estimates
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Are formulas, aggregations, and statistical methods applied correctly? |
+| **Completeness** | Does the analysis cover all requested metrics and time ranges? |
+| **Context-fit** | Are the chosen metrics relevant to the business question being answered? |
+| **Consequence** | If this data were used for a decision today, what blind spots remain? |
+
+## Edge Cases
+
+- **Missing or incomplete data** — Document gaps and their potential impact on conclusions. Provide ranges instead of point estimates.
+- **Outliers skewing results** — Report with and without outliers. Document the decision to include or exclude.
+- **Changing data definitions mid-period** — Split analysis at the change boundary and note the schema difference.
+
+## Changelog
+
+- v1.0.0 — Initial release

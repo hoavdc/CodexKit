@@ -1,6 +1,8 @@
 ---
 name: codexkit-supplier-evaluation
 description: Evaluate and tier suppliers using a weighted scorecard per SCOR DS Supplier Management practices. Score Quality, Delivery, Cost, Responsiveness, and Sustainability. Classify suppliers as Strategic, Preferred, Approved, or Conditional. Use during vendor reviews or procurement decisions.
+version: 1.0.0
+category: data
 ---
 
 # Supplier Evaluation Scorecard
@@ -114,3 +116,29 @@ Quality: 96% pass rate (4/5), Delivery: 88% OTD (3/5), Cost: competitive (4/5),
 Responsiveness: excellent (5/5), Sustainability: no ISO 14001 (3/5).
 Generate the scorecard and improvement plan.
 ```
+
+## Quality Criteria
+
+- [ ] Data sources and assumptions are explicitly stated
+- [ ] Calculations are reproducible from provided inputs
+- [ ] Visualizations or tables have clear labels, units, and time ranges
+- [ ] Caveats and confidence levels are documented for estimates
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Are formulas, aggregations, and statistical methods applied correctly? |
+| **Completeness** | Does the analysis cover all requested metrics and time ranges? |
+| **Context-fit** | Are the chosen metrics relevant to the business question being answered? |
+| **Consequence** | If this data were used for a decision today, what blind spots remain? |
+
+## Edge Cases
+
+- **Missing or incomplete data** — Document gaps and their potential impact on conclusions. Provide ranges instead of point estimates.
+- **Outliers skewing results** — Report with and without outliers. Document the decision to include or exclude.
+- **Changing data definitions mid-period** — Split analysis at the change boundary and note the schema difference.
+
+## Changelog
+
+- v1.0.0 — Initial release

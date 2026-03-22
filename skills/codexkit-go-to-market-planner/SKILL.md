@@ -2,6 +2,7 @@
 name: codexkit-go-to-market-planner
 description: Build a Go-to-Market (GTM) plan for new product launches, market entries, or feature rollouts. Covers market sizing (TAM/SAM/SOM), positioning, messaging, channel strategy, pricing approach, and launch timeline. Use when preparing to bring something new to market. Do not use for ongoing marketing operations or campaign execution.
 version: 1.0.0
+category: knowledge
 ---
 
 # Go-to-Market Planner
@@ -85,3 +86,29 @@ Create a structured GTM plan that aligns product, marketing, sales, and customer
 - "Create a GTM plan for our new AI writing tool targeting SMB content teams."
 - "Plan the launch of our Vietnam market expansion for the existing SaaS product."
 - "We're repositioning from enterprise to mid-market — build the messaging and channel plan."
+
+## Quality Criteria
+
+- [ ] All claims reference specific frameworks, standards, or quantifiable data
+- [ ] Content matches the stated audience's expertise level
+- [ ] Recommendations are actionable — each includes a concrete next step
+- [ ] No unsupported assertions or generic filler language
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Do referenced frameworks and standards match their official definitions? |
+| **Completeness** | Are all key concepts covered without significant gaps for the stated audience? |
+| **Context-fit** | Would this be useful for someone new to this domain, or is it too advanced/too basic? |
+| **Consequence** | If a stakeholder acted on this immediately, what could they misinterpret? |
+
+## Edge Cases
+
+- **Conflicting frameworks** — State which framework takes precedence and why. Document the trade-off explicitly.
+- **Rapidly changing domain** — Note information currency date. Flag sections likely to need updates.
+- **Audience has mixed expertise levels** — Provide a glossary and mark advanced sections as optional.
+
+## Changelog
+
+- v1.0.0 — Initial release

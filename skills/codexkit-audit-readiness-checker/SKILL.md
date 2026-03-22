@@ -1,6 +1,8 @@
 ---
 name: codexkit-audit-readiness-checker
 description: Assess organizational readiness for financial audits (internal or external). Map assertions to account balances, check evidence completeness, score readiness using a Red/Amber/Green framework, and generate a remediation timeline. Aligned with SOX, IFRS, and GAAP audit standards. Use before scheduled audits or when preparing for first-time compliance.
+version: 1.0.0
+category: verification
 ---
 
 # Audit Readiness Checker
@@ -115,3 +117,29 @@ Our external audit fieldwork starts in 12 weeks for FY2025.
 Here is our trial balance: [paste]. Prior year findings: AR confirmation delays, inventory count gaps.
 Assess our audit readiness and create a remediation plan.
 ```
+
+## Quality Criteria
+
+- [ ] Every finding is tied to a specific evidence source (log, test, metric)
+- [ ] Pass/fail criteria are binary and measurable — no subjective judgments
+- [ ] Severity levels are assigned with clear thresholds
+- [ ] Remediation steps are provided for all critical and high findings
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Are all pass/fail criteria applied against the correct standard or rule? |
+| **Completeness** | Were all required dimensions or checklist items evaluated? |
+| **Context-fit** | Does the verification scope match the actual risk level of the deliverable? |
+| **Consequence** | If this passed verification but had a hidden flaw, what is the worst-case impact? |
+
+## Edge Cases
+
+- **Incomplete data for full assessment** — Document which checks were limited and flag for re-verification when data becomes available.
+- **Ambiguous pass/fail criteria** — Request clarification from the standard owner before scoring. Mark as 'Needs Review'.
+- **Multiple overlapping standards** — Identify the governing standard and note where others diverge.
+
+## Changelog
+
+- v1.0.0 — Initial release

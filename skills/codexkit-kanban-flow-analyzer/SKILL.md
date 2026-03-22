@@ -2,6 +2,7 @@
 name: codexkit-kanban-flow-analyzer
 description: Analyze Kanban flow metrics to identify bottlenecks and improve team throughput. Covers Cycle Time, Throughput, WIP, and Flow Efficiency using Little's Law and Theory of Constraints. Use when a team wants to optimize delivery flow or improve predictability. Do not use for sprint-based Scrum planning — use sprint-planning-assistant instead.
 version: 1.0.0
+category: data
 ---
 
 # Kanban Flow Analyzer
@@ -70,3 +71,29 @@ Transform raw task completion data into actionable flow insights — find bottle
 - "Analyze our Jira board data for the last 8 weeks — why are tasks stuck in Code Review?"
 - "Our cycle time went from 5 days to 12 days. What happened?"
 - "Set WIP limits for a 7-person team with columns: To Do, In Progress, Review, QA, Done."
+
+## Quality Criteria
+
+- [ ] Data sources and assumptions are explicitly stated
+- [ ] Calculations are reproducible from provided inputs
+- [ ] Visualizations or tables have clear labels, units, and time ranges
+- [ ] Caveats and confidence levels are documented for estimates
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Are formulas, aggregations, and statistical methods applied correctly? |
+| **Completeness** | Does the analysis cover all requested metrics and time ranges? |
+| **Context-fit** | Are the chosen metrics relevant to the business question being answered? |
+| **Consequence** | If this data were used for a decision today, what blind spots remain? |
+
+## Edge Cases
+
+- **Missing or incomplete data** — Document gaps and their potential impact on conclusions. Provide ranges instead of point estimates.
+- **Outliers skewing results** — Report with and without outliers. Document the decision to include or exclude.
+- **Changing data definitions mid-period** — Split analysis at the change boundary and note the schema difference.
+
+## Changelog
+
+- v1.0.0 — Initial release

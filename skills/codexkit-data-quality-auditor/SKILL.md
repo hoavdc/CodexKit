@@ -1,6 +1,8 @@
 ---
 name: codexkit-data-quality-auditor
 description: Audit data quality across six DAMA DMBOK dimensions — Completeness, Accuracy, Consistency, Timeliness, Validity, Uniqueness. Produces a scored data quality report with issue log and remediation plan. Use when profiling datasets, onboarding new data sources, or building data quality gates.
+version: 1.0.0
+category: verification
 ---
 
 # Data Quality Auditor
@@ -112,3 +114,29 @@ Define ongoing quality checks:
 - [ ] Issue log with severity and affected records
 - [ ] Remediation plan for Critical/High issues
 - [ ] Monitoring rules defined for ongoing quality
+
+## Quality Criteria
+
+- [ ] Every finding is tied to a specific evidence source (log, test, metric)
+- [ ] Pass/fail criteria are binary and measurable — no subjective judgments
+- [ ] Severity levels are assigned with clear thresholds
+- [ ] Remediation steps are provided for all critical and high findings
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Are all pass/fail criteria applied against the correct standard or rule? |
+| **Completeness** | Were all required dimensions or checklist items evaluated? |
+| **Context-fit** | Does the verification scope match the actual risk level of the deliverable? |
+| **Consequence** | If this passed verification but had a hidden flaw, what is the worst-case impact? |
+
+## Edge Cases
+
+- **Incomplete data for full assessment** — Document which checks were limited and flag for re-verification when data becomes available.
+- **Ambiguous pass/fail criteria** — Request clarification from the standard owner before scoring. Mark as 'Needs Review'.
+- **Multiple overlapping standards** — Identify the governing standard and note where others diverge.
+
+## Changelog
+
+- v1.0.0 — Initial release

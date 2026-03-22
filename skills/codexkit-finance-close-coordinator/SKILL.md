@@ -2,6 +2,7 @@
 name: codexkit-finance-close-coordinator
 description: Organize month-end or quarter-end close blockers, reconciliations, owners, and evidence gaps into a routine control pack. Use when the work is finance close coordination and issue tracking. Do not use for accounting judgment, policy interpretation, or final technical accounting conclusions.
 version: 1.0.0
+category: runbook
 ---
 
 # Finance Close Coordinator
@@ -52,3 +53,29 @@ Keep close operations moving with a short, decision-ready issue view.
 
 - "Summarize these close notes into blockers, gaps, and owners."
 - "Turn this close tracker into a morning control pack."
+
+## Quality Criteria
+
+- [ ] Steps are executable in sequence without external context
+- [ ] Decision points have clear if/then branching
+- [ ] Rollback or abort procedures are documented for risky steps
+- [ ] Expected duration or time-per-step is estimated
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Do the steps execute correctly in the order specified? |
+| **Completeness** | Are decision points, error handling, and escalation paths all documented? |
+| **Context-fit** | Could someone with the right access but no prior context complete this runbook? |
+| **Consequence** | If Step N fails and the operator skips to Step N+1, what breaks? |
+
+## Edge Cases
+
+- **Steps require access the operator doesn't have** — Document exact access requirements upfront. Include escalation contact for emergency access.
+- **Environment differs from documented state** — Add a pre-flight check as Step 0 to verify prerequisites before starting.
+- **Runbook is triggered during off-hours** — Document who to contact and which steps can be safely deferred to business hours.
+
+## Changelog
+
+- v1.0.0 — Initial release

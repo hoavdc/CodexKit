@@ -2,6 +2,7 @@
 name: codexkit-scrum-retrospective
 description: Facilitate and document Sprint Retrospectives per Scrum Guide 2020. Choose format by team maturity, structure the session, capture action items, and track improvement across sprints. Use after every sprint. Do not use for individual performance reviews, blame sessions, or annual assessments.
 version: 1.0.0
+category: review
 ---
 
 # Sprint Retrospective Facilitator
@@ -65,3 +66,29 @@ Turn sprint reflections into structured improvement actions by choosing the righ
 - "Run a retrospective for Sprint 8 with a norming team of 6 — velocity dropped 15% this sprint."
 - "Our last 3 retros had the same 'unclear requirements' action item. Help us escalate."
 - "Facilitate a Fishbone retro to investigate why the deployment failed last sprint."
+
+## Quality Criteria
+
+- [ ] Feedback is specific and references exact locations in the reviewed material
+- [ ] Each critique includes a concrete improvement suggestion
+- [ ] Severity is categorized (critical / important / nice-to-have)
+- [ ] Positive aspects are acknowledged alongside areas for improvement
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Is the feedback technically accurate and properly contextualized? |
+| **Completeness** | Were all major sections of the reviewed material addressed? |
+| **Context-fit** | Is the review granularity appropriate for the material's maturity level? |
+| **Consequence** | If the author implemented all feedback literally, what could go wrong? |
+
+## Edge Cases
+
+- **Material is too early-stage for detailed review** — Provide structural feedback only. Note that content review is deferred until it matures.
+- **Reviewer lacks domain expertise** — Focus on structure, clarity, and consistency. Flag domain-specific claims as 'Needs SME verification'.
+- **Author is defensive or resistant to feedback** — Lead with what works well. Frame changes as questions rather than mandates.
+
+## Changelog
+
+- v1.0.0 — Initial release

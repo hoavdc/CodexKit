@@ -1,6 +1,8 @@
 ---
 name: codexkit-workshop-facilitator
 description: Design and facilitate structured workshops using Design Thinking and Liberating Structures. Produces detailed agendas with time blocks, facilitation notes, participant materials, and retrospective templates. Use when running ideation sessions, retrospectives, planning workshops, or collaborative problem-solving.
+version: 1.0.0
+category: scaffolding
 ---
 
 # Workshop Facilitator
@@ -127,3 +129,29 @@ Prepare and distribute:
 - [ ] Facilitation notes for each activity
 - [ ] Participant materials prepared
 - [ ] Post-workshop action plan template ready
+
+## Quality Criteria
+
+- [ ] All placeholder sections are filled with domain-specific content
+- [ ] Structure follows the relevant industry standard or framework
+- [ ] Language matches target audience (technical / executive / legal)
+- [ ] Output is ready for review — not a rough draft requiring major rework
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Does the draft structure follow the stated framework or industry standard? |
+| **Completeness** | Are all required sections present with substantive (not placeholder) content? |
+| **Context-fit** | Does tone, detail level, and terminology match the intended audience? |
+| **Consequence** | If sent to the intended recipient without further editing, what would fail? |
+
+## Edge Cases
+
+- **No existing template for this type** — Use the closest available template and document all customizations made.
+- **Stakeholder requirements conflict** — Flag conflicts explicitly in the draft. Do not silently choose one requirement over another.
+- **Output required in multiple formats** — Produce the canonical format first, then derive others. Note any formatting limitations.
+
+## Changelog
+
+- v1.0.0 — Initial release

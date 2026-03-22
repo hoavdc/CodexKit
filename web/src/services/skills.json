@@ -403,5 +403,10 @@
     "name": "codexkit-policy-document-writer",
     "description": "Author policies and SOPs with ISO document control, compliance monitoring, and review schedule.",
     "category": "Cross-Functional"
+  },
+  {
+    "name": "codexkit-skill-template",
+    "description": "Reference implementation of a v2 CodexKit skill with all 10 sections, 4C verification, and Tier 2 folder structure. Copy this to create new skills.",
+    "category": "Skill Authoring"
   }
 ]

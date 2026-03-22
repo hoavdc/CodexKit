@@ -2,6 +2,7 @@
 name: codexkit-data-story-builder
 description: Turn business data, KPI movement, or experiment results into a clear narrative using the what-so what-now what structure, audience calibration, and action-oriented insight. Use when leaders need a data-backed brief, dashboard storyline, or metric interpretation. Do not use for raw statistical modeling with no communication deliverable.
 version: 1.0.0
+category: knowledge
 ---
 
 # Data Story Builder
@@ -56,3 +57,29 @@ Make analytics usable by giving the numbers a decision-oriented narrative.
 
 - "Turn this KPI dashboard into a narrative for the monthly business review."
 - "Explain these A/B test results for a non-technical leadership team."
+
+## Quality Criteria
+
+- [ ] All claims reference specific frameworks, standards, or quantifiable data
+- [ ] Content matches the stated audience's expertise level
+- [ ] Recommendations are actionable — each includes a concrete next step
+- [ ] No unsupported assertions or generic filler language
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Do referenced frameworks and standards match their official definitions? |
+| **Completeness** | Are all key concepts covered without significant gaps for the stated audience? |
+| **Context-fit** | Would this be useful for someone new to this domain, or is it too advanced/too basic? |
+| **Consequence** | If a stakeholder acted on this immediately, what could they misinterpret? |
+
+## Edge Cases
+
+- **Conflicting frameworks** — State which framework takes precedence and why. Document the trade-off explicitly.
+- **Rapidly changing domain** — Note information currency date. Flag sections likely to need updates.
+- **Audience has mixed expertise levels** — Provide a glossary and mark advanced sections as optional.
+
+## Changelog
+
+- v1.0.0 — Initial release

@@ -2,6 +2,7 @@
 name: codexkit-contract-risk-review
 description: Review commercial contracts, NDAs, MSAs, SOWs, and vendor agreements for obligation clarity, risk allocation, termination, data handling, and negotiation red flags. Use when a user needs a structured contract summary, red flag list, fallback positions, or clause-by-clause review. Do not use as jurisdiction-specific legal advice, litigation strategy, or final legal sign-off.
 version: 1.0.0
+category: verification
 ---
 
 # Contract Risk Review
@@ -54,3 +55,29 @@ Surface business and contractual risk quickly so a human reviewer can negotiate 
 
 - "Review this vendor MSA and flag the clauses we should negotiate before signing."
 - "Summarize our obligations and main risks in this customer SOW."
+
+## Quality Criteria
+
+- [ ] Every finding is tied to a specific evidence source (log, test, metric)
+- [ ] Pass/fail criteria are binary and measurable — no subjective judgments
+- [ ] Severity levels are assigned with clear thresholds
+- [ ] Remediation steps are provided for all critical and high findings
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Are all pass/fail criteria applied against the correct standard or rule? |
+| **Completeness** | Were all required dimensions or checklist items evaluated? |
+| **Context-fit** | Does the verification scope match the actual risk level of the deliverable? |
+| **Consequence** | If this passed verification but had a hidden flaw, what is the worst-case impact? |
+
+## Edge Cases
+
+- **Incomplete data for full assessment** — Document which checks were limited and flag for re-verification when data becomes available.
+- **Ambiguous pass/fail criteria** — Request clarification from the standard owner before scoring. Mark as 'Needs Review'.
+- **Multiple overlapping standards** — Identify the governing standard and note where others diverge.
+
+## Changelog
+
+- v1.0.0 — Initial release

@@ -1,6 +1,8 @@
 ---
 name: codexkit-incident-postmortem
 description: Write blameless incident postmortems following Google SRE methodology. Covers timeline reconstruction, root cause analysis (5 Whys), impact assessment, and action items with owners. Use after production incidents, outages, or significant bugs to prevent recurrence.
+version: 1.0.0
+category: runbook
 ---
 
 # Incident Postmortem
@@ -128,3 +130,29 @@ migration, affecting ~12,000 users and breaching our 99.95% SLA target.
 - [ ] 5 Whys reaching a systemic root cause
 - [ ] Impact quantified (users, duration, revenue, SLA)
 - [ ] Action items typed (prevent/detect/mitigate) with owners
+
+## Quality Criteria
+
+- [ ] Steps are executable in sequence without external context
+- [ ] Decision points have clear if/then branching
+- [ ] Rollback or abort procedures are documented for risky steps
+- [ ] Expected duration or time-per-step is estimated
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Do the steps execute correctly in the order specified? |
+| **Completeness** | Are decision points, error handling, and escalation paths all documented? |
+| **Context-fit** | Could someone with the right access but no prior context complete this runbook? |
+| **Consequence** | If Step N fails and the operator skips to Step N+1, what breaks? |
+
+## Edge Cases
+
+- **Steps require access the operator doesn't have** — Document exact access requirements upfront. Include escalation contact for emergency access.
+- **Environment differs from documented state** — Add a pre-flight check as Step 0 to verify prerequisites before starting.
+- **Runbook is triggered during off-hours** — Document who to contact and which steps can be safely deferred to business hours.
+
+## Changelog
+
+- v1.0.0 — Initial release

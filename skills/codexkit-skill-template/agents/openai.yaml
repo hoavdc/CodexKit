@@ -1,0 +1,6 @@
+interface:
+  name: codexkit-skill-template
+  instructions: |
+    Reference implementation of a v2 CodexKit skill. Copy this folder to create
+    a new skill. Follow all 10 required sections and assign one of the 8 categories.
+  tools: []

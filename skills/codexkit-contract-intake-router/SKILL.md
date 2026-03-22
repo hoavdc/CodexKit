@@ -2,6 +2,7 @@
 name: codexkit-contract-intake-router
 description: Standardize incoming legal or commercial contract requests into request type, missing information, priority, and review queue. Use when the work is intake routing and request cleanup. Do not use for clause interpretation, negotiation strategy, or legal advice on the agreement itself.
 version: 1.0.0
+category: automation
 ---
 
 # Contract Intake Router
@@ -52,3 +53,29 @@ Clean up contract intake so legal review starts with the right information.
 
 - "Clean up this legal inbox into request type, priority, and missing info."
 - "Turn these contract asks into a structured intake queue for legal ops."
+
+## Quality Criteria
+
+- [ ] Trigger conditions and input requirements are unambiguous
+- [ ] Each automated step produces a verifiable output
+- [ ] Error handling and fallback paths are defined
+- [ ] Manual override points are documented
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Does the workflow produce the expected output for the defined inputs? |
+| **Completeness** | Are all trigger conditions, edge cases, and error paths handled? |
+| **Context-fit** | Is the automation appropriate for the frequency and criticality of this task? |
+| **Consequence** | If this ran unattended and failed silently, what would the downstream impact be? |
+
+## Edge Cases
+
+- **Input format varies unexpectedly** — Add a normalization step at entry. Alert the operator on format mismatches.
+- **Downstream system is unavailable** — Queue the output and retry with exponential backoff. Alert after N failures.
+- **Partial execution completes** — Ensure idempotency — re-running from the start produces the same result without duplication.
+
+## Changelog
+
+- v1.0.0 — Initial release

@@ -2,6 +2,7 @@
 name: codexkit-content-calendar-assembler
 description: Turn launch dates, campaign inputs, and asset requests into a structured content calendar and workback plan. Use when the work is recurring marketing coordination and schedule packaging. Do not use for brand strategy, positioning design, or deep performance interpretation.
 version: 1.0.0
+category: automation
 ---
 
 # Content Calendar Assembler
@@ -52,3 +53,29 @@ Build a reliable publishing and asset schedule from scattered campaign inputs.
 
 - "Turn these launch notes into a content calendar with owners and dates."
 - "Build a workback plan from this campaign brief and asset list."
+
+## Quality Criteria
+
+- [ ] Trigger conditions and input requirements are unambiguous
+- [ ] Each automated step produces a verifiable output
+- [ ] Error handling and fallback paths are defined
+- [ ] Manual override points are documented
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Does the workflow produce the expected output for the defined inputs? |
+| **Completeness** | Are all trigger conditions, edge cases, and error paths handled? |
+| **Context-fit** | Is the automation appropriate for the frequency and criticality of this task? |
+| **Consequence** | If this ran unattended and failed silently, what would the downstream impact be? |
+
+## Edge Cases
+
+- **Input format varies unexpectedly** — Add a normalization step at entry. Alert the operator on format mismatches.
+- **Downstream system is unavailable** — Queue the output and retry with exponential backoff. Alert after N failures.
+- **Partial execution completes** — Ensure idempotency — re-running from the start produces the same result without duplication.
+
+## Changelog
+
+- v1.0.0 — Initial release

@@ -1,6 +1,8 @@
 ---
 name: codexkit-vendor-comparison-matrix
 description: Build structured vendor/tool evaluation matrices with weighted scoring, TCO analysis, and recommendation memos. Covers criteria definition, deal-breaker identification, and negotiation points. Use when selecting SaaS tools, evaluating technology vendors, or making build-vs-buy decisions.
+version: 1.0.0
+category: data
 ---
 
 # Vendor Comparison Matrix
@@ -123,3 +125,29 @@ Write a concise memo:
 - [ ] TCO calculated over 3+ years
 - [ ] Risks identified with mitigations
 - [ ] Clear recommendation with rationale
+
+## Quality Criteria
+
+- [ ] Data sources and assumptions are explicitly stated
+- [ ] Calculations are reproducible from provided inputs
+- [ ] Visualizations or tables have clear labels, units, and time ranges
+- [ ] Caveats and confidence levels are documented for estimates
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Are formulas, aggregations, and statistical methods applied correctly? |
+| **Completeness** | Does the analysis cover all requested metrics and time ranges? |
+| **Context-fit** | Are the chosen metrics relevant to the business question being answered? |
+| **Consequence** | If this data were used for a decision today, what blind spots remain? |
+
+## Edge Cases
+
+- **Missing or incomplete data** — Document gaps and their potential impact on conclusions. Provide ranges instead of point estimates.
+- **Outliers skewing results** — Report with and without outliers. Document the decision to include or exclude.
+- **Changing data definitions mid-period** — Split analysis at the change boundary and note the schema difference.
+
+## Changelog
+
+- v1.0.0 — Initial release

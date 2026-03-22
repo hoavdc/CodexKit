@@ -2,6 +2,7 @@
 name: codexkit-presentation-outliner
 description: Structure presentations, pitch decks, and internal slide decks from rough ideas into clear outlines with slide-by-slide content guidance, key messages, and data callouts. Use when the work is organizing thoughts into a presentation structure. Do not use for visual design, slide layout, or graphic creation.
 version: 1.0.0
+category: knowledge
 ---
 
 # Presentation Outliner
@@ -64,3 +65,29 @@ Turn unstructured thoughts into a clear presentation outline with slide-by-slide
 - "Structure a board deck for Q1 results — we need to explain the revenue miss and recovery plan."
 - "Plan a 15-minute all-hands presentation about the engineering reorg."
 - "Create an outline for a client QBR — highlight adoption gains and renewal ask."
+
+## Quality Criteria
+
+- [ ] All claims reference specific frameworks, standards, or quantifiable data
+- [ ] Content matches the stated audience's expertise level
+- [ ] Recommendations are actionable — each includes a concrete next step
+- [ ] No unsupported assertions or generic filler language
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Do referenced frameworks and standards match their official definitions? |
+| **Completeness** | Are all key concepts covered without significant gaps for the stated audience? |
+| **Context-fit** | Would this be useful for someone new to this domain, or is it too advanced/too basic? |
+| **Consequence** | If a stakeholder acted on this immediately, what could they misinterpret? |
+
+## Edge Cases
+
+- **Conflicting frameworks** — State which framework takes precedence and why. Document the trade-off explicitly.
+- **Rapidly changing domain** — Note information currency date. Flag sections likely to need updates.
+- **Audience has mixed expertise levels** — Provide a glossary and mark advanced sections as optional.
+
+## Changelog
+
+- v1.0.0 — Initial release

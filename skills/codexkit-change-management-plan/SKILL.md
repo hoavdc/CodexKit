@@ -1,6 +1,8 @@
 ---
 name: codexkit-change-management-plan
 description: Build change management plans using ADKAR and Kotter's 8-Step framework. Covers stakeholder readiness, communication plans, training schedules, resistance management, and adoption metrics. Use when rolling out new systems, reorganizations, or process changes that affect people.
+version: 1.0.0
+category: scaffolding
 ---
 
 # Change Management Plan
@@ -126,3 +128,29 @@ teams (85 people). Go-live: Q2 2024.
 - [ ] Communication plan with dates and channels
 - [ ] Training schedule with formats and pre-requisites
 - [ ] Adoption metrics defined with targets
+
+## Quality Criteria
+
+- [ ] All placeholder sections are filled with domain-specific content
+- [ ] Structure follows the relevant industry standard or framework
+- [ ] Language matches target audience (technical / executive / legal)
+- [ ] Output is ready for review — not a rough draft requiring major rework
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Does the draft structure follow the stated framework or industry standard? |
+| **Completeness** | Are all required sections present with substantive (not placeholder) content? |
+| **Context-fit** | Does tone, detail level, and terminology match the intended audience? |
+| **Consequence** | If sent to the intended recipient without further editing, what would fail? |
+
+## Edge Cases
+
+- **No existing template for this type** — Use the closest available template and document all customizations made.
+- **Stakeholder requirements conflict** — Flag conflicts explicitly in the draft. Do not silently choose one requirement over another.
+- **Output required in multiple formats** — Produce the canonical format first, then derive others. Note any formatting limitations.
+
+## Changelog
+
+- v1.0.0 — Initial release

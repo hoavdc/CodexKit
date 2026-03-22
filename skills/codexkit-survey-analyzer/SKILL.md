@@ -1,6 +1,8 @@
 ---
 name: codexkit-survey-analyzer
 description: Analyze survey and feedback data with statistical distributions, cross-tabulations, significance testing, and open-ended theme extraction. Produces executive-ready survey reports with segment comparisons and action recommendations. Use when processing NPS, CSAT, employee engagement, or market research surveys.
+version: 1.0.0
+category: data
 ---
 
 # Survey Analyzer
@@ -118,3 +120,29 @@ Structure insights as:
 - [ ] Open-ended themes extracted and quantified
 - [ ] What / So What / Now What insights provided
 - [ ] Action recommendations prioritized with owners
+
+## Quality Criteria
+
+- [ ] Data sources and assumptions are explicitly stated
+- [ ] Calculations are reproducible from provided inputs
+- [ ] Visualizations or tables have clear labels, units, and time ranges
+- [ ] Caveats and confidence levels are documented for estimates
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Are formulas, aggregations, and statistical methods applied correctly? |
+| **Completeness** | Does the analysis cover all requested metrics and time ranges? |
+| **Context-fit** | Are the chosen metrics relevant to the business question being answered? |
+| **Consequence** | If this data were used for a decision today, what blind spots remain? |
+
+## Edge Cases
+
+- **Missing or incomplete data** — Document gaps and their potential impact on conclusions. Provide ranges instead of point estimates.
+- **Outliers skewing results** — Report with and without outliers. Document the decision to include or exclude.
+- **Changing data definitions mid-period** — Split analysis at the change boundary and note the schema difference.
+
+## Changelog
+
+- v1.0.0 — Initial release

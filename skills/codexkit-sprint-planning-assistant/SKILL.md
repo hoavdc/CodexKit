@@ -2,6 +2,7 @@
 name: codexkit-sprint-planning-assistant
 description: Facilitate sprint planning by organizing backlog items, estimating effort, balancing capacity, identifying dependencies, and producing a sprint commitment summary. Use when teams need structured sprint planning output. Do not use for strategic roadmap planning, annual budgeting, or product vision work.
 version: 1.0.0
+category: runbook
 ---
 
 # Sprint Planning Assistant
@@ -63,3 +64,29 @@ Turn a groomed backlog into a well-scoped sprint plan with clear commitments, de
 - "Plan Sprint 12 with these 15 backlog items for a 5-person team over 2 weeks."
 - "Check if we can fit the payment feature plus 3 bug fixes into next sprint."
 - "Write a sprint summary for stakeholders — what we're committing to and why."
+
+## Quality Criteria
+
+- [ ] Steps are executable in sequence without external context
+- [ ] Decision points have clear if/then branching
+- [ ] Rollback or abort procedures are documented for risky steps
+- [ ] Expected duration or time-per-step is estimated
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Do the steps execute correctly in the order specified? |
+| **Completeness** | Are decision points, error handling, and escalation paths all documented? |
+| **Context-fit** | Could someone with the right access but no prior context complete this runbook? |
+| **Consequence** | If Step N fails and the operator skips to Step N+1, what breaks? |
+
+## Edge Cases
+
+- **Steps require access the operator doesn't have** — Document exact access requirements upfront. Include escalation contact for emergency access.
+- **Environment differs from documented state** — Add a pre-flight check as Step 0 to verify prerequisites before starting.
+- **Runbook is triggered during off-hours** — Document who to contact and which steps can be safely deferred to business hours.
+
+## Changelog
+
+- v1.0.0 — Initial release

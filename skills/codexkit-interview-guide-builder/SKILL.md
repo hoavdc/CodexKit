@@ -1,6 +1,8 @@
 ---
 name: codexkit-interview-guide-builder
 description: Build structured behavioral interview guides using the STAR method. Map job competencies to interview questions, provide scoring rubrics (1–5), and include follow-up probes and red/green flag indicators. Use when preparing for hiring interviews or standardizing interview practices.
+version: 1.0.0
+category: scaffolding
 ---
 
 # Interview Guide Builder
@@ -131,3 +133,29 @@ This is a behavioral interview (45 minutes).
 Key competencies: Strategic thinking, Stakeholder management, Data-driven decisions, Cross-functional leadership.
 Build an interview guide with STAR questions and scoring rubrics.
 ```
+
+## Quality Criteria
+
+- [ ] All placeholder sections are filled with domain-specific content
+- [ ] Structure follows the relevant industry standard or framework
+- [ ] Language matches target audience (technical / executive / legal)
+- [ ] Output is ready for review — not a rough draft requiring major rework
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Does the draft structure follow the stated framework or industry standard? |
+| **Completeness** | Are all required sections present with substantive (not placeholder) content? |
+| **Context-fit** | Does tone, detail level, and terminology match the intended audience? |
+| **Consequence** | If sent to the intended recipient without further editing, what would fail? |
+
+## Edge Cases
+
+- **No existing template for this type** — Use the closest available template and document all customizations made.
+- **Stakeholder requirements conflict** — Flag conflicts explicitly in the draft. Do not silently choose one requirement over another.
+- **Output required in multiple formats** — Produce the canonical format first, then derive others. Note any formatting limitations.
+
+## Changelog
+
+- v1.0.0 — Initial release

@@ -1,6 +1,8 @@
 ---
 name: codexkit-business-case-writer
 description: Write structured business cases with problem framing, options analysis, financial modeling (NPV/ROI/Payback), risk assessment, and implementation roadmap. Follows HBR business case structure. Use when seeking budget approval, proposing new initiatives, or justifying investment decisions.
+version: 1.0.0
+category: knowledge
 ---
 
 # Business Case Writer
@@ -127,3 +129,29 @@ Approve $120K Q2 budget + 2 FTE allocation by March 30.
 - [ ] Financial analysis includes ROI, payback, NPV
 - [ ] Risks identified with mitigations
 - [ ] Clear ask with decision deadline
+
+## Quality Criteria
+
+- [ ] All claims reference specific frameworks, standards, or quantifiable data
+- [ ] Content matches the stated audience's expertise level
+- [ ] Recommendations are actionable — each includes a concrete next step
+- [ ] No unsupported assertions or generic filler language
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Do referenced frameworks and standards match their official definitions? |
+| **Completeness** | Are all key concepts covered without significant gaps for the stated audience? |
+| **Context-fit** | Would this be useful for someone new to this domain, or is it too advanced/too basic? |
+| **Consequence** | If a stakeholder acted on this immediately, what could they misinterpret? |
+
+## Edge Cases
+
+- **Conflicting frameworks** — State which framework takes precedence and why. Document the trade-off explicitly.
+- **Rapidly changing domain** — Note information currency date. Flag sections likely to need updates.
+- **Audience has mixed expertise levels** — Provide a glossary and mark advanced sections as optional.
+
+## Changelog
+
+- v1.0.0 — Initial release

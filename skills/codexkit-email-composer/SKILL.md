@@ -2,6 +2,7 @@
 name: codexkit-email-composer
 description: Draft clear, professional business emails from rough notes, context, or instructions. Handles cold outreach, internal updates, client responses, and escalation drafts. Use when the work is routine email writing with known context and audience. Do not use for sensitive legal notices, formal regulatory correspondence, or board-level communication without review.
 version: 1.0.0
+category: automation
 ---
 
 # Email Composer
@@ -59,3 +60,29 @@ Turn rough thoughts into polished business emails that are clear, actionable, an
 - "Draft a response to the client's feature request — we can do it in Q3 but not Q2."
 - "Send an internal update to engineering about the deployment schedule change."
 - "Write a polite escalation to the procurement team about the delayed PO."
+
+## Quality Criteria
+
+- [ ] Trigger conditions and input requirements are unambiguous
+- [ ] Each automated step produces a verifiable output
+- [ ] Error handling and fallback paths are defined
+- [ ] Manual override points are documented
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Does the workflow produce the expected output for the defined inputs? |
+| **Completeness** | Are all trigger conditions, edge cases, and error paths handled? |
+| **Context-fit** | Is the automation appropriate for the frequency and criticality of this task? |
+| **Consequence** | If this ran unattended and failed silently, what would the downstream impact be? |
+
+## Edge Cases
+
+- **Input format varies unexpectedly** — Add a normalization step at entry. Alert the operator on format mismatches.
+- **Downstream system is unavailable** — Queue the output and retry with exponential backoff. Alert after N failures.
+- **Partial execution completes** — Ensure idempotency — re-running from the start produces the same result without duplication.
+
+## Changelog
+
+- v1.0.0 — Initial release

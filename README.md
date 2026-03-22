@@ -2,15 +2,15 @@
 
 Open-source operating kit for people using OpenAI Codex and ChatGPT to think, write, analyze, decide, automate routine work, and ship better output with more consistency.
 
-CodexKit is a fresh project rebuilt around the surfaces that matter in Codex today: local Skills, high-signal playbooks, automation recipes, operational templates, department starter workspaces, repo guardrails, and MCP onboarding guidance. The pack covers 81 skills across 13 domains: engineering workflows, high-reasoning work, and low-reasoning office automation across project management, finance, legal, HR, operations, supply chain, strategy, analytics, marketing, data, customer success, IT & admin, training & development, and cross-functional work. It follows the official Codex Skills layout with `SKILL.md`, optional `agents/openai.yaml`, and standard `.agents/skills` discovery paths.
+CodexKit is a fresh project rebuilt around the surfaces that matter in Codex today: local Skills, high-signal playbooks, automation recipes, operational templates, department starter workspaces, repo guardrails, and MCP onboarding guidance. The pack covers 82 skills across 13 domains: engineering workflows, high-reasoning work, and low-reasoning office automation across project management, finance, legal, HR, operations, supply chain, strategy, analytics, marketing, data, customer success, IT & admin, training & development, and cross-functional work. It follows the official Codex Skills layout with `SKILL.md`, optional `agents/openai.yaml`, and standard `.agents/skills` discovery paths.
 
 ## What is included
 
-- `skills/`: 81 installable Codex Skills across 13 domains — engineering, high-reasoning business work, and low-reasoning office automation.
+- `skills/`: 82 installable Codex Skills across 13 domains — engineering, high-reasoning business work, and low-reasoning office automation.
 - `playbooks/`: copy-ready prompts for clarify, execute, review, decision, delegation, and release work.
 - `automations/`: recurring task recipes for engineering plus weekly business, close, hiring, legal intake, operations, and marketing routines.
 - `mcp/`: practical guidance for choosing and rolling out MCP servers without overloading the team.
-- `templates/`: reusable department templates for PM, finance, HR, legal, operations, marketing, and cross-functional work.
+- `templates/`: reusable templates including department templates (PM, finance, HR, legal, operations, marketing, cross-functional), the SKILL.md v2 template, and a deep research master prompt for skill authoring.
 - `workspaces/`: starter workspace kits for PM, finance, HR, legal, ops, and marketing teams.
 - `scripts/`: cross-platform skill installers, workspace quick-start scripts, and a pack validator.
 - `web/`: a Next.js docs site for publishing the kit as a public open-source project.
@@ -31,12 +31,12 @@ CodexKit is a fresh project rebuilt around the surfaces that matter in Codex tod
 If you do not want to use Git commands or remember terminal steps, use the GitHub release package:
 
 1. Open the Releases page for this repository.
-2. Download `codexkit-starter-pack-v0.7.1.zip`.
+2. Download `codexkit-starter-pack-v0.9.0.zip`.
 3. Unzip it anywhere on your computer.
 4. On Windows, double-click `START-HERE-WINDOWS.cmd`.
    - If Codex is not installed, the script will show installation instructions.
 5. Restart Codex.
-6. In Codex, type `/skills` to confirm all 81 skills appear.
+6. In Codex, type `/skills` to confirm all 82 skills appear.
 7. Open `skill-finder.md` to browse skills by situation.
 7. Optional: double-click `CREATE-WORKSPACE-WINDOWS.cmd` to create a starter workspace.
 
@@ -197,6 +197,53 @@ CodexKit/
 - Automations must include guardrails, not just schedules.
 - MCP adoption should be intentional, observable, and reversible.
 
+## Skill architecture
+
+CodexKit uses a **5-Layer Skill Framework** with a tiered structure:
+
+### Layers
+
+Every skill addresses five concerns: **Intent** (clear purpose), **Knowledge** (domain expertise), **Execution** (step-by-step procedure), **Verification** (4C quality gates — Correctness, Completeness, Context-fit, Consequence), and **Evolution** (versioned changelog).
+
+### Tiers
+
+| Tier | Structure | Current coverage |
+|------|-----------|------------------|
+| **1** | `SKILL.md` + `agents/openai.yaml` | All 82 skills |
+| **2** | + `verification/` + `examples/` | 21 high-value skills |
+| **3** | + `templates/` + `scripts/` | 5 technical skills |
+
+### Categories
+
+| Category | Skills |
+|----------|--------|
+| `knowledge` | 17 |
+| `data` | 14 |
+| `scaffolding` | 14 |
+| `runbook` | 10 |
+| `verification` | 9 |
+| `automation` | 8 |
+| `review` | 6 |
+| `infra` | 4 |
+
+### Authoring new skills
+
+Use `templates/SKILL-TEMPLATE.md` as the starting point. Optionally, use `templates/deep-research-prompt.md` with an external AI research tool (ChatGPT Deep Research, Gemini, Perplexity Pro) to generate domain knowledge — the 6-section output maps directly into the SKILL.md sections. See `skills/codexkit-skill-template/` for a working reference implementation.
+
+Full authoring guide: [CONTRIBUTING.md](./CONTRIBUTING.md).
+
+## Contributing
+
+CodexKit is open-source and community-driven. There are several ways to help:
+
+- **Enrich existing skills**: 61 skills still need Tier 2 content (`verification/`, `examples/`). Pick a skill you know well, create domain-specific checklists and examples, and open a PR.
+- **Add Tier 3 assets**: Technical skills benefit from `scripts/` and `templates/`. Build a reusable helper or output template.
+- **Create new skills**: Use `templates/SKILL-TEMPLATE.md` + `templates/deep-research-prompt.md` to author a skill for a domain you are expert in.
+- **Add gotchas**: If you encounter a real-world edge case while using a skill, document it using `templates/gotchas-template.md` and add it to the skill folder.
+- **Improve docs or translations**: The docs site, playbooks, and the Vietnamese guide all benefit from review.
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full guide.
+
 ## Open-source quality bar
 
 - MIT license
@@ -217,7 +264,7 @@ CodexKit/
 - Replace placeholder maintainer details where needed.
 - Add screenshots or a short demo GIF to the docs site.
 - Commit and push the release candidate branch or `main`.
-- Tag `v0.7.1` after validating the pack and docs build.
+- Tag `v0.9.0` after validating the pack and docs build.
 - Push the tag to trigger the GitHub release workflow.
 
 ## Release process
@@ -225,11 +272,11 @@ CodexKit/
 1. Update `package.json`, `web/package.json`, and `CHANGELOG.md`.
 2. Run `npm run check`.
 3. Commit and push the release commit.
-4. Create the tag: `git tag v0.7.1`
-5. Push the tag: `git push origin v0.7.1`
+4. Create the tag: `git tag v0.9.0`
+5. Push the tag: `git push origin v0.9.0`
 6. GitHub Actions publishes:
-   `codexkit-source-v0.7.1.zip`
-   `codexkit-starter-pack-v0.7.1.zip`
+   `codexkit-source-v0.9.0.zip`
+   `codexkit-starter-pack-v0.9.0.zip`
 
 ## Related files
 

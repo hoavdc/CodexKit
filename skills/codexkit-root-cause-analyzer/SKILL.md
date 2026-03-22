@@ -2,6 +2,7 @@
 name: codexkit-root-cause-analyzer
 description: Conduct structured root cause analysis using Ishikawa (Fishbone), 5 Whys, and Pareto methods. Suitable for production incidents, quality defects, customer complaints, and recurring operational problems. Use when problems recur or when initial fixes do not resolve the issue. Do not use for one-time, obvious fixes or strategic decision-making.
 version: 1.0.0
+category: runbook
 ---
 
 # Root Cause Analyzer
@@ -81,3 +82,29 @@ Move beyond symptomatic fixes to identify true root causes of recurring problems
 - "Our deployment failed 3 times this month. Run a 5 Whys analysis."
 - "Customer complaints about delayed invoices are increasing. Do a Fishbone analysis."
 - "We have 12 different bug types from last quarter. Use Pareto to prioritize which to fix first."
+
+## Quality Criteria
+
+- [ ] Steps are executable in sequence without external context
+- [ ] Decision points have clear if/then branching
+- [ ] Rollback or abort procedures are documented for risky steps
+- [ ] Expected duration or time-per-step is estimated
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Do the steps execute correctly in the order specified? |
+| **Completeness** | Are decision points, error handling, and escalation paths all documented? |
+| **Context-fit** | Could someone with the right access but no prior context complete this runbook? |
+| **Consequence** | If Step N fails and the operator skips to Step N+1, what breaks? |
+
+## Edge Cases
+
+- **Steps require access the operator doesn't have** — Document exact access requirements upfront. Include escalation contact for emergency access.
+- **Environment differs from documented state** — Add a pre-flight check as Step 0 to verify prerequisites before starting.
+- **Runbook is triggered during off-hours** — Document who to contact and which steps can be safely deferred to business hours.
+
+## Changelog
+
+- v1.0.0 — Initial release

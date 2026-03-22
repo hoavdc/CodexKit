@@ -2,6 +2,7 @@
 name: codexkit-backlog-refiner
 description: Refine Product Backlog Items to meet INVEST criteria. Write User Stories with Acceptance Criteria in Given/When/Then format, estimate with Story Points, and flag dependencies. Use before sprint planning when backlog items need grooming. Do not use to prioritize the backlog — that is the Product Owner's decision.
 version: 1.0.0
+category: review
 ---
 
 # Backlog Refiner
@@ -71,3 +72,29 @@ Transform raw backlog items into sprint-ready User Stories that meet INVEST crit
 - "Refine these 8 raw feature requests into sprint-ready user stories."
 - "This epic 'User Authentication' is too big — help me split it into stories."
 - "Write acceptance criteria for the 'Password Reset' story."
+
+## Quality Criteria
+
+- [ ] Feedback is specific and references exact locations in the reviewed material
+- [ ] Each critique includes a concrete improvement suggestion
+- [ ] Severity is categorized (critical / important / nice-to-have)
+- [ ] Positive aspects are acknowledged alongside areas for improvement
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Is the feedback technically accurate and properly contextualized? |
+| **Completeness** | Were all major sections of the reviewed material addressed? |
+| **Context-fit** | Is the review granularity appropriate for the material's maturity level? |
+| **Consequence** | If the author implemented all feedback literally, what could go wrong? |
+
+## Edge Cases
+
+- **Material is too early-stage for detailed review** — Provide structural feedback only. Note that content review is deferred until it matures.
+- **Reviewer lacks domain expertise** — Focus on structure, clarity, and consistency. Flag domain-specific claims as 'Needs SME verification'.
+- **Author is defensive or resistant to feedback** — Lead with what works well. Frame changes as questions rather than mandates.
+
+## Changelog
+
+- v1.0.0 — Initial release

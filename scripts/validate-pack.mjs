@@ -15,6 +15,17 @@ const requiredDirectories = [
 
 const requiredSkillFrontmatterFields = ["name", "description"];
 
+const validCategories = [
+  "knowledge",
+  "verification",
+  "data",
+  "automation",
+  "scaffolding",
+  "review",
+  "runbook",
+  "infra",
+];
+
 async function ensureDirectory(dir) {
   const fullPath = path.join(root, dir);
   const stat = await fs.stat(fullPath).catch(() => null);
@@ -44,6 +55,8 @@ async function validateSkills() {
     throw new Error("No skill directories found.");
   }
 
+  const warnings = [];
+
   for (const skill of skillDirs) {
     const skillDir = path.join(root, "skills", skill);
     const skillFile = path.join(root, "skills", skill, "SKILL.md");
@@ -60,6 +73,34 @@ async function validateSkills() {
     for (const field of requiredSkillFrontmatterFields) {
       if (!new RegExp(`^${field}:\\s*.+$`, "m").test(contents)) {
         throw new Error(`Skill ${skill} is missing a ${field} field in frontmatter.`);
+      }
+    }
+
+    // v2 frontmatter warnings (not errors during migration)
+    if (!new RegExp("^version:\\s*.+$", "m").test(contents)) {
+      warnings.push(`Skill ${skill} is missing a version field in frontmatter.`);
+    }
+
+    const categoryMatch = contents.match(/^category:\s*(.+)$/m);
+    if (!categoryMatch) {
+      warnings.push(`Skill ${skill} is missing a category field in frontmatter.`);
+    } else {
+      const category = categoryMatch[1].trim();
+      if (!validCategories.includes(category)) {
+        warnings.push(`Skill ${skill} has invalid category "${category}". Valid: ${validCategories.join(", ")}`);
+      }
+    }
+
+    // v2 section lint checks
+    const requiredSections = [
+      "Quality Criteria",
+      "Verification (4C)",
+      "Edge Cases",
+      "Changelog",
+    ];
+    for (const section of requiredSections) {
+      if (!contents.includes(`## ${section}`)) {
+        warnings.push(`Skill ${skill} is missing section: ## ${section}`);
       }
     }
 
@@ -82,7 +123,17 @@ async function validateSkills() {
     }
   }
 
-  return { skillCount: skillDirs.length, metadataCount };
+  // Compute category breakdown
+  const categoryBreakdown = {};
+  for (const skill of skillDirs) {
+    const skillFile = path.join(root, "skills", skill, "SKILL.md");
+    const contents = await fs.readFile(skillFile, "utf8").catch(() => "");
+    const match = contents.match(/^category:\s*(.+)$/m);
+    const cat = match ? match[1].trim() : "uncategorized";
+    categoryBreakdown[cat] = (categoryBreakdown[cat] || 0) + 1;
+  }
+
+  return { skillCount: skillDirs.length, metadataCount, warnings, categoryBreakdown };
 }
 
 async function validateMarkdownDirectory(dir) {
@@ -149,12 +200,20 @@ async function main() {
     await ensureDirectory(dir);
   }
 
-  const { skillCount, metadataCount } = await validateSkills();
+  const { skillCount, metadataCount, warnings, categoryBreakdown } = await validateSkills();
   const playbookCount = await validateMarkdownDirectory("playbooks");
   const automationCount = await validateMarkdownDirectory("automations");
   const mcpGuideCount = await validateMarkdownDirectory("mcp");
   const templateCount = await validateMarkdownDirectory("templates");
   const workspaceCount = await validateWorkspaces();
+
+  if (warnings.length > 0) {
+    console.log(`\n⚠️  ${warnings.length} warning(s):`);
+    for (const w of warnings) {
+      console.log(`   - ${w}`);
+    }
+    console.log();
+  }
 
   console.log("CodexKit pack validation passed.");
   console.log(`Skills: ${skillCount}`);
@@ -164,6 +223,13 @@ async function main() {
   console.log(`MCP guides: ${mcpGuideCount}`);
   console.log(`Templates: ${templateCount}`);
   console.log(`Starter workspaces: ${workspaceCount}`);
+
+  // Category breakdown
+  console.log(`\nSkill categories:`);
+  const sorted = Object.entries(categoryBreakdown).sort((a, b) => b[1] - a[1]);
+  for (const [cat, count] of sorted) {
+    console.log(`  ${cat}: ${count}`);
+  }
 }
 
 main().catch((error) => {

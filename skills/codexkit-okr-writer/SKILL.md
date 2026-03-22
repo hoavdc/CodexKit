@@ -2,6 +2,7 @@
 name: codexkit-okr-writer
 description: Write and cascade OKRs (Objectives and Key Results) for company, department, team, or project level. Ensure objectives are inspiring and key results are measurable outcomes. Includes weekly check-in template. Use at the start of each quarter or when aligning strategy to execution. Do not use for KPI performance reviews or daily task tracking.
 version: 1.0.0
+category: scaffolding
 ---
 
 # OKR Writer
@@ -77,3 +78,29 @@ Create well-structured OKRs that connect strategic ambition to measurable outcom
 - "Write Q2 OKRs for the product team that align to the company goal of market expansion."
 - "Our team OKRs feel like a task list — help us rewrite them as outcome-based KRs."
 - "Create a weekly OKR check-in template for a 12-person engineering team."
+
+## Quality Criteria
+
+- [ ] All placeholder sections are filled with domain-specific content
+- [ ] Structure follows the relevant industry standard or framework
+- [ ] Language matches target audience (technical / executive / legal)
+- [ ] Output is ready for review — not a rough draft requiring major rework
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Does the draft structure follow the stated framework or industry standard? |
+| **Completeness** | Are all required sections present with substantive (not placeholder) content? |
+| **Context-fit** | Does tone, detail level, and terminology match the intended audience? |
+| **Consequence** | If sent to the intended recipient without further editing, what would fail? |
+
+## Edge Cases
+
+- **No existing template for this type** — Use the closest available template and document all customizations made.
+- **Stakeholder requirements conflict** — Flag conflicts explicitly in the draft. Do not silently choose one requirement over another.
+- **Output required in multiple formats** — Produce the canonical format first, then derive others. Note any formatting limitations.
+
+## Changelog
+
+- v1.0.0 — Initial release

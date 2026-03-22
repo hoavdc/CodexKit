@@ -2,6 +2,7 @@
 name: codexkit-report-summarizer
 description: Condense long reports, documents, or data exports into structured summaries with key findings, implications, and recommended actions. Use when the work is distilling dense content for busy readers. Do not use for original analysis, strategy formulation, or when the source material needs expert interpretation beyond summarization.
 version: 1.0.0
+category: knowledge
 ---
 
 # Report Summarizer
@@ -60,3 +61,29 @@ Transform lengthy documents into actionable summaries that respect the reader's 
 - "Extract the top 5 findings from the quarterly budget review and list recommended actions."
 - "Create a 3-bullet pre-read summary of the vendor evaluation document for tomorrow's meeting."
 - "Condense this audit report into key risks and remediation priorities."
+
+## Quality Criteria
+
+- [ ] All claims reference specific frameworks, standards, or quantifiable data
+- [ ] Content matches the stated audience's expertise level
+- [ ] Recommendations are actionable — each includes a concrete next step
+- [ ] No unsupported assertions or generic filler language
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Do referenced frameworks and standards match their official definitions? |
+| **Completeness** | Are all key concepts covered without significant gaps for the stated audience? |
+| **Context-fit** | Would this be useful for someone new to this domain, or is it too advanced/too basic? |
+| **Consequence** | If a stakeholder acted on this immediately, what could they misinterpret? |
+
+## Edge Cases
+
+- **Conflicting frameworks** — State which framework takes precedence and why. Document the trade-off explicitly.
+- **Rapidly changing domain** — Note information currency date. Flag sections likely to need updates.
+- **Audience has mixed expertise levels** — Provide a glossary and mark advanced sections as optional.
+
+## Changelog
+
+- v1.0.0 — Initial release

@@ -1,6 +1,8 @@
 ---
 name: codexkit-onboarding-plan-creator
 description: Create structured employee onboarding plans using the 30-60-90 day framework aligned with SHRM best practices. Cover pre-boarding, Day 1, Week 1, and monthly milestones with task owners, success criteria, and buddy assignments. Use when hiring new employees or revamping the onboarding process.
+version: 1.0.0
+category: scaffolding
 ---
 
 # Onboarding Plan Creator
@@ -127,3 +129,29 @@ Department: Product. Reports to: VP Product.
 Tools: Jira, Figma, Slack, Notion, Looker.
 Create a complete 30-60-90 day onboarding plan with pre-boarding checklist.
 ```
+
+## Quality Criteria
+
+- [ ] All placeholder sections are filled with domain-specific content
+- [ ] Structure follows the relevant industry standard or framework
+- [ ] Language matches target audience (technical / executive / legal)
+- [ ] Output is ready for review — not a rough draft requiring major rework
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Does the draft structure follow the stated framework or industry standard? |
+| **Completeness** | Are all required sections present with substantive (not placeholder) content? |
+| **Context-fit** | Does tone, detail level, and terminology match the intended audience? |
+| **Consequence** | If sent to the intended recipient without further editing, what would fail? |
+
+## Edge Cases
+
+- **No existing template for this type** — Use the closest available template and document all customizations made.
+- **Stakeholder requirements conflict** — Flag conflicts explicitly in the draft. Do not silently choose one requirement over another.
+- **Output required in multiple formats** — Produce the canonical format first, then derive others. Note any formatting limitations.
+
+## Changelog
+
+- v1.0.0 — Initial release

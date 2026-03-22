@@ -2,6 +2,7 @@
 name: codexkit-financial-statement-analyzer
 description: Read and interpret financial statements — Income Statement, Balance Sheet, and Cash Flow Statement. Calculate key ratios, identify trends, and produce an analysis narrative. Use when reviewing company performance, preparing for investor meetings, or conducting due diligence. Do not use for preparing or auditing financial statements — this is an analysis tool only.
 version: 1.0.0
+category: knowledge
 ---
 
 # Financial Statement Analyzer
@@ -73,3 +74,29 @@ Turn raw financial statements into a structured analysis with key ratios, trend 
 - "Analyze our Q3 financials vs Q2 — what's improving and what's not?"
 - "Review this company's annual report and tell me if it's a good acquisition target."
 - "Why is our ROE declining despite growing revenue? Run a DuPont analysis."
+
+## Quality Criteria
+
+- [ ] All claims reference specific frameworks, standards, or quantifiable data
+- [ ] Content matches the stated audience's expertise level
+- [ ] Recommendations are actionable — each includes a concrete next step
+- [ ] No unsupported assertions or generic filler language
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Do referenced frameworks and standards match their official definitions? |
+| **Completeness** | Are all key concepts covered without significant gaps for the stated audience? |
+| **Context-fit** | Would this be useful for someone new to this domain, or is it too advanced/too basic? |
+| **Consequence** | If a stakeholder acted on this immediately, what could they misinterpret? |
+
+## Edge Cases
+
+- **Conflicting frameworks** — State which framework takes precedence and why. Document the trade-off explicitly.
+- **Rapidly changing domain** — Note information currency date. Flag sections likely to need updates.
+- **Audience has mixed expertise levels** — Provide a glossary and mark advanced sections as optional.
+
+## Changelog
+
+- v1.0.0 — Initial release

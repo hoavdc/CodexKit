@@ -2,6 +2,7 @@
 name: codexkit-process-mapper
 description: Map existing business processes using BPMN 2.0 notation or simplified swimlane diagrams. Identify waste, handoffs, decision points, and improvement opportunities using Lean principles (8 Wastes). Use when documenting workflows for SOP creation, automation assessment, or process improvement. Do not use for software architecture diagrams — use architecture tools instead.
 version: 1.0.0
+category: runbook
 ---
 
 # Process Mapper
@@ -85,3 +86,29 @@ Document and analyze business processes to find waste, reduce cycle time, and id
 - "Map our employee onboarding process from offer acceptance to first productive day."
 - "Document the invoice processing workflow and find where delays happen."
 - "We want to automate our customer support escalation — map the as-is process first."
+
+## Quality Criteria
+
+- [ ] Steps are executable in sequence without external context
+- [ ] Decision points have clear if/then branching
+- [ ] Rollback or abort procedures are documented for risky steps
+- [ ] Expected duration or time-per-step is estimated
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Do the steps execute correctly in the order specified? |
+| **Completeness** | Are decision points, error handling, and escalation paths all documented? |
+| **Context-fit** | Could someone with the right access but no prior context complete this runbook? |
+| **Consequence** | If Step N fails and the operator skips to Step N+1, what breaks? |
+
+## Edge Cases
+
+- **Steps require access the operator doesn't have** — Document exact access requirements upfront. Include escalation contact for emergency access.
+- **Environment differs from documented state** — Add a pre-flight check as Step 0 to verify prerequisites before starting.
+- **Runbook is triggered during off-hours** — Document who to contact and which steps can be safely deferred to business hours.
+
+## Changelog
+
+- v1.0.0 — Initial release

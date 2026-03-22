@@ -2,6 +2,7 @@
 name: codexkit-meeting-action-router
 description: Turn meeting notes, transcripts, or rough bullets into decisions, action items, owners, due dates, and follow-up queues. Use when the work is repetitive meeting cleanup or recap writing. Do not use for negotiation strategy, legal advice, or executive decision framing.
 version: 1.0.0
+category: automation
 ---
 
 # Meeting Action Router
@@ -52,3 +53,29 @@ Convert raw meeting material into a tight recap that people can execute.
 
 - "Turn these meeting bullets into a clean recap with owners."
 - "Read this transcript and give me decisions, actions, and open questions."
+
+## Quality Criteria
+
+- [ ] Trigger conditions and input requirements are unambiguous
+- [ ] Each automated step produces a verifiable output
+- [ ] Error handling and fallback paths are defined
+- [ ] Manual override points are documented
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Does the workflow produce the expected output for the defined inputs? |
+| **Completeness** | Are all trigger conditions, edge cases, and error paths handled? |
+| **Context-fit** | Is the automation appropriate for the frequency and criticality of this task? |
+| **Consequence** | If this ran unattended and failed silently, what would the downstream impact be? |
+
+## Edge Cases
+
+- **Input format varies unexpectedly** — Add a normalization step at entry. Alert the operator on format mismatches.
+- **Downstream system is unavailable** — Queue the output and retry with exponential backoff. Alert after N failures.
+- **Partial execution completes** — Ensure idempotency — re-running from the start produces the same result without duplication.
+
+## Changelog
+
+- v1.0.0 — Initial release

@@ -1,6 +1,8 @@
 ---
 name: codexkit-a-b-test-planner
 description: Design rigorous A/B test plans with hypothesis, sample size calculation, Minimum Detectable Effect (MDE), randomization strategy, and decision rules. Includes guardrail metrics and rollout playbook. Use when planning product experiments, conversion optimization, or data-driven feature decisions.
+version: 1.0.0
+category: verification
 ---
 
 # A/B Test Planner
@@ -136,3 +138,29 @@ Current activation: 32%. MDE: 3 percentage points. Daily new users: 500.
 We have max 14 days for the test.
 Design a complete A/B test plan with sample size and decision rules.
 ```
+
+## Quality Criteria
+
+- [ ] Every finding is tied to a specific evidence source (log, test, metric)
+- [ ] Pass/fail criteria are binary and measurable — no subjective judgments
+- [ ] Severity levels are assigned with clear thresholds
+- [ ] Remediation steps are provided for all critical and high findings
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Are all pass/fail criteria applied against the correct standard or rule? |
+| **Completeness** | Were all required dimensions or checklist items evaluated? |
+| **Context-fit** | Does the verification scope match the actual risk level of the deliverable? |
+| **Consequence** | If this passed verification but had a hidden flaw, what is the worst-case impact? |
+
+## Edge Cases
+
+- **Incomplete data for full assessment** — Document which checks were limited and flag for re-verification when data becomes available.
+- **Ambiguous pass/fail criteria** — Request clarification from the standard owner before scoring. Mark as 'Needs Review'.
+- **Multiple overlapping standards** — Identify the governing standard and note where others diverge.
+
+## Changelog
+
+- v1.0.0 — Initial release

@@ -2,6 +2,7 @@
 name: codexkit-risk-register
 description: Build and maintain a project Risk Register per PMBOK 8 Risk Performance Domain. Identify risks, assess probability and impact, define response strategies, and track residual risk. Use throughout the project lifecycle — not just at planning. Do not use for operational incident response or security vulnerability scanning.
 version: 1.0.0
+category: infra
 ---
 
 # Risk Register Manager
@@ -73,3 +74,29 @@ Systematically identify, assess, and manage project risks using a structured reg
 - "Build an initial risk register for a 6-month ERP migration project."
 - "Update the risk register after Sprint 5 — add 3 new risks we discovered."
 - "We have 15 risks but no response plans. Help me define strategies for the top 10."
+
+## Quality Criteria
+
+- [ ] All dependencies and prerequisites are documented
+- [ ] Changes are reversible or include a rollback plan
+- [ ] Security implications are assessed for each configuration change
+- [ ] Monitoring and alerting are defined for post-deployment validation
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Are all configurations, permissions, and dependencies accurate? |
+| **Completeness** | Does the setup cover dev, staging, and prod environments as needed? |
+| **Context-fit** | Is the solution proportional to the problem (not over/under-engineered)? |
+| **Consequence** | If deployed as-is to production, what is the highest-risk failure mode? |
+
+## Edge Cases
+
+- **Target environment has pre-existing configuration** — Scan for conflicts before applying changes. Document what to preserve.
+- **Permissions differ between environments** — Test in staging first. Document the minimum permissions required.
+- **Third-party service is unavailable or deprecated** — Document fallback or alternative. Include health-check endpoints.
+
+## Changelog
+
+- v1.0.0 — Initial release

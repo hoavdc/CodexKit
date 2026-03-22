@@ -1,6 +1,8 @@
 ---
 name: codexkit-competitor-intelligence
 description: Build competitive intelligence briefs following the CI cycle — Plan, Collect, Analyze, Disseminate. Profile competitors, create feature comparison matrices, analyze pricing, build positioning maps, and identify win/loss patterns. Use when preparing for product launches, sales enablement, or strategic reviews.
+version: 1.0.0
+category: knowledge
 ---
 
 # Competitive Intelligence Analyst
@@ -122,3 +124,29 @@ Indirect: Notion, Linear.
 Compare on: features, pricing, target market, integrations.
 Include battle cards for sales team.
 ```
+
+## Quality Criteria
+
+- [ ] All claims reference specific frameworks, standards, or quantifiable data
+- [ ] Content matches the stated audience's expertise level
+- [ ] Recommendations are actionable — each includes a concrete next step
+- [ ] No unsupported assertions or generic filler language
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Do referenced frameworks and standards match their official definitions? |
+| **Completeness** | Are all key concepts covered without significant gaps for the stated audience? |
+| **Context-fit** | Would this be useful for someone new to this domain, or is it too advanced/too basic? |
+| **Consequence** | If a stakeholder acted on this immediately, what could they misinterpret? |
+
+## Edge Cases
+
+- **Conflicting frameworks** — State which framework takes precedence and why. Document the trade-off explicitly.
+- **Rapidly changing domain** — Note information currency date. Flag sections likely to need updates.
+- **Audience has mixed expertise levels** — Provide a glossary and mark advanced sections as optional.
+
+## Changelog
+
+- v1.0.0 — Initial release

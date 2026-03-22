@@ -7,6 +7,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-03-22
+
+### Added
+
+- **Tier 2 enrichment for 20 core skills**: Domain-specific `verification/checklist.md`, `examples/good-output.md`, and `examples/common-mistakes.md` for: bug-hunt, high-signal-review, execution-planner, okr-writer, sprint-planning-assistant, financial-statement-analyzer, contract-risk-review, data-quality-auditor, dashboard-kpi-designer, a-b-test-planner, go-to-market-planner, campaign-brief-writer, incident-postmortem, root-cause-analyzer, onboarding-plan-creator, repo-onboarding, survey-analyzer, business-case-writer, process-mapper, and customer-journey-mapper.
+- **Tier 3 enrichment for 5 technical skills**: Executable assets including `coverage-gap-finder.sh` (test-hardening), `query-validator.sql` (sql-query-builder), `readme-template.md` + `changelog-template.md` (docs-shipper), `automation-spec.md` (automation-designer), `charter-template.md` + `raci-template.md` (project-governance-pilot).
+- **Gotchas template**: `templates/gotchas-template.md` for capturing real-world edge cases and workarounds per skill.
+- **`/evolve-skill` workflow**: Structured process for updating skills after discovering issues, edge cases, or improvements — includes change classification, version bumping, changelog updates, and validation.
+- **v2 section lint**: `validate-pack.mjs` now warns on missing v2 sections (Quality Criteria, Verification 4C, Edge Cases, Changelog).
+- **Category breakdown**: Pack validation output now shows per-category skill counts.
+- **Community contribution guide**: CONTRIBUTING.md expanded with tier enrichment guide and community call-to-action for skills needing enrichment.
+
+### Changed
+
+- 21 skills now have `verification/` folders (20 Tier 2 enriched + 1 exemplar).
+- 21 skills now have `examples/` folders with domain-specific good output and common mistakes.
+- 5 skills now have `scripts/` or `templates/` folders with executable Tier 3 assets.
+- CONTRIBUTING.md refactored with community contribution opportunities and enrichment guide.
+- README updated with v0.9.0 enrichment stats, contribution call-to-action, and release instructions.
+
+## [0.8.0] - 2026-03-22
+
+### Added
+
+- **5-Layer Skill Framework**: Every skill now addresses Intent, Knowledge, Execution, Verification (4C), and Evolution layers.
+- **SKILL.md v2 Template**: `templates/SKILL-TEMPLATE.md` — 10-section template with Quality Criteria, Verification (4C), Edge Cases, and Changelog sections.
+- **Deep Research Master Prompt**: `templates/deep-research-prompt.md` — universal prompt for ChatGPT Deep Research / Gemini / Perplexity Pro that generates structured domain knowledge mapping directly into SKILL.md sections.
+- **Exemplar skill**: `codexkit-skill-template` — working reference implementation demonstrating full Tier 2 folder structure (SKILL.md, verification/, examples/, CHANGELOG.md).
+- **Skill categories**: 8-category taxonomy (`knowledge`, `verification`, `data`, `automation`, `scaffolding`, `review`, `runbook`, `infra`) added to skill frontmatter.
+- **3-tier skill structure**: Tier 1 (all skills — SKILL.md + agents/), Tier 2 (~20 high-value — + verification/ + examples/), Tier 3 (~5–10 technical — + templates/ + scripts/).
+
+### Changed
+
+- Skill count increased from 81 to 82 (added `codexkit-skill-template` exemplar).
+- `CONTRIBUTING.md` expanded with comprehensive skill authoring guide (7-step process, folder structure guide).
+- `skill-finder.md` updated with category taxonomy section and exemplar skill entry.
+- README updated with new "Skill architecture" section.
+
 ## [0.7.1] - 2026-03-20
 
 ### Fixed
@@ -144,7 +182,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Cross-platform skill installation scripts and a validation script.
 - New docs site positioned for OpenAI Codex and ChatGPT users.
 
-[Unreleased]: https://github.com/hoavdc/CodexKit/compare/v0.7.1...HEAD
+[Unreleased]: https://github.com/hoavdc/CodexKit/compare/v0.9.0...HEAD
+[0.9.0]: https://github.com/hoavdc/CodexKit/compare/v0.8.0...v0.9.0
+[0.8.0]: https://github.com/hoavdc/CodexKit/compare/v0.7.1...v0.8.0
 [0.7.1]: https://github.com/hoavdc/CodexKit/releases/tag/v0.7.1
 [0.7.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.7.0
 [0.6.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.6.0

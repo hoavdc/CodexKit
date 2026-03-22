@@ -1,6 +1,23 @@
 # Skill Finder — "I need to… → Use this skill"
 
-> Quick reference for all 81 CodexKit skills grouped by what you're trying to accomplish.
+> Quick reference for all 82 CodexKit skills grouped by what you're trying to accomplish.
+
+---
+
+## 🏷️ Skill Categories
+
+| Category | Description | Count |
+|----------|-------------|-------|
+| `knowledge` | Domain expertise, onboarding, reference material | ~15 |
+| `scaffolding` | Generate structured first drafts, frameworks, outlines | ~25 |
+| `review` | Analyze, critique, and improve existing deliverables | ~12 |
+| `data` | Read, process, analyze, or visualize data | ~8 |
+| `automation` | Chain repeatable steps into workflows | ~10 |
+| `verification` | Validate, audit, or test outputs against standards | ~5 |
+| `runbook` | Step-by-step procedures for recurring operational situations | ~5 |
+| `infra` | Technical delivery, CI/CD, system checks, governance | ~2 |
+
+> Each skill's `SKILL.md` frontmatter includes a `category` field. See `templates/SKILL-TEMPLATE.md` for authoring guidelines.
 
 ---
 
@@ -173,3 +190,11 @@
 | Draft crisis communications | `codexkit-crisis-communication` | Holding statements, Q&A, stakeholder‑specific messaging |
 | Write a business case for investment | `codexkit-business-case-writer` | NPV/ROI/Payback, risk assessment, implementation roadmap |
 | Author a policy or SOP | `codexkit-policy-document-writer` | ISO document control, compliance monitoring, review schedule |
+
+---
+
+## 📐 Skill Authoring
+
+| I need to… | Skill | What it does |
+|---|---|---|
+| Create a new CodexKit skill | `codexkit-skill-template` | Reference implementation with all 10 SKILL.md v2 sections, 4C verification, and Tier 2 folder structure |

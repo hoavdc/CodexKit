@@ -1,6 +1,8 @@
 ---
 name: codexkit-pmbok8-earned-value
 description: Calculate and interpret Earned Value Management (EVM) metrics per PMBOK 8 Measurement Performance Domain. Compute SPI, CPI, EAC, ETC, TCPI, and generate variance narratives with corrective action recommendations. Use during project execution to assess schedule and cost performance.
+version: 1.0.0
+category: data
 ---
 
 # Earned Value Management Analyst
@@ -113,3 +115,29 @@ PV = $200,000, EV = $180,000, AC = $210,000.
 Last month SPI was 0.93, CPI was 0.89.
 Generate a full EVM report with forecasts and corrective actions.
 ```
+
+## Quality Criteria
+
+- [ ] Data sources and assumptions are explicitly stated
+- [ ] Calculations are reproducible from provided inputs
+- [ ] Visualizations or tables have clear labels, units, and time ranges
+- [ ] Caveats and confidence levels are documented for estimates
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Are formulas, aggregations, and statistical methods applied correctly? |
+| **Completeness** | Does the analysis cover all requested metrics and time ranges? |
+| **Context-fit** | Are the chosen metrics relevant to the business question being answered? |
+| **Consequence** | If this data were used for a decision today, what blind spots remain? |
+
+## Edge Cases
+
+- **Missing or incomplete data** — Document gaps and their potential impact on conclusions. Provide ranges instead of point estimates.
+- **Outliers skewing results** — Report with and without outliers. Document the decision to include or exclude.
+- **Changing data definitions mid-period** — Split analysis at the change boundary and note the schema difference.
+
+## Changelog
+
+- v1.0.0 — Initial release

@@ -2,6 +2,7 @@
 name: codexkit-brand-positioning-canvas
 description: Build or refine brand positioning with audience, category, differentiators, proof, tone, JTBD signals, and competitive context. Use when marketing, founders, or GTM teams need a positioning canvas, messaging pillars, or campaign foundation. Do not use for isolated ad copy tweaks with no strategy question.
 version: 1.0.0
+category: knowledge
 ---
 
 # Brand Positioning Canvas
@@ -56,3 +57,29 @@ Create a positioning foundation that sharpens how a brand should show up and wha
 
 - "Help us position our B2B product against two bigger competitors."
 - "Build a positioning canvas we can use before rewriting the website."
+
+## Quality Criteria
+
+- [ ] All claims reference specific frameworks, standards, or quantifiable data
+- [ ] Content matches the stated audience's expertise level
+- [ ] Recommendations are actionable — each includes a concrete next step
+- [ ] No unsupported assertions or generic filler language
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Do referenced frameworks and standards match their official definitions? |
+| **Completeness** | Are all key concepts covered without significant gaps for the stated audience? |
+| **Context-fit** | Would this be useful for someone new to this domain, or is it too advanced/too basic? |
+| **Consequence** | If a stakeholder acted on this immediately, what could they misinterpret? |
+
+## Edge Cases
+
+- **Conflicting frameworks** — State which framework takes precedence and why. Document the trade-off explicitly.
+- **Rapidly changing domain** — Note information currency date. Flag sections likely to need updates.
+- **Audience has mixed expertise levels** — Provide a glossary and mark advanced sections as optional.
+
+## Changelog
+
+- v1.0.0 — Initial release

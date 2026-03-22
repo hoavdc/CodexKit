@@ -1,6 +1,8 @@
 ---
 name: codexkit-training-needs-analyzer
 description: Assess organizational training needs using ADDIE methodology and Kirkpatrick's 4-Level evaluation framework. Maps performance gaps to learning objectives using Bloom's taxonomy. Use when planning L&D budgets, designing training programs, or evaluating training effectiveness.
+version: 1.0.0
+category: scaffolding
 ---
 
 # Training Needs Analyzer
@@ -129,3 +131,29 @@ Write measurable objectives at the right cognitive level:
 - [ ] Delivery format recommended with justification
 - [ ] Kirkpatrick evaluation plan included
 - [ ] Budget estimated with per-learner cost
+
+## Quality Criteria
+
+- [ ] All placeholder sections are filled with domain-specific content
+- [ ] Structure follows the relevant industry standard or framework
+- [ ] Language matches target audience (technical / executive / legal)
+- [ ] Output is ready for review — not a rough draft requiring major rework
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Does the draft structure follow the stated framework or industry standard? |
+| **Completeness** | Are all required sections present with substantive (not placeholder) content? |
+| **Context-fit** | Does tone, detail level, and terminology match the intended audience? |
+| **Consequence** | If sent to the intended recipient without further editing, what would fail? |
+
+## Edge Cases
+
+- **No existing template for this type** — Use the closest available template and document all customizations made.
+- **Stakeholder requirements conflict** — Flag conflicts explicitly in the draft. Do not silently choose one requirement over another.
+- **Output required in multiple formats** — Produce the canonical format first, then derive others. Note any formatting limitations.
+
+## Changelog
+
+- v1.0.0 — Initial release

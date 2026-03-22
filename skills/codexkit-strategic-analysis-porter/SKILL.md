@@ -1,6 +1,8 @@
 ---
 name: codexkit-strategic-analysis-porter
 description: Conduct strategic analysis using Porter's Five Forces, PESTEL, and SWOT frameworks. Assess competitive dynamics, macro environment, and internal capabilities. Synthesize into strategic implications with ranked options. Use when entering new markets, evaluating competitive position, or strategic planning.
+version: 1.0.0
+category: knowledge
 ---
 
 # Strategic Analysis (Porter + PESTEL + SWOT)
@@ -124,3 +126,29 @@ We have 5% market share, strong product but weak sales team.
 Key competitors: Workday, BambooHR, Deel.
 Use Porter's Five Forces + PESTEL + SWOT and recommend strategic options.
 ```
+
+## Quality Criteria
+
+- [ ] All claims reference specific frameworks, standards, or quantifiable data
+- [ ] Content matches the stated audience's expertise level
+- [ ] Recommendations are actionable — each includes a concrete next step
+- [ ] No unsupported assertions or generic filler language
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Do referenced frameworks and standards match their official definitions? |
+| **Completeness** | Are all key concepts covered without significant gaps for the stated audience? |
+| **Context-fit** | Would this be useful for someone new to this domain, or is it too advanced/too basic? |
+| **Consequence** | If a stakeholder acted on this immediately, what could they misinterpret? |
+
+## Edge Cases
+
+- **Conflicting frameworks** — State which framework takes precedence and why. Document the trade-off explicitly.
+- **Rapidly changing domain** — Note information currency date. Flag sections likely to need updates.
+- **Audience has mixed expertise levels** — Provide a glossary and mark advanced sections as optional.
+
+## Changelog
+
+- v1.0.0 — Initial release

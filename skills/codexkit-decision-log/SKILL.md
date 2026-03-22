@@ -1,6 +1,8 @@
 ---
 name: codexkit-decision-log
 description: Record and track organizational decisions using the RAPID framework. Captures decision context, options analysis, RAPID roles, risk assessment, and communication plan. Use when making cross-functional decisions, documenting governance choices, or building an auditable decision trail.
+version: 1.0.0
+category: knowledge
 ---
 
 # Decision Log
@@ -117,3 +119,29 @@ We will migrate to PostgreSQL 16 managed on AWS RDS.
 - [ ] Risks identified per option
 - [ ] Decision recorded with rationale
 - [ ] Communication plan defined
+
+## Quality Criteria
+
+- [ ] All claims reference specific frameworks, standards, or quantifiable data
+- [ ] Content matches the stated audience's expertise level
+- [ ] Recommendations are actionable — each includes a concrete next step
+- [ ] No unsupported assertions or generic filler language
+
+## Verification (4C)
+
+| Check | Question |
+|-------|----------|
+| **Correctness** | Do referenced frameworks and standards match their official definitions? |
+| **Completeness** | Are all key concepts covered without significant gaps for the stated audience? |
+| **Context-fit** | Would this be useful for someone new to this domain, or is it too advanced/too basic? |
+| **Consequence** | If a stakeholder acted on this immediately, what could they misinterpret? |
+
+## Edge Cases
+
+- **Conflicting frameworks** — State which framework takes precedence and why. Document the trade-off explicitly.
+- **Rapidly changing domain** — Note information currency date. Flag sections likely to need updates.
+- **Audience has mixed expertise levels** — Provide a glossary and mark advanced sections as optional.
+
+## Changelog
+
+- v1.0.0 — Initial release
