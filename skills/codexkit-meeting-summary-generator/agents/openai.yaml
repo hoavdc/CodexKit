@@ -1,0 +1,4 @@
+interface:
+  display_name: "Meeting Summary Generator"
+  short_description: "Turn meeting notes or transcripts into decisions, action items, open questions, and recaps."
+  brand_color: "#0F766E"

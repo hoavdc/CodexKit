@@ -7,6 +7,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-05-15
+
+### Added
+
+- **Office productivity expansion**: 8 new skills for everyday non-coder workflows: `codexkit-daily-brief-generator`, `codexkit-meeting-summary-generator`, `codexkit-support-ticket-summarizer`, `codexkit-sales-forecast-analyzer`, `codexkit-onboarding-checklist-creator`, `codexkit-sop-writer`, `codexkit-document-summarizer`, and `codexkit-csat-sentiment-analyzer`.
+- **Tier 2 enrichment for 5 additional skills**: Added `verification/checklist.md`, `examples/good-output.md`, and `examples/common-mistakes.md` for `codexkit-email-composer`, `codexkit-report-summarizer`, `codexkit-sql-query-builder`, `codexkit-data-story-builder`, and `codexkit-performance-review-writer`.
+- **5 office templates**: `email-introduction-templates`, `personal-weekly-planner`, `weekly-status-report`, `marketing-calendar`, and `team-meeting-agenda`.
+- **4 automation recipes**: `daily-standup-reminder`, `weekly-status-report-automation`, `meeting-follow-up-assistant`, and `quarterly-okr-reminder`.
+- **3 starter workspaces**: `team-onboarding`, `startup-launch`, and `weekly-team-sync`.
+
+### Changed
+
+- Skill count increased from 82 to 90.
+- Template count increased from 13 to 18.
+- Automation recipe count increased from 10 to 14.
+- Starter workspace count increased from 6 to 9.
+- Tier 2 enriched skill count increased from 21 to 26.
+- README, skill finder, docs site data, launcher counts, install docs, and package versions synchronized for the v0.10.0 release.
+- Update scripts now sync release ZIP installs across skills, templates, workspaces, playbooks, automations, MCP guides, and reference docs instead of only reinstalling skills.
+- Improved domain-specific quality gates for email composition, report summarization, data storytelling, SQL query building, and performance review writing.
+
 ## [0.9.0] - 2026-03-22
 
 ### Added
@@ -182,7 +203,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Cross-platform skill installation scripts and a validation script.
 - New docs site positioned for OpenAI Codex and ChatGPT users.
 
-[Unreleased]: https://github.com/hoavdc/CodexKit/compare/v0.9.0...HEAD
+[Unreleased]: https://github.com/hoavdc/CodexKit/compare/v0.10.0...HEAD
+[0.10.0]: https://github.com/hoavdc/CodexKit/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/hoavdc/CodexKit/compare/v0.8.0...v0.9.0
 [0.8.0]: https://github.com/hoavdc/CodexKit/compare/v0.7.1...v0.8.0
 [0.7.1]: https://github.com/hoavdc/CodexKit/releases/tag/v0.7.1
@@ -194,4 +216,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 [0.3.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.3.0
 [0.2.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.2.0
 [0.1.0]: https://github.com/hoavdc/CodexKit/releases/tag/v0.1.0
-

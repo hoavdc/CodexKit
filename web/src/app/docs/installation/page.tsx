@@ -13,7 +13,7 @@ export default function InstallationPage() {
         <div className="eyebrow mb-5">Installation</div>
         <h1 className="section-title">Install CodexKit locally, then publish the docs when the pack matches your workflow.</h1>
         <p className="mt-4 text-base leading-8 text-muted-foreground">
-          CodexKit follows the official Codex Skills layout: each skill ships with <code>SKILL.md</code>, optional <code>agents/openai.yaml</code>, and standard <code>.agents/skills</code> discovery paths. The pack now covers engineering, high-reasoning work, low-reasoning office automation, department templates, and starter workspaces across project, finance, legal, operations, HR, strategy, analytics, marketing, and CX workflows.
+          CodexKit follows the official Codex Skills layout: each skill ships with <code>SKILL.md</code>, optional <code>agents/openai.yaml</code>, and standard <code>.agents/skills</code> discovery paths. The pack now covers engineering, high-reasoning work, low-reasoning office automation, department templates, and starter workspaces across project, finance, legal, operations, HR, strategy, analytics, marketing, sales, support, founder, and CX workflows.
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <a
@@ -22,7 +22,7 @@ export default function InstallationPage() {
             rel="noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 dark:bg-zinc-50 dark:text-zinc-900"
           >
-            ⭐ View on GitHub
+            View on GitHub
           </a>
           <a
             href="https://github.com/hoavdc/CodexKit/releases"
@@ -63,10 +63,10 @@ cd CodexKit`}</code>
       <section className="mb-12 panel p-8">
         <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Fastest path for non-coders</h2>
         <ol className="mt-5 space-y-4 text-sm leading-7 text-muted-foreground">
-          <li>1. Open the <a href="https://github.com/hoavdc/CodexKit/releases" target="_blank" rel="noreferrer" className="font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 dark:text-zinc-50 dark:decoration-zinc-700">GitHub Releases page</a> and download <code>codexkit-starter-pack-v0.7.0.zip</code>.</li>
+          <li>1. Open the <a href="https://github.com/hoavdc/CodexKit/releases" target="_blank" rel="noreferrer" className="font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 dark:text-zinc-50 dark:decoration-zinc-700">GitHub Releases page</a> and download <code>codexkit-starter-pack-v0.10.0.zip</code>.</li>
           <li>2. Unzip the package anywhere on your machine.</li>
           <li>3. On Windows, double-click <code>START-HERE-WINDOWS.cmd</code>. On macOS or Linux, run <code>bash ./START-HERE.sh</code>.</li>
-          <li>4. Restart Codex and type <code>/skills</code> to confirm all 81 skills appear.</li>
+          <li>4. Restart Codex and type <code>/skills</code> to confirm all 90 skills appear.</li>
           <li>5. Open <code>skill-finder.md</code> to browse skills by situation.</li>
           <li>6. Optional: create a starter workspace with <code>CREATE-WORKSPACE-WINDOWS.cmd</code> or <code>bash ./CREATE-WORKSPACE.sh</code>.</li>
         </ol>
@@ -107,7 +107,7 @@ node ./scripts/validate-pack.mjs`}</code>
       <section className="mb-12 panel p-8">
         <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Updating CodexKit</h2>
         <p className="mt-4 text-sm leading-7 text-muted-foreground">
-          CodexKit ships with update scripts that auto-detect your install method and pull the latest skills without re-downloading everything.
+          CodexKit ships with update scripts that auto-detect your install method and refresh the local pack without a manual reinstall.
         </p>
         <div className="mt-5 grid gap-4 lg:grid-cols-2">
           <div className="rounded-3xl border border-border/80 bg-[#161617] p-5">
@@ -122,7 +122,7 @@ node ./scripts/validate-pack.mjs`}</code>
         </div>
         <ul className="mt-5 space-y-2 text-sm leading-7 text-muted-foreground">
           <li><strong>Git clone:</strong> Runs <code>git pull</code> + re-installs all skills with <code>--force</code>.</li>
-          <li><strong>Zip download:</strong> Fetches the latest release from GitHub, extracts new skills, and overwrites installed ones.</li>
+          <li><strong>Zip download:</strong> Fetches the latest release from GitHub, syncs local skills/templates/workspaces/playbooks/automations/MCP guides, and overwrites installed skills.</li>
         </ul>
       </section>
 
@@ -161,7 +161,7 @@ node ./scripts/validate-pack.mjs`}</code>
         <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Starter workspace adoption</h2>
         <ul className="mt-5 space-y-3 text-sm leading-7 text-muted-foreground">
           <li>Choose the closest starter in <code>workspaces/</code> instead of beginning from an empty folder.</li>
-          <li>Keep the structure, but rename files and sections to match your team’s actual cadence and terminology.</li>
+          <li>Keep the structure, but rename files and sections to match the actual team cadence and terminology.</li>
           <li>Pair the workspace with one high-reasoning skill and one routine automation skill before adding more assets.</li>
         </ul>
       </section>

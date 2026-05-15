@@ -9,7 +9,50 @@ $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $RootDir = Split-Path -Parent $ScriptDir
 $CurrentVersion = ""
 
-# ── Detect current version ──
+function Copy-CodexKitReleaseContent {
+    param(
+        [Parameter(Mandatory = $true)][string]$SourceRoot,
+        [Parameter(Mandatory = $true)][string]$TargetRoot
+    )
+
+    $targetRootFull = [System.IO.Path]::GetFullPath($TargetRoot)
+    if (
+        [string]::IsNullOrWhiteSpace($targetRootFull) -or
+        $targetRootFull -match '^[A-Za-z]:\\$' -or
+        $targetRootFull -eq [System.IO.Path]::GetPathRoot($targetRootFull)
+    ) {
+        throw "Refusing to update an unsafe CodexKit root: $targetRootFull"
+    }
+
+    foreach ($dir in @("skills", "templates", "workspaces", "playbooks", "automations", "mcp")) {
+        $src = Join-Path $SourceRoot $dir
+        if (-not (Test-Path $src)) { continue }
+
+        $dst = Join-Path $targetRootFull $dir
+        $dstFull = [System.IO.Path]::GetFullPath($dst)
+        $expectedPrefix = $targetRootFull.TrimEnd('\') + '\'
+        if (-not $dstFull.StartsWith($expectedPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
+            throw "Refusing to update outside the CodexKit root: $dstFull"
+        }
+
+        if (Test-Path $dstFull) {
+            Remove-Item -Recurse -Force -LiteralPath $dstFull
+        }
+        Copy-Item -Recurse -Force -LiteralPath $src -Destination $dstFull
+    }
+
+    foreach ($file in @("README.md", "LICENSE", "NOTICE.md", "package.json", "CHANGELOG.md", "skill-finder.md", "HUONG-DAN-NHANH.md", "START-HERE-WINDOWS.cmd", "START-HERE.sh", "CREATE-WORKSPACE-WINDOWS.cmd", "CREATE-WORKSPACE.sh")) {
+        $src = Join-Path $SourceRoot $file
+        if (Test-Path $src) {
+            Copy-Item -Force -LiteralPath $src -Destination (Join-Path $targetRootFull $file) -ErrorAction SilentlyContinue
+        }
+    }
+
+    Get-ChildItem -Path $SourceRoot -Filter "RELEASE-v*.md" -File -ErrorAction SilentlyContinue | ForEach-Object {
+        Copy-Item -Force -LiteralPath $_.FullName -Destination (Join-Path $targetRootFull $_.Name) -ErrorAction SilentlyContinue
+    }
+}
+
 $pkgPath = Join-Path $RootDir "package.json"
 if (Test-Path $pkgPath) {
     $pkg = Get-Content $pkgPath -Raw | ConvertFrom-Json
@@ -25,7 +68,6 @@ if ($CurrentVersion) { Write-Host "Current version: v$CurrentVersion" }
 Write-Host "Skills destination: $Destination"
 Write-Host ""
 
-# ── Detect update method ──
 $gitDir = Join-Path $RootDir ".git"
 if (Test-Path $gitDir) {
     Write-Host "[GIT] Git repository detected. Updating via git pull..." -ForegroundColor Green
@@ -33,23 +75,25 @@ if (Test-Path $gitDir) {
 
     Push-Location $RootDir
 
-    # Check for uncommitted changes
-    $status = git status --porcelain 2>$null
     $stashed = $false
+    $status = git status --porcelain 2>$null
     if ($status) {
         Write-Host "Warning: You have uncommitted changes. Stashing them..." -ForegroundColor Yellow
-        git stash
+        git stash push -u -m "CodexKit updater auto-stash"
         $stashed = $true
     }
 
-    # Pull latest
-    $before = git rev-parse HEAD
-    try {
-        git pull --rebase origin main 2>&1
-    } catch {
+    $before = (git rev-parse HEAD).Trim()
+    git pull --rebase origin main 2>&1
+    if ($LASTEXITCODE -ne 0) {
+        git rebase --abort 2>$null
         git pull origin main 2>&1
+        if ($LASTEXITCODE -ne 0) {
+            Pop-Location
+            throw "Git update failed. Resolve the git error above, then rerun the updater."
+        }
     }
-    $after = git rev-parse HEAD
+    $after = (git rev-parse HEAD).Trim()
 
     if ($before -eq $after) {
         Write-Host ""
@@ -62,14 +106,15 @@ if (Test-Path $gitDir) {
         git log --oneline "$before..$after" 2>$null
     }
 
-    # Restore stashed changes
     if ($stashed) {
         Write-Host ""
         Write-Host "Restoring your local changes..."
-        try { git stash pop } catch { Write-Warning "Could not auto-restore stash. Run 'git stash pop' manually." }
+        git stash pop
+        if ($LASTEXITCODE -ne 0) {
+            Write-Warning "Could not auto-restore stash. Run 'git stash pop' manually."
+        }
     }
 
-    # Re-read version
     if (Test-Path $pkgPath) {
         $pkg = Get-Content $pkgPath -Raw | ConvertFrom-Json
         $LatestVersion = $pkg.version
@@ -79,13 +124,10 @@ if (Test-Path $gitDir) {
 
     Pop-Location
 
-    # Re-install skills
     Write-Host ""
     Write-Host "Re-installing skills..." -ForegroundColor Cyan
     & "$RootDir\scripts\install-skills.ps1" -Destination $Destination -Force
-
 } else {
-    # ── Non-git: Download latest release ──
     Write-Host "[DOWNLOAD] No git repo found. Checking GitHub for latest release..." -ForegroundColor Yellow
     Write-Host ""
 
@@ -109,7 +151,6 @@ if (Test-Path $gitDir) {
         exit 0
     }
 
-    # Download latest starter pack
     $downloadUrl = "$RepoUrl/releases/download/v$LatestVersion/codexkit-starter-pack-v$LatestVersion.zip"
     $tmpDir = Join-Path $env:TEMP "codexkit-update-$(Get-Random)"
     $zipFile = Join-Path $tmpDir "codexkit.zip"
@@ -126,48 +167,39 @@ if (Test-Path $gitDir) {
     } catch {
         Write-Host "Download failed. Please download manually from:" -ForegroundColor Red
         Write-Host "  $RepoUrl/releases"
-        Remove-Item -Recurse -Force $tmpDir -ErrorAction SilentlyContinue
+        Remove-Item -Recurse -Force -LiteralPath $tmpDir -ErrorAction SilentlyContinue
         exit 1
     }
 
     Write-Host "Extracting..." -ForegroundColor Cyan
     Expand-Archive -Path $zipFile -DestinationPath $extractDir -Force
 
-    # Find the extracted skills directory
-    $extractedSkills = Get-ChildItem -Path $extractDir -Recurse -Directory -Filter "skills" | Select-Object -First 1
-    if (-not $extractedSkills) {
-        Write-Host "Could not find skills directory in the downloaded package." -ForegroundColor Red
-        Remove-Item -Recurse -Force $tmpDir -ErrorAction SilentlyContinue
+    $extractedRoot = Get-ChildItem -Path $extractDir -Directory | Where-Object {
+        (Test-Path (Join-Path $_.FullName "package.json")) -or
+        (Test-Path (Join-Path $_.FullName "skill-finder.md")) -or
+        (Test-Path (Join-Path $_.FullName "skills"))
+    } | Select-Object -First 1
+
+    if (-not $extractedRoot) {
+        Write-Host "Could not find the release root in the downloaded package." -ForegroundColor Red
+        Remove-Item -Recurse -Force -LiteralPath $tmpDir -ErrorAction SilentlyContinue
         exit 1
     }
 
-    # Copy new skills
+    Write-Host "Syncing local CodexKit content..." -ForegroundColor Cyan
+    Copy-CodexKitReleaseContent -SourceRoot $extractedRoot.FullName -TargetRoot $RootDir
+
+    $localSkills = Join-Path $RootDir "skills"
+    if (-not (Test-Path $localSkills)) {
+        Write-Host "Could not find the local skills directory after sync." -ForegroundColor Red
+        Remove-Item -Recurse -Force -LiteralPath $tmpDir -ErrorAction SilentlyContinue
+        exit 1
+    }
+
     Write-Host "Installing new skills from v$LatestVersion..." -ForegroundColor Cyan
-    New-Item -ItemType Directory -Force -Path $Destination | Out-Null
-    $installedCount = 0
+    & "$RootDir\scripts\install-skills.ps1" -SourceDir $localSkills -Destination $Destination -Force
 
-    Get-ChildItem -Path $extractedSkills.FullName -Directory | ForEach-Object {
-        $target = Join-Path $Destination $_.Name
-        if (Test-Path $target) { Remove-Item -Recurse -Force $target }
-        Copy-Item -Recurse -Force $_.FullName $target
-        $installedCount++
-    }
-
-    Write-Host "Updated $installedCount skills to v$LatestVersion" -ForegroundColor Green
-
-    # Update local reference files
-    $extractedRoot = Get-ChildItem -Path $extractDir -Directory | Select-Object -First 1
-    if ($extractedRoot) {
-        foreach ($file in @("skill-finder.md", "HUONG-DAN-NHANH.md", "CHANGELOG.md")) {
-            $src = Join-Path $extractedRoot.FullName $file
-            if (Test-Path $src) {
-                Copy-Item -Force $src (Join-Path $RootDir $file) -ErrorAction SilentlyContinue
-            }
-        }
-    }
-
-    # Cleanup
-    Remove-Item -Recurse -Force $tmpDir -ErrorAction SilentlyContinue
+    Remove-Item -Recurse -Force -LiteralPath $tmpDir -ErrorAction SilentlyContinue
 }
 
 Write-Host ""

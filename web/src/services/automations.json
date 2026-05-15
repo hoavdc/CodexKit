@@ -48,5 +48,25 @@
     "name": "Content calendar refresh",
     "cadence": "Weekly",
     "description": "Turn launch and campaign changes into an updated publishing calendar, dependencies, and risks."
+  },
+  {
+    "name": "Daily standup reminder",
+    "cadence": "Weekdays",
+    "description": "Collect async standup updates, summarize progress, and surface blockers before team sync."
+  },
+  {
+    "name": "Weekly status report automation",
+    "cadence": "Weekly",
+    "description": "Generate a weekly status report from task updates, meeting notes, milestones, and risks."
+  },
+  {
+    "name": "Meeting follow-up assistant",
+    "cadence": "Event-driven",
+    "description": "Convert meeting notes into follow-up messages, tracker rows, and confirmation gaps."
+  },
+  {
+    "name": "Quarterly OKR reminder",
+    "cadence": "Quarterly",
+    "description": "Prompt OKR owners to update progress, close out the quarter, and prepare next-quarter drafting."
   }
 ]

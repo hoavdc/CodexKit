@@ -51,9 +51,9 @@ See [`templates/SKILL-TEMPLATE.md`](templates/SKILL-TEMPLATE.md) for the full ti
 
 ## Community enrichment — where help is most needed
 
-### Tier 2 enrichment (61 skills need this)
+### Tier 2 enrichment (64 skills need this)
 
-21 of 82 skills already have `verification/` and `examples/` folders. The other 61 do not. To enrich a skill:
+26 of 90 skills already have `verification/` and `examples/` folders. The other 64 do not. To enrich a skill:
 
 1. Pick a skill you have domain expertise in.
 2. Create `verification/checklist.md` — answer four domain-specific questions for each of the 4C gates (Correctness, Completeness, Context-fit, Consequence).

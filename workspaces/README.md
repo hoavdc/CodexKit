@@ -17,3 +17,6 @@ CodexKit ships department starter workspaces so teams can adopt a working struct
 - `legal-ops-desk`
 - `operations-control-hub`
 - `marketing-growth-studio`
+- `team-onboarding`
+- `startup-launch`
+- `weekly-team-sync`

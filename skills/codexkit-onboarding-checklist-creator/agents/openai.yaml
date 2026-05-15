@@ -1,0 +1,4 @@
+interface:
+  display_name: "Onboarding Checklist Creator"
+  short_description: "Create practical onboarding checklists with owners, timing, access needs, and milestones."
+  brand_color: "#9333EA"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document Summarizer"
+  short_description: "Summarize document-heavy inputs into key points, actions, risks, and review needs."
+  brand_color: "#475569"

@@ -63,26 +63,30 @@ Turn rough thoughts into polished business emails that are clear, actionable, an
 
 ## Quality Criteria
 
-- [ ] Trigger conditions and input requirements are unambiguous
-- [ ] Each automated step produces a verifiable output
-- [ ] Error handling and fallback paths are defined
-- [ ] Manual override points are documented
+- [ ] Subject line previews the purpose or action needed.
+- [ ] Opening sentence gives enough context without overexplaining.
+- [ ] The email has one clear primary ask, update, or decision point.
+- [ ] Tone matches the audience relationship and business stakes.
+- [ ] Next step, owner, and timing are explicit when action is needed.
+- [ ] Sensitive or high-stakes content is marked for human review.
 
 ## Verification (4C)
 
 | Check | Question |
 |-------|----------|
-| **Correctness** | Does the workflow produce the expected output for the defined inputs? |
-| **Completeness** | Are all trigger conditions, edge cases, and error paths handled? |
-| **Context-fit** | Is the automation appropriate for the frequency and criticality of this task? |
-| **Consequence** | If this ran unattended and failed silently, what would the downstream impact be? |
+| **Correctness** | Does the draft preserve the user's facts, names, dates, and constraints accurately? |
+| **Completeness** | Does it include subject, greeting, context, message, ask, timing, and close where needed? |
+| **Context-fit** | Is the tone appropriate for the recipient relationship and stakes? |
+| **Consequence** | Could the wording create an unintended commitment, escalation, or legal/HR issue? |
 
 ## Edge Cases
 
-- **Input format varies unexpectedly** — Add a normalization step at entry. Alert the operator on format mismatches.
-- **Downstream system is unavailable** — Queue the output and retry with exponential backoff. Alert after N failures.
-- **Partial execution completes** — Ensure idempotency — re-running from the start produces the same result without duplication.
+- **Ambiguous ask** — Ask one clarifying question or draft two variants with different asks.
+- **High-stakes external message** — Draft conservatively and require human review before sending.
+- **Missing recipient relationship** — Default to neutral professional tone and state the assumption.
+- **Sensitive HR, legal, or regulatory topic** — Provide structure only and recommend appropriate review.
 
 ## Changelog
 
+- v1.1.0 — Added domain-specific quality gates for office email drafting.
 - v1.0.0 — Initial release

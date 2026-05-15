@@ -1,0 +1,4 @@
+interface:
+  display_name: "Daily Brief Generator"
+  short_description: "Create a concise daily brief from calendar items, tasks, messages, and open decisions."
+  brand_color: "#2563EB"

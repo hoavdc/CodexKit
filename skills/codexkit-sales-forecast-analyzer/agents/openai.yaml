@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sales Forecast Analyzer"
+  short_description: "Build sales forecast scenarios from historical revenue, pipeline, assumptions, and deal movement."
+  brand_color: "#16A34A"

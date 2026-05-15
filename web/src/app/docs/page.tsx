@@ -65,7 +65,7 @@ export default function DocsPage() {
           </Link>
           <Link href="/docs/templates" className="panel p-6 transition-transform hover:-translate-y-0.5">
             <h3 className="text-lg font-semibold">Templates</h3>
-            <p className="mt-2 text-sm leading-7 text-muted-foreground">Adopt reusable outputs for PM, finance, HR, legal, ops, and marketing work.</p>
+            <p className="mt-2 text-sm leading-7 text-muted-foreground">Adopt reusable outputs for PM, finance, HR, legal, ops, marketing, personal productivity, and skill authoring work.</p>
           </Link>
         </div>
       </section>

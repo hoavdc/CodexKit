@@ -1,0 +1,4 @@
+interface:
+  display_name: "CSAT Sentiment Analyzer"
+  short_description: "Analyze customer feedback for sentiment, themes, pain points, and CX improvement actions."
+  brand_color: "#7C3AED"

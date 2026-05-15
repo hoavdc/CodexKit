@@ -65,15 +65,15 @@ export default function SkillsPage() {
           Every skill addresses five layers: <strong>Intent</strong> (clear purpose), <strong>Knowledge</strong> (domain expertise), <strong>Execution</strong> (step-by-step procedure), <strong>Verification</strong> (4C quality gates), and <strong>Evolution</strong> (versioned changelog).
         </p>
         <ul className="mt-5 space-y-3 text-sm leading-7 text-muted-foreground">
-          <li><strong>Tier 1</strong> — All 82 skills: <code>SKILL.md</code> + <code>agents/openai.yaml</code></li>
-          <li><strong>Tier 2</strong> — 21 high-value skills add: <code>verification/checklist.md</code>, <code>examples/good-output.md</code>, <code>examples/common-mistakes.md</code></li>
+          <li><strong>Tier 1</strong> — All 90 skills: <code>SKILL.md</code> + <code>agents/openai.yaml</code></li>
+          <li><strong>Tier 2</strong> — 26 high-value skills add: <code>verification/checklist.md</code>, <code>examples/good-output.md</code>, <code>examples/common-mistakes.md</code></li>
           <li><strong>Tier 3</strong> — 5 technical skills additionally add: <code>scripts/</code> and <code>templates/</code> with executable helpers</li>
         </ul>
         <p className="mt-4 text-sm leading-7 text-muted-foreground">
-          Skills are tagged with one of 8 categories: <code>knowledge</code> (17), <code>data</code> (14), <code>scaffolding</code> (14), <code>runbook</code> (10), <code>verification</code> (9), <code>automation</code> (8), <code>review</code> (6), <code>infra</code> (4).
+          Skills are tagged with one of 8 categories: <code>knowledge</code> (17), <code>data</code> (16), <code>scaffolding</code> (16), <code>runbook</code> (10), <code>verification</code> (9), <code>automation</code> (9), <code>review</code> (9), <code>infra</code> (4).
         </p>
         <p className="mt-4 text-sm leading-7 text-muted-foreground">
-          61 skills still need Tier 2 enrichment — community contributions welcome. See <a href="https://github.com/hoavdc/CodexKit/blob/main/CONTRIBUTING.md" className="underline hover:text-zinc-900 dark:hover:text-zinc-50">CONTRIBUTING.md</a> for the guide.
+          64 skills still need Tier 2 enrichment — community contributions welcome. See <a href="https://github.com/hoavdc/CodexKit/blob/main/CONTRIBUTING.md" className="underline hover:text-zinc-900 dark:hover:text-zinc-50">CONTRIBUTING.md</a> for the guide.
         </p>
       </section>
 
@@ -110,14 +110,14 @@ export default function SkillsPage() {
       <section className="mb-12 panel p-8">
         <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Skill structure</h2>
         <pre className="mt-5 overflow-x-auto rounded-3xl bg-[#161617] p-5 text-sm leading-7 text-[#f8f3ea]">
-          <code>{`# Tier 1 (all 82 skills)
+          <code>{`# Tier 1 (all 90 skills)
 skills/
 \`-- codexkit-{name}/
     |-- SKILL.md
     \`-- agents/
         \`-- openai.yaml
 
-# Tier 2 (21 high-value skills)
+# Tier 2 (26 high-value skills)
 skills/
 \`-- codexkit-{name}/
     |-- SKILL.md

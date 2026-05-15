@@ -12,6 +12,7 @@ export default function TemplatesPage() {
 
   const departmentOrder = [
     "Cross-functional",
+    "Personal Productivity",
     "Engineering",
     "Project Management",
     "Finance",
@@ -19,6 +20,7 @@ export default function TemplatesPage() {
     "Legal",
     "Operations",
     "Marketing",
+    "Skill Authoring",
   ];
 
   return (

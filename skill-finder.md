@@ -1,6 +1,6 @@
 # Skill Finder — "I need to… → Use this skill"
 
-> Quick reference for all 82 CodexKit skills grouped by what you're trying to accomplish.
+> Quick reference for all 90 CodexKit skills grouped by what you're trying to accomplish.
 
 ---
 
@@ -8,14 +8,14 @@
 
 | Category | Description | Count |
 |----------|-------------|-------|
-| `knowledge` | Domain expertise, onboarding, reference material | ~15 |
-| `scaffolding` | Generate structured first drafts, frameworks, outlines | ~25 |
-| `review` | Analyze, critique, and improve existing deliverables | ~12 |
-| `data` | Read, process, analyze, or visualize data | ~8 |
-| `automation` | Chain repeatable steps into workflows | ~10 |
-| `verification` | Validate, audit, or test outputs against standards | ~5 |
-| `runbook` | Step-by-step procedures for recurring operational situations | ~5 |
-| `infra` | Technical delivery, CI/CD, system checks, governance | ~2 |
+| `knowledge` | Domain expertise, onboarding, reference material | 17 |
+| `scaffolding` | Generate structured first drafts, frameworks, outlines | 16 |
+| `review` | Analyze, critique, and improve existing deliverables | 9 |
+| `data` | Read, process, analyze, or visualize data | 16 |
+| `automation` | Chain repeatable steps into workflows | 9 |
+| `verification` | Validate, audit, or test outputs against standards | 9 |
+| `runbook` | Step-by-step procedures for recurring operational situations | 10 |
+| `infra` | Technical delivery, CI/CD, system checks, governance | 4 |
 
 > Each skill's `SKILL.md` frontmatter includes a `category` field. See `templates/SKILL-TEMPLATE.md` for authoring guidelines.
 
@@ -28,9 +28,12 @@
 | Triage my inbox / Slack / ticket queue | `codexkit-inbox-priority-triage` | Priority buckets, owners, and next actions |
 | Write a follow‑up email or reminder | `codexkit-follow-up-draft-builder` | Drafts nudges, recaps, and reminders from open items |
 | Draft a professional business email | `codexkit-email-composer` | Clear emails from rough notes, matched to audience |
+| Build a morning work brief | `codexkit-daily-brief-generator` | Calendar, tasks, messages, priorities, risks, and follow-ups |
+| Summarize meeting notes or transcripts | `codexkit-meeting-summary-generator` | Decisions, action items, open questions, and follow-up draft |
 | Turn meeting notes into action items | `codexkit-meeting-action-router` | Decisions, owners, due dates, follow‑up queues |
 | Package a weekly status update | `codexkit-status-update-packager` | Clean status from scattered notes and RAID changes |
 | Summarize a long report | `codexkit-report-summarizer` | Key findings, implications, recommended actions |
+| Summarize a document packet | `codexkit-document-summarizer` | Key points, actions, risks, caveats, and human review needs |
 | Outline a presentation or pitch deck | `codexkit-presentation-outliner` | Slide‑by‑slide outline with key messages and data callouts |
 
 ---
@@ -92,6 +95,7 @@
 | Write a job description | `codexkit-job-description-writer` | SHRM competency alignment, inclusive language check |
 | Write a performance review | `codexkit-performance-review-writer` | SBI feedback model, SMART goals, bias check |
 | Create a new hire onboarding plan | `codexkit-onboarding-plan-creator` | 30-60-90 day plan, pre-boarding, milestones |
+| Create a practical onboarding checklist | `codexkit-onboarding-checklist-creator` | Pre-start, day-one, week-one, owners, and completion signals |
 | Build a structured interview guide | `codexkit-interview-guide-builder` | STAR method, scoring rubrics, bias safeguards |
 
 ---
@@ -115,6 +119,7 @@
 | Run S&OP / business planning cycle | `codexkit-sandop-facilitator` | Demand, supply, inventory, capacity alignment |
 | Package operations KPIs | `codexkit-ops-kpi-packager` | KPI snapshots, exception flags, owner follow‑ups |
 | Run a Lean Six Sigma improvement | `codexkit-dmaic-improvement-charter` | DMAIC charter, SIPOC, baseline, improvement path |
+| Write a standard operating procedure | `codexkit-sop-writer` | SOP scope, roles, steps, controls, exceptions, and review cadence |
 | Map a business process end-to-end | `codexkit-process-mapper` | Swimlane diagrams, 8 Lean Wastes, process efficiency |
 | Find root cause of recurring problems | `codexkit-root-cause-analyzer` | 5 Whys, Fishbone, Pareto, CAPA corrective actions |
 | Evaluate and tier suppliers | `codexkit-supplier-evaluation` | Weighted scorecard, tier classification, improvement plan |
@@ -131,8 +136,11 @@
 | Plan a go‑to‑market launch | `codexkit-go-to-market-planner` | TAM/SAM/SOM, positioning, messaging, channel strategy |
 | Write a marketing campaign brief | `codexkit-campaign-brief-writer` | SMART objectives, audience persona, KPIs, budget allocation |
 | Prepare a customer QBR | `codexkit-cx-qbr-preparer` | Outcome tracking, adoption health, ROI, next‑quarter plan |
+| Summarize support tickets | `codexkit-support-ticket-summarizer` | Issue, impact, evidence, owner, next step, and response draft |
+| Analyze CSAT and customer sentiment | `codexkit-csat-sentiment-analyzer` | Feedback sentiment, themes, pain points, and CX actions |
 | Map the customer journey | `codexkit-customer-journey-mapper` | 7 lifecycle stages, Moments of Truth, emotion curve |
 | Analyze churn risk and build retention plays | `codexkit-churn-risk-analyzer` | Health scoring, customer segmentation, intervention playbooks |
+| Forecast sales pipeline | `codexkit-sales-forecast-analyzer` | Scenario forecast from revenue history, pipeline, assumptions, and risks |
 
 ---
 

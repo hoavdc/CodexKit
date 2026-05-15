@@ -172,4 +172,5 @@ Add comments for production queries:
 
 ## Changelog
 
+- v1.1.0 — Added Tier 2 verification checklist and examples for query safety.
 - v1.0.0 — Initial release

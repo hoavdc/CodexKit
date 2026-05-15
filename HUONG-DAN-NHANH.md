@@ -1,104 +1,137 @@
-# Hướng Dẫn Nhanh — CodexKit
+# Hướng Dẫn Nhanh - CodexKit
 
-> Bản hướng dẫn tiếng Việt dành cho người dùng văn phòng. Xem [README.md](README.md) để biết chi tiết đầy đủ.
-
----
+> Hướng dẫn tiếng Việt dành cho người dùng văn phòng và người không biết code. Xem thêm [README.md](README.md) nếu cần chi tiết kỹ thuật.
 
 ## CodexKit là gì?
 
-CodexKit là bộ quy trình (skills) giúp bạn sử dụng AI hiệu quả hơn trong công việc hàng ngày — viết email, tóm tắt báo cáo, quản lý dự án, phân tích tài chính, và nhiều hơn nữa.
+CodexKit là bộ skills, templates, automations và starter workspaces giúp bạn dùng OpenAI Codex và ChatGPT cho công việc hằng ngày: viết email, tóm tắt họp, tạo daily brief, quản lý dự án, phân tích tài chính, xử lý ticket hỗ trợ, lập kế hoạch onboarding, viết SOP, và nhiều việc văn phòng khác.
 
-**Không cần biết lập trình.** Bạn chỉ cần copy–paste prompt vào Codex hoặc ChatGPT.
+Bạn không cần biết lập trình. Bạn chỉ cần cài skills, mở `skill-finder.md`, chọn tình huống công việc, rồi gọi skill phù hợp trong Codex hoặc dùng nội dung với ChatGPT.
 
----
+## Có gì trong v0.10.0?
 
-## Cài đặt nhanh (3 phút)
+- 90 skills
+- 9 playbooks
+- 18 templates
+- 14 automation recipes
+- 9 starter workspaces
 
-### Cách 1: Tải bản release (đơn giản nhất)
+## Cài đặt nhanh
 
-1. Vào [Releases](https://github.com/your-org/codexkit/releases) → tải file `.zip` mới nhất
-2. Giải nén vào thư mục dự án của bạn
-3. Xong! Mở file `skill-finder.md` để bắt đầu
+### Cách 1: Dùng bản release zip
 
-### Cách 2: Chạy script cài đặt
+1. Mở trang [GitHub Releases](https://github.com/hoavdc/CodexKit/releases).
+2. Tải `codexkit-starter-pack-v0.10.0.zip`.
+3. Giải nén vào một thư mục bất kỳ.
+4. Trên Windows, bấm đúp `START-HERE-WINDOWS.cmd`.
+5. Trên macOS/Linux, chạy:
 
-**Windows (PowerShell):**
+```bash
+bash ./START-HERE.sh
+```
+
+6. Khởi động lại Codex.
+7. Gõ `/skills` trong Codex để kiểm tra skills đã xuất hiện.
+
+### Cách 2: Cài từ repo
+
+Windows PowerShell:
+
 ```powershell
 .\scripts\install-skills.ps1
 ```
 
-**macOS / Linux:**
-```bash
-./scripts/install-skills.sh
-```
+macOS / Linux:
 
----
+```bash
+bash ./scripts/install-skills.sh
+```
 
 ## Bắt đầu từ đâu?
 
-### Bước 1: Xem bảng tra cứu
+### 1. Mở skill finder
 
-Mở file **[skill-finder.md](skill-finder.md)** — tìm tình huống công việc của bạn → biết dùng skill nào.
+Mở [skill-finder.md](skill-finder.md) và tìm theo tình huống:
 
-### Bước 2: Chọn workspace phù hợp
+- Tôi cần viết email.
+- Tôi cần tóm tắt cuộc họp.
+- Tôi cần tạo daily brief.
+- Tôi cần viết status report.
+- Tôi cần phân tích support tickets.
+- Tôi cần tạo onboarding checklist.
+- Tôi cần viết SOP.
 
-| Bộ phận | Workspace |
+### 2. Chọn starter workspace
+
+| Nhu cầu | Workspace |
 |---------|-----------|
-| Quản lý dự án (PMO) | `workspaces/project-management-office/` |
-| Tài chính | `workspaces/finance/` |
-| Nhân sự | `workspaces/hr/` |
-| Pháp lý | `workspaces/legal/` |
-| Marketing | `workspaces/marketing/` |
-| Vận hành | `workspaces/operations/` |
+| Quản lý dự án | `workspaces/project-management-office/` |
+| Tài chính | `workspaces/finance-performance-desk/` |
+| Nhân sự | `workspaces/hr-people-ops-hub/` |
+| Pháp lý | `workspaces/legal-ops-desk/` |
+| Vận hành | `workspaces/operations-control-hub/` |
+| Marketing | `workspaces/marketing-growth-studio/` |
+| Onboarding nhân sự | `workspaces/team-onboarding/` |
+| Startup / founder | `workspaces/startup-launch/` |
+| Họp team hằng tuần | `workspaces/weekly-team-sync/` |
 
-### Bước 3: Dùng playbook để bắt đầu ngay
+Bạn cũng có thể tạo workspace nhanh:
 
-Playbooks là các prompt mẫu bạn có thể copy–paste trực tiếp:
-
-| Tôi cần… | Playbook |
-|-----------|----------|
-| Viết recap cuộc họp | `playbooks/meeting-to-actions.md` |
-| Tổng hợp status | `playbooks/status-synthesis.md` |
-| Viết memo quyết định | `playbooks/write-decision-memo.md` |
-
----
-
-## 5 Skill phổ biến nhất cho văn phòng
-
-| # | Skill | Tác dụng |
-|---|-------|----------|
-| 1 | `codexkit-email-composer` | Viết email chuyên nghiệp từ ghi chú |
-| 2 | `codexkit-report-summarizer` | Tóm tắt báo cáo dài thành key points |
-| 3 | `codexkit-meeting-action-router` | Biến notes cuộc họp thành action items |
-| 4 | `codexkit-inbox-priority-triage` | Phân loại inbox theo mức ưu tiên |
-| 5 | `codexkit-presentation-outliner` | Dàn ý slide trình bày |
-
----
-
-## Cách dùng một Skill
-
-1. Mở file `SKILL.md` trong thư mục skill
-2. Đọc phần **"When to use"** để đảm bảo đúng skill
-3. Xem phần **"Examples"** để lấy prompt mẫu
-4. Copy prompt, thay `[paste ...]` bằng nội dung thực tế
-5. Paste vào Codex hoặc ChatGPT → nhận kết quả
-
-### Ví dụ cụ thể
-
-Bạn cần viết email nhắc vendor:
-
-```text
-Act as a business communication specialist.
-Draft a polite follow-up email to our vendor (Acme Corp)
-asking for updated pricing by end of this week.
-Context: We sent the original request 5 days ago, no response yet.
-Tone: professional but firm.
+```powershell
+.\scripts\quick-start.ps1 -List
+.\scripts\quick-start.ps1 -Starter team-onboarding -Destination .\my-onboarding
 ```
 
----
+### 3. Dùng các skill phổ biến
 
-## Cần hỗ trợ?
+| Skill | Dùng để làm gì |
+|-------|----------------|
+| `codexkit-daily-brief-generator` | Tạo bản tóm tắt công việc trong ngày từ lịch, task, tin nhắn |
+| `codexkit-meeting-summary-generator` | Tóm tắt họp thành quyết định, action items, owners |
+| `codexkit-email-composer` | Viết email chuyên nghiệp từ ghi chú thô |
+| `codexkit-report-summarizer` | Tóm tắt báo cáo dài thành key points |
+| `codexkit-support-ticket-summarizer` | Tóm tắt ticket hỗ trợ khách hàng |
+| `codexkit-sales-forecast-analyzer` | Phân tích pipeline và dự báo doanh số |
+| `codexkit-onboarding-checklist-creator` | Tạo checklist onboarding theo vai trò |
+| `codexkit-sop-writer` | Viết quy trình SOP rõ ràng, có owner và bước thực hiện |
 
-- Xem **[skill-finder.md](skill-finder.md)** — bảng tra cứu đầy đủ
-- Xem **[README.md](README.md)** — hướng dẫn chi tiết bằng tiếng Anh
-- Mỗi skill có phần **Examples** với prompt mẫu sẵn sàng sử dụng
+## Ví dụ prompt
+
+```text
+Use codexkit-meeting-summary-generator.
+Summarize these meeting notes into:
+- decisions
+- action items
+- owners
+- due dates
+- open questions
+- a short follow-up message
+
+Meeting notes:
+[paste notes here]
+```
+
+```text
+Use codexkit-daily-brief-generator.
+Create my daily brief from this calendar and task list.
+Highlight top 3 priorities, meeting prep, follow-ups, and risks.
+
+Calendar:
+[paste calendar]
+
+Tasks:
+[paste tasks]
+```
+
+## Lưu ý an toàn
+
+- Với email nhạy cảm, pháp lý, nhân sự, tài chính hoặc hợp đồng, hãy xem lại trước khi gửi.
+- Với dữ liệu khách hàng, hãy xóa thông tin cá nhân không cần thiết.
+- Với phân tích tài chính hoặc pháp lý, dùng CodexKit để hỗ trợ chuẩn bị, không thay thế chuyên gia.
+
+## Cần xem thêm
+
+- [README.md](README.md)
+- [skill-finder.md](skill-finder.md)
+- [workspaces/README.md](workspaces/README.md)
+- [RELEASE-v0.10.0.md](RELEASE-v0.10.0.md)

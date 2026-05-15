@@ -110,6 +110,21 @@
     "category": "Routine Automation & Office Ops"
   },
   {
+    "name": "codexkit-daily-brief-generator",
+    "description": "Create a concise daily brief from calendar items, tasks, messages, and open decisions.",
+    "category": "Routine Automation & Office Ops"
+  },
+  {
+    "name": "codexkit-meeting-summary-generator",
+    "description": "Turn meeting notes or transcripts into decisions, action items, open questions, and recaps.",
+    "category": "Routine Automation & Office Ops"
+  },
+  {
+    "name": "codexkit-support-ticket-summarizer",
+    "description": "Summarize support tickets into issue, impact, evidence, owner, next step, and response draft.",
+    "category": "Routine Automation & Office Ops"
+  },
+  {
     "name": "codexkit-project-governance-pilot",
     "description": "Stand up governance, cadence, decision rights, and RAID structure for complex initiatives.",
     "category": "Project & Portfolio Management"
@@ -260,6 +275,11 @@
     "category": "People, Operations & Supply Chain"
   },
   {
+    "name": "codexkit-onboarding-checklist-creator",
+    "description": "Create practical onboarding checklists with owners, timing, access needs, and milestones.",
+    "category": "People, Operations & Supply Chain"
+  },
+  {
     "name": "codexkit-interview-guide-builder",
     "description": "Build structured interview guides with STAR method, scoring rubrics, and bias safeguards.",
     "category": "People, Operations & Supply Chain"
@@ -272,6 +292,11 @@
   {
     "name": "codexkit-procurement-rfp-writer",
     "description": "Write procurement RFPs/RFQs with evaluation methodology and ISO 20400 alignment.",
+    "category": "People, Operations & Supply Chain"
+  },
+  {
+    "name": "codexkit-sop-writer",
+    "description": "Draft standard operating procedures with roles, steps, controls, exceptions, and review cadence.",
     "category": "People, Operations & Supply Chain"
   },
   {
@@ -325,6 +350,16 @@
     "category": "Strategy, Analytics & Growth"
   },
   {
+    "name": "codexkit-sales-forecast-analyzer",
+    "description": "Build sales forecast scenarios from historical revenue, pipeline, assumptions, and deal movement.",
+    "category": "Strategy, Analytics & Growth"
+  },
+  {
+    "name": "codexkit-csat-sentiment-analyzer",
+    "description": "Analyze customer feedback for sentiment, themes, pain points, and CX improvement actions.",
+    "category": "Strategy, Analytics & Growth"
+  },
+  {
     "name": "codexkit-a-b-test-planner",
     "description": "Design rigorous A/B tests with hypothesis, sample sizing, MDE, guardrail metrics, and rollout playbook.",
     "category": "Data & Analytics"
@@ -353,6 +388,11 @@
     "name": "codexkit-architecture-decision-writer",
     "description": "Document architecture decisions in ADR format with options comparison, consequences, and review dates.",
     "category": "Engineering Delivery"
+  },
+  {
+    "name": "codexkit-document-summarizer",
+    "description": "Summarize document-heavy inputs into key points, actions, risks, and review needs.",
+    "category": "Knowledge Work & Communication"
   },
   {
     "name": "codexkit-incident-postmortem",

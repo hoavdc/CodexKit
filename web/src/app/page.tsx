@@ -60,7 +60,7 @@ export default function Home() {
                   CodexKit turns prompt chaos into a repeatable work operating system.
                 </h1>
                 <p className="max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
-                  A Codex-first starter repo with installable skills, templates, and workspace kits for engineering, project management, finance, legal, HR, operations, strategy, analytics, marketing, and CX.
+                  A Codex-first starter repo with installable skills, templates, and workspace kits for engineering, project management, finance, legal, HR, operations, strategy, analytics, marketing, sales, support, founders, and CX.
                 </p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">
@@ -77,7 +77,7 @@ export default function Home() {
                   rel="noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-transform hover:-translate-y-0.5"
                 >
-                  ⭐ GitHub
+                  GitHub
                 </a>
                 <Link
                   href="/docs/installation"
@@ -200,7 +200,7 @@ npm --prefix web run dev`}</code>
               <div>
                 <h3 className="text-2xl font-semibold">Starter kits for real teams</h3>
                 <p className="mt-2 text-sm leading-7 text-muted-foreground">
-                  Department workspaces give PM, finance, HR, legal, ops, and marketing teams a working spine instead of a blank folder and a vague prompt.
+                  Department workspaces give PM, finance, HR, legal, ops, marketing, onboarding, startup, and weekly team-sync workflows a working spine instead of a blank folder and a vague prompt.
                 </p>
               </div>
             </div>

@@ -208,7 +208,7 @@ async function main() {
   const workspaceCount = await validateWorkspaces();
 
   if (warnings.length > 0) {
-    console.log(`\n⚠️  ${warnings.length} warning(s):`);
+    console.log(`\nWarnings (${warnings.length}):`);
     for (const w of warnings) {
       console.log(`   - ${w}`);
     }

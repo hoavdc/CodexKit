@@ -40,5 +40,26 @@
     "audience": "Growth marketers, brand teams, content leads",
     "description": "Positioning, campaign calendar, review queue, and performance notes.",
     "includes": "positioning, campaign calendar, review queue, performance notes"
+  },
+  {
+    "name": "Team Onboarding Workspace",
+    "slug": "team-onboarding",
+    "audience": "HR partners, hiring managers, team leads",
+    "description": "Role-specific onboarding context, readiness tracking, checklists, and first-30-days milestones.",
+    "includes": "getting started, onboarding checklist"
+  },
+  {
+    "name": "Startup Launch Workspace",
+    "slug": "startup-launch",
+    "audience": "Founders, entrepreneurs, small business owners",
+    "description": "Idea validation, assumption testing, business plan outline, launch workback, and forecast starter.",
+    "includes": "idea validation, business plan outline"
+  },
+  {
+    "name": "Weekly Team Sync Workspace",
+    "slug": "weekly-team-sync",
+    "audience": "Team leads, project managers, chiefs of staff",
+    "description": "Prepare recurring team meetings, capture decisions, track action items, and close follow-ups.",
+    "includes": "agenda preparation, action tracker"
   }
 ]

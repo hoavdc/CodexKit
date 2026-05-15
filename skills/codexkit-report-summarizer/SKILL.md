@@ -64,26 +64,29 @@ Transform lengthy documents into actionable summaries that respect the reader's 
 
 ## Quality Criteria
 
-- [ ] All claims reference specific frameworks, standards, or quantifiable data
-- [ ] Content matches the stated audience's expertise level
-- [ ] Recommendations are actionable — each includes a concrete next step
-- [ ] No unsupported assertions or generic filler language
+- [ ] The summary preserves the source's core thesis, key findings, numbers, and conclusions.
+- [ ] The output separates source-backed facts from interpretation or recommended action.
+- [ ] The length and detail match the requested audience and format.
+- [ ] Important caveats, omitted sections, and uncertainty are visible.
+- [ ] No unsupported assertions or generic filler language are introduced.
 
 ## Verification (4C)
 
 | Check | Question |
 |-------|----------|
-| **Correctness** | Do referenced frameworks and standards match their official definitions? |
-| **Completeness** | Are all key concepts covered without significant gaps for the stated audience? |
-| **Context-fit** | Would this be useful for someone new to this domain, or is it too advanced/too basic? |
-| **Consequence** | If a stakeholder acted on this immediately, what could they misinterpret? |
+| **Correctness** | Are all findings, numbers, names, and recommendations faithful to the source? |
+| **Completeness** | Are the main argument, evidence, implications, actions, and caveats covered? |
+| **Context-fit** | Is the summary calibrated to the reader's role, time, and decision need? |
+| **Consequence** | What could be misinterpreted if the reader skips the source and acts only on this summary? |
 
 ## Edge Cases
 
-- **Conflicting frameworks** — State which framework takes precedence and why. Document the trade-off explicitly.
-- **Rapidly changing domain** — Note information currency date. Flag sections likely to need updates.
-- **Audience has mixed expertise levels** — Provide a glossary and mark advanced sections as optional.
+- **Source is too long for one pass** — Summarize by section and list any skipped portions explicitly.
+- **Report mixes facts and opinion** — Label each recommendation as source-stated or inferred.
+- **Audience has mixed expertise levels** — Use a top summary first, then optional detail.
+- **Legal, financial, or compliance report** — Preserve caveats and recommend expert review before action.
 
 ## Changelog
 
+- v1.1.0 — Added source-faithful summarization quality gates and edge cases.
 - v1.0.0 — Initial release

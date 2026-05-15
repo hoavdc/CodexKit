@@ -1,0 +1,4 @@
+interface:
+  display_name: "Support Ticket Summarizer"
+  short_description: "Summarize support tickets into issue, impact, evidence, owner, next step, and response draft."
+  brand_color: "#DC2626"

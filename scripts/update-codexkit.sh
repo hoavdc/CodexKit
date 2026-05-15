@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-# ──────────────────────────────────────────
-# CodexKit Update Script (macOS / Linux)
-# Updates skills from local repo or downloads latest release from GitHub
-# ──────────────────────────────────────────
 set -euo pipefail
 
 REPO_URL="https://github.com/hoavdc/CodexKit"
@@ -13,187 +9,184 @@ SKILLS_DEST="${CODEXKIT_DESTINATION:-"$HOME/.agents/skills"}"
 CURRENT_VERSION=""
 LATEST_VERSION=""
 
-# ── Detect current version ──
-if [ -f "$ROOT_DIR/package.json" ]; then
-  CURRENT_VERSION=$(grep '"version"' "$ROOT_DIR/package.json" | head -1 | sed 's/.*"version"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/')
-fi
+detect_version() {
+  local package_file="$1"
+  if [ -f "$package_file" ]; then
+    grep '"version"' "$package_file" | head -1 | sed 's/.*"version"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/'
+  fi
+}
+
+copy_release_content() {
+  local source_root="$1"
+  local target_root="$2"
+  local target_root_abs
+  target_root_abs="$(cd "$target_root" && pwd)"
+
+  if [ -z "$target_root_abs" ] || [ "$target_root_abs" = "/" ]; then
+    echo "Refusing to update an unsafe CodexKit root: $target_root_abs" >&2
+    exit 1
+  fi
+
+  for dir in skills templates workspaces playbooks automations mcp; do
+    [ -d "$source_root/$dir" ] || continue
+    local target="$target_root_abs/$dir"
+    case "$target" in
+      "$target_root_abs"/*) ;;
+      *)
+        echo "Refusing to update outside the CodexKit root: $target" >&2
+        exit 1
+        ;;
+    esac
+    rm -rf "$target"
+    cp -R "$source_root/$dir" "$target"
+  done
+
+  for file in README.md LICENSE NOTICE.md package.json CHANGELOG.md skill-finder.md HUONG-DAN-NHANH.md START-HERE-WINDOWS.cmd START-HERE.sh CREATE-WORKSPACE-WINDOWS.cmd CREATE-WORKSPACE.sh; do
+    [ -f "$source_root/$file" ] || continue
+    cp "$source_root/$file" "$target_root_abs/$file" 2>/dev/null || true
+  done
+
+  for release_file in "$source_root"/RELEASE-v*.md; do
+    [ -f "$release_file" ] || continue
+    cp "$release_file" "$target_root_abs/$(basename "$release_file")" 2>/dev/null || true
+  done
+}
+
+find_extracted_root() {
+  local extract_dir="$1"
+  for dir in "$extract_dir"/* "$extract_dir"; do
+    [ -d "$dir" ] || continue
+    if [ -f "$dir/package.json" ] || [ -f "$dir/skill-finder.md" ] || [ -d "$dir/skills" ]; then
+      printf '%s\n' "$dir"
+      return 0
+    fi
+  done
+  return 1
+}
+
+CURRENT_VERSION="$(detect_version "$ROOT_DIR/package.json" || true)"
 
 echo ""
-echo "╔══════════════════════════════════════════════╗"
-echo "║          CodexKit Updater                    ║"
-echo "╚══════════════════════════════════════════════╝"
+echo "================================================"
+echo "          CodexKit Updater"
+echo "================================================"
 echo ""
 [ -n "$CURRENT_VERSION" ] && echo "Current version: v$CURRENT_VERSION"
 echo "Skills destination: $SKILLS_DEST"
 echo ""
 
-# ── Detect update method ──
 if [ -d "$ROOT_DIR/.git" ]; then
-  echo "📦 Git repository detected. Updating via git pull..."
+  echo "[GIT] Git repository detected. Updating via git pull..."
   echo ""
 
   cd "$ROOT_DIR"
 
-  # Check for uncommitted changes
   if ! git diff --quiet 2>/dev/null || ! git diff --cached --quiet 2>/dev/null; then
-    echo "⚠️  You have uncommitted changes. Stashing them..."
-    git stash
+    echo "Warning: you have uncommitted changes. Stashing them..."
+    git stash push -u -m "CodexKit updater auto-stash"
     STASHED=1
   else
     STASHED=0
   fi
 
-  # Pull latest
-  BEFORE=$(git rev-parse HEAD)
-  git pull --rebase origin main 2>&1 || git pull origin main 2>&1
-  AFTER=$(git rev-parse HEAD)
+  BEFORE="$(git rev-parse HEAD)"
+  git pull --rebase origin main 2>&1 || {
+    git rebase --abort 2>/dev/null || true
+    git pull origin main 2>&1
+  }
+  AFTER="$(git rev-parse HEAD)"
 
   if [ "$BEFORE" = "$AFTER" ]; then
     echo ""
-    echo "✅ Already up to date!"
+    echo "Already up to date."
   else
     echo ""
-    echo "✅ Updated successfully!"
-    # Show what changed
+    echo "Updated successfully."
     echo ""
     echo "Changes:"
     git log --oneline "$BEFORE..$AFTER" 2>/dev/null || true
   fi
 
-  # Restore stashed changes
   if [ "$STASHED" = "1" ]; then
     echo ""
     echo "Restoring your local changes..."
-    git stash pop || echo "⚠️  Could not auto-restore stash. Run 'git stash pop' manually."
+    git stash pop || echo "Warning: could not auto-restore stash. Run 'git stash pop' manually."
   fi
 
-  # Re-read version
-  if [ -f "$ROOT_DIR/package.json" ]; then
-    LATEST_VERSION=$(grep '"version"' "$ROOT_DIR/package.json" | head -1 | sed 's/.*"version"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/')
+  LATEST_VERSION="$(detect_version "$ROOT_DIR/package.json" || true)"
+  if [ -n "$LATEST_VERSION" ]; then
     echo ""
-    echo "Version: v$CURRENT_VERSION → v$LATEST_VERSION"
+    echo "Version: v$CURRENT_VERSION -> v$LATEST_VERSION"
   fi
 
-  # Re-install skills
   echo ""
-  echo "📥 Re-installing skills..."
-  CODEXKIT_FORCE=1 bash "$ROOT_DIR/scripts/install-skills.sh"
-
+  echo "Re-installing skills..."
+  CODEXKIT_FORCE=1 CODEXKIT_DESTINATION="$SKILLS_DEST" bash "$ROOT_DIR/scripts/install-skills.sh" --source "$ROOT_DIR/skills"
 else
-  # ── Non-git: Download latest release ──
-  echo "📦 No git repo found. Checking GitHub for latest release..."
+  echo "[DOWNLOAD] No git repo found. Checking GitHub for latest release..."
   echo ""
 
-  # Check for curl
-  if ! command -v curl &>/dev/null; then
-    echo "❌ curl is required but not found. Please install curl first."
+  if ! command -v curl >/dev/null 2>&1; then
+    echo "curl is required but was not found. Please install curl first."
     exit 1
   fi
 
-  # Fetch latest release info
-  RELEASE_JSON=$(curl -sL "$API_URL")
-  LATEST_VERSION=$(echo "$RELEASE_JSON" | grep '"tag_name"' | head -1 | sed 's/.*"tag_name"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/' | sed 's/^v//')
+  RELEASE_JSON="$(curl -fsSL "$API_URL" || true)"
+  LATEST_VERSION="$(printf '%s' "$RELEASE_JSON" | grep '"tag_name"' | head -1 | sed 's/.*"tag_name"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/' | sed 's/^v//')"
 
   if [ -z "$LATEST_VERSION" ]; then
-    echo "❌ Could not fetch latest version from GitHub."
-    echo "   Check your internet connection or visit: $REPO_URL/releases"
+    echo "Could not fetch latest version from GitHub."
+    echo "Check your internet connection or visit: $REPO_URL/releases"
     exit 1
   fi
 
   echo "Latest version: v$LATEST_VERSION"
 
   if [ "$CURRENT_VERSION" = "$LATEST_VERSION" ]; then
-    echo "✅ You are already on the latest version!"
+    echo "You are already on the latest version."
     echo ""
     echo "Re-installing skills anyway..."
-    CODEXKIT_FORCE=1 bash "$ROOT_DIR/scripts/install-skills.sh"
+    CODEXKIT_FORCE=1 CODEXKIT_DESTINATION="$SKILLS_DEST" bash "$ROOT_DIR/scripts/install-skills.sh" --source "$ROOT_DIR/skills"
     exit 0
   fi
 
-  # Download latest starter pack
   DOWNLOAD_URL="$REPO_URL/releases/download/v$LATEST_VERSION/codexkit-starter-pack-v$LATEST_VERSION.zip"
-  TMP_DIR=$(mktemp -d)
+  TMP_DIR="$(mktemp -d)"
+  trap 'rm -rf "$TMP_DIR"' EXIT
+
   echo ""
-  echo "📥 Downloading v$LATEST_VERSION from GitHub..."
-  echo "   $DOWNLOAD_URL"
+  echo "Downloading v$LATEST_VERSION from GitHub..."
+  echo "  $DOWNLOAD_URL"
+  curl -fL -o "$TMP_DIR/codexkit.zip" "$DOWNLOAD_URL"
 
-  if curl -sL -o "$TMP_DIR/codexkit.zip" "$DOWNLOAD_URL"; then
-    echo "📂 Extracting..."
-
-    # Try unzip
-    if command -v unzip &>/dev/null; then
-      unzip -qo "$TMP_DIR/codexkit.zip" -d "$TMP_DIR/extracted"
-    elif command -v tar &>/dev/null; then
-      mkdir -p "$TMP_DIR/extracted"
-      cd "$TMP_DIR/extracted" && tar -xf "$TMP_DIR/codexkit.zip"
-    else
-      echo "❌ No unzip or tar found. Please install unzip."
-      rm -rf "$TMP_DIR"
-      exit 1
-    fi
-
-    # Find the extracted skills directory
-    EXTRACTED_SKILLS=""
-    for dir in "$TMP_DIR/extracted"/*/skills "$TMP_DIR/extracted"/skills; do
-      if [ -d "$dir" ]; then
-        EXTRACTED_SKILLS="$dir"
-        break
-      fi
-    done
-
-    if [ -z "$EXTRACTED_SKILLS" ]; then
-      echo "❌ Could not find skills directory in the downloaded package."
-      rm -rf "$TMP_DIR"
-      exit 1
-    fi
-
-    # Copy new skills
-    echo "📥 Installing new skills from v$LATEST_VERSION..."
-    mkdir -p "$SKILLS_DEST"
-    INSTALLED_COUNT=0
-    for skill_dir in "$EXTRACTED_SKILLS"/*/; do
-      [ -d "$skill_dir" ] || continue
-      skill_name="$(basename "$skill_dir")"
-      target="$SKILLS_DEST/$skill_name"
-      rm -rf "$target"
-      cp -R "$skill_dir" "$target"
-      INSTALLED_COUNT=$((INSTALLED_COUNT + 1))
-    done
-
-    echo "✅ Updated $INSTALLED_COUNT skills to v$LATEST_VERSION"
-
-    # Update local files too
-    EXTRACTED_ROOT=""
-    for dir in "$TMP_DIR/extracted"/*/; do
-      if [ -f "${dir}package.json" ] || [ -f "${dir}skill-finder.md" ]; then
-        EXTRACTED_ROOT="$dir"
-        break
-      fi
-    done
-
-    if [ -n "$EXTRACTED_ROOT" ]; then
-      # Update key reference files
-      for file in skill-finder.md HUONG-DAN-NHANH.md CHANGELOG.md; do
-        if [ -f "$EXTRACTED_ROOT/$file" ]; then
-          cp "$EXTRACTED_ROOT/$file" "$ROOT_DIR/$file" 2>/dev/null || true
-        fi
-      done
-    fi
-
-    # Cleanup
-    rm -rf "$TMP_DIR"
+  echo "Extracting..."
+  mkdir -p "$TMP_DIR/extracted"
+  if command -v unzip >/dev/null 2>&1; then
+    unzip -qo "$TMP_DIR/codexkit.zip" -d "$TMP_DIR/extracted"
+  elif command -v bsdtar >/dev/null 2>&1; then
+    bsdtar -xf "$TMP_DIR/codexkit.zip" -C "$TMP_DIR/extracted"
   else
-    echo "❌ Download failed. Please download manually from:"
-    echo "   $REPO_URL/releases"
-    rm -rf "$TMP_DIR"
+    echo "unzip or bsdtar is required to extract the release package."
     exit 1
   fi
+
+  EXTRACTED_ROOT="$(find_extracted_root "$TMP_DIR/extracted" || true)"
+  if [ -z "$EXTRACTED_ROOT" ]; then
+    echo "Could not find the release root in the downloaded package."
+    exit 1
+  fi
+
+  echo "Syncing local CodexKit content..."
+  copy_release_content "$EXTRACTED_ROOT" "$ROOT_DIR"
+
+  echo "Installing new skills from v$LATEST_VERSION..."
+  CODEXKIT_FORCE=1 CODEXKIT_DESTINATION="$SKILLS_DEST" bash "$ROOT_DIR/scripts/install-skills.sh" --source "$ROOT_DIR/skills"
 fi
 
 echo ""
-echo "╔══════════════════════════════════════════════╗"
-echo "║          Update complete!                    ║"
-echo "╚══════════════════════════════════════════════╝"
+echo "================================================"
+echo "          Update complete!"
+echo "================================================"
 echo ""
 echo "Next steps:"
 echo "  1. Restart Codex to pick up new/updated skills"

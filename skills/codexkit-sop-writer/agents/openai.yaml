@@ -1,0 +1,4 @@
+interface:
+  display_name: "SOP Writer"
+  short_description: "Draft standard operating procedures with roles, steps, controls, exceptions, and review cadence."
+  brand_color: "#CA8A04"

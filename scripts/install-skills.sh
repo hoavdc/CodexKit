@@ -30,6 +30,12 @@ done
 SOURCE_DIR="$(cd "$SOURCE_DIR" && pwd)"
 
 mkdir -p "$DESTINATION"
+DESTINATION="$(cd "$DESTINATION" && pwd)"
+if [ -z "$DESTINATION" ] || [ "$DESTINATION" = "/" ]; then
+  echo "Refusing to install into an unsafe destination: $DESTINATION" >&2
+  exit 1
+fi
+
 INSTALLED_COUNT=0
 
 echo "Installing CodexKit skills from $SOURCE_DIR"
@@ -40,6 +46,14 @@ for skill_dir in "$SOURCE_DIR"/*; do
 
   skill_name="$(basename "$skill_dir")"
   target="$DESTINATION/$skill_name"
+
+  case "$target" in
+    "$DESTINATION"/*) ;;
+    *)
+      echo "Refusing to write outside the destination directory: $target" >&2
+      exit 1
+      ;;
+  esac
 
   if [[ -e "$target" && "$FORCE" != "1" ]]; then
     echo "Skipping $skill_name because it already exists. Use --force or CODEXKIT_FORCE=1 to overwrite."

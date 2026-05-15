@@ -89,26 +89,29 @@ Produce structured, balanced performance reviews that celebrate achievements, id
 
 ## Quality Criteria
 
-- [ ] Feedback is specific and references exact locations in the reviewed material
-- [ ] Each critique includes a concrete improvement suggestion
-- [ ] Severity is categorized (critical / important / nice-to-have)
-- [ ] Positive aspects are acknowledged alongside areas for improvement
+- [ ] Every strength and development area is supported by specific evidence.
+- [ ] Feedback focuses on observable work behaviors and outcomes, not personality labels.
+- [ ] The review balances recognition, accountability, growth, and future expectations.
+- [ ] Goals are SMART and linked to role expectations or career path.
+- [ ] Bias check covers recency, halo/horn effect, vague adjectives, and inconsistent standards.
 
 ## Verification (4C)
 
 | Check | Question |
 |-------|----------|
-| **Correctness** | Is the feedback technically accurate and properly contextualized? |
-| **Completeness** | Were all major sections of the reviewed material addressed? |
-| **Context-fit** | Is the review granularity appropriate for the material's maturity level? |
-| **Consequence** | If the author implemented all feedback literally, what could go wrong? |
+| **Correctness** | Are achievements, gaps, ratings, and goals supported by the evidence provided? |
+| **Completeness** | Are achievements, development areas, prior goals, new goals, and bias checks included? |
+| **Context-fit** | Does the review match the role level, review period, and performance expectations? |
+| **Consequence** | Could the wording create unfairness, legal risk, or unclear expectations for the employee? |
 
 ## Edge Cases
 
-- **Material is too early-stage for detailed review** — Provide structural feedback only. Note that content review is deferred until it matures.
-- **Reviewer lacks domain expertise** — Focus on structure, clarity, and consistency. Flag domain-specific claims as 'Needs SME verification'.
-- **Author is defensive or resistant to feedback** — Lead with what works well. Frame changes as questions rather than mandates.
+- **Insufficient evidence** — Ask for examples before writing conclusions; do not fill gaps with assumptions.
+- **Potential disciplinary issue** — Do not draft a PIP or warning letter; recommend HR review.
+- **Promotion or compensation implications** — Keep review language evidence-based and avoid compensation recommendations.
+- **Sensitive protected-class context** — Remove irrelevant personal details and require HR/legal review when needed.
 
 ## Changelog
 
+- v1.1.0 — Added performance-review-specific quality gates, 4C checks, and HR safety edge cases.
 - v1.0.0 — Initial release

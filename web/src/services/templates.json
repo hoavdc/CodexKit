@@ -48,5 +48,45 @@
     "name": "marketing-campaign-brief",
     "department": "Marketing",
     "description": "Align audience, message, channels, launch timing, asset owners, and success measures."
+  },
+  {
+    "name": "email-introduction-templates",
+    "department": "Cross-functional",
+    "description": "Reusable introduction email formats for outreach, referrals, and two-person introductions."
+  },
+  {
+    "name": "personal-weekly-planner",
+    "department": "Personal Productivity",
+    "description": "Plan weekly outcomes, focus blocks, open loops, commitments, and Friday review notes."
+  },
+  {
+    "name": "weekly-status-report",
+    "department": "Cross-functional",
+    "description": "Package weekly progress, next work, risks, decisions, and milestone movement."
+  },
+  {
+    "name": "marketing-calendar",
+    "department": "Marketing",
+    "description": "Coordinate campaign dates, channels, assets, owners, workback plan, and risks."
+  },
+  {
+    "name": "team-meeting-agenda",
+    "department": "Cross-functional",
+    "description": "Structure meeting objectives, pre-work, agenda topics, decisions, and action logs."
+  },
+  {
+    "name": "SKILL-TEMPLATE",
+    "department": "Skill Authoring",
+    "description": "CodexKit v2 skill template with required sections, categories, and tier structure."
+  },
+  {
+    "name": "deep-research-prompt",
+    "department": "Skill Authoring",
+    "description": "Master prompt for producing domain research that maps directly into CodexKit skill sections."
+  },
+  {
+    "name": "gotchas-template",
+    "department": "Skill Authoring",
+    "description": "Template for capturing real-world edge cases, symptoms, root causes, workarounds, and status."
   }
 ]

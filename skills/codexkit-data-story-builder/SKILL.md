@@ -60,26 +60,29 @@ Make analytics usable by giving the numbers a decision-oriented narrative.
 
 ## Quality Criteria
 
-- [ ] All claims reference specific frameworks, standards, or quantifiable data
-- [ ] Content matches the stated audience's expertise level
-- [ ] Recommendations are actionable — each includes a concrete next step
-- [ ] No unsupported assertions or generic filler language
+- [ ] The story starts from a business question, not from chart narration.
+- [ ] Evidence, interpretation, and recommendation are clearly separated.
+- [ ] Every claim is supported by a data point, comparison, or stated assumption.
+- [ ] The "so what" explains business consequence, not just metric movement.
+- [ ] Caveats and confidence limits are included when data is incomplete or noisy.
 
 ## Verification (4C)
 
 | Check | Question |
 |-------|----------|
-| **Correctness** | Do referenced frameworks and standards match their official definitions? |
-| **Completeness** | Are all key concepts covered without significant gaps for the stated audience? |
-| **Context-fit** | Would this be useful for someone new to this domain, or is it too advanced/too basic? |
-| **Consequence** | If a stakeholder acted on this immediately, what could they misinterpret? |
+| **Correctness** | Do the numbers, comparisons, and causal language match the underlying data? |
+| **Completeness** | Does the story include what changed, why it matters, likely drivers, actions, and caveats? |
+| **Context-fit** | Is the narrative useful for the audience's actual decision or operating review? |
+| **Consequence** | What wrong action might a stakeholder take if the story overstates certainty? |
 
 ## Edge Cases
 
-- **Conflicting frameworks** — State which framework takes precedence and why. Document the trade-off explicitly.
-- **Rapidly changing domain** — Note information currency date. Flag sections likely to need updates.
-- **Audience has mixed expertise levels** — Provide a glossary and mark advanced sections as optional.
+- **Correlation mistaken for causation** — Use causal language only when the design supports it; otherwise state "may be associated with."
+- **Metric definition changed** — Split the story before and after the definition change.
+- **Executive audience with little time** — Lead with the decision implication, then supporting evidence.
+- **Weak or missing baseline** — Mark confidence as low and recommend the next analysis step.
 
 ## Changelog
 
+- v1.1.0 — Added data-story-specific quality gates and consequence checks.
 - v1.0.0 — Initial release
