@@ -1,0 +1,5 @@
+interface:
+  display_name: "Software Graph Analysis"
+  short_description: "Answer codebase questions with Ontoly graph evidence."
+  default_prompt: "Use $codexkit-software-graph-analysis to answer this repository question from Ontoly Software Graph evidence."
+  brand_color: "#2563EB"
