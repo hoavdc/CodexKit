@@ -56,10 +56,12 @@ function getGroupedSkills(markdown) {
   for (const line of markdown.split(/\r?\n/)) {
     const h = line.match(/^## (.+)$/);
     if (h) heading = h[1];
-    const row = line.match(/^\|\s*`(codexkit-[a-z0-9-]+)`\s*\|/);
-    if (row && groupConfig[heading]) {
-      if (!groups.has(heading)) groups.set(heading, []);
-      groups.get(heading).push(row[1]);
+    if (line.startsWith("|") && groupConfig[heading]) {
+      const skillIds = [...line.matchAll(/`(codexkit-[a-z0-9-]+)`/g)].map((match) => match[1]);
+      if (skillIds.length) {
+        if (!groups.has(heading)) groups.set(heading, []);
+        groups.get(heading).push(...skillIds);
+      }
     }
   }
   return groups;
