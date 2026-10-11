@@ -31,7 +31,7 @@ CodexKit is a fresh project rebuilt around the surfaces that matter in Codex tod
 If you do not want to use Git commands or remember terminal steps, use the GitHub release package:
 
 1. Open the Releases page for this repository.
-2. Download `codexkit-starter-pack-v0.10.0.zip`.
+2. Download `codexkit-starter-pack-v0.11.0.zip`.
 3. Unzip it anywhere on your computer.
 4. On Windows, double-click `START-HERE-WINDOWS.cmd`.
    - If Codex is not installed, the script will show installation instructions.
@@ -275,26 +275,26 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full guide.
 - Replace placeholder maintainer details where needed.
 - Add screenshots or a short demo GIF to the docs site.
 - Commit and push the release candidate branch or `main`.
-- Tag `v0.10.0` after validating the pack and docs build.
+- Tag `v0.11.0` after validating the pack, Work exports, and docs build.
 - Push the tag to trigger the GitHub release workflow.
 
 ## Release process
 
-1. Update `package.json`, `web/package.json`, and `CHANGELOG.md`.
-2. Run `npm run check`.
-3. Commit and push the release commit.
-4. Create the tag: `git tag v0.10.0`
-5. Push the tag: `git push origin v0.10.0`
-6. GitHub Actions publishes:
-   `codexkit-source-v0.10.0.zip`
-   `codexkit-starter-pack-v0.10.0.zip`
+1. Update `package.json`, `web/package.json`, `CHANGELOG.md`, and `RELEASE-v0.11.0.md`.
+2. Run `npm run check` (including `npm run work:test`).
+3. Merge the validated release candidate into `main`.
+4. Create the tag from the release commit: `git tag v0.11.0`
+5. Push the tag: `git push origin v0.11.0`
+6. GitHub Actions validates the release and publishes:
+   `codexkit-source-v0.11.0.zip`
+   `codexkit-starter-pack-v0.11.0.zip`
 
 ## Related files
 
 - [CONTRIBUTING.md](./CONTRIBUTING.md)
 - [SECURITY.md](./SECURITY.md)
 - [NOTICE.md](./NOTICE.md)
-- [RELEASE-v0.10.0.md](./RELEASE-v0.10.0.md)
+- [RELEASE-v0.11.0.md](./RELEASE-v0.11.0.md)
 - [templates/project-brief.md](./templates/project-brief.md)
 - [templates/release-checklist.md](./templates/release-checklist.md)
 - [workspaces/README.md](./workspaces/README.md)
