@@ -34,6 +34,9 @@ jobs:
       - name: Validate pack structure
         run: node ./scripts/validate-pack.mjs
 
+      - name: Build and test ChatGPT Work plugin exports
+        run: npm run work:test
+
       - name: Smoke install on Unix
         if: runner.os != 'Windows'
         run: |
