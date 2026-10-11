@@ -17,9 +17,9 @@ category: knowledge
 
 ## Procedure
 
-### Step 1 — Define the Intent
+### Step 1 — Define the Intent and Trigger
 
-Write a clear, one-sentence purpose. Answer: "After running this skill, the user will have ___."
+Write a clear, one-sentence purpose. Answer: "After running this skill, the user will have ___." Then decide whether it should be directly invoked by name, automatically selected from its description, or support both. Keep the description concrete enough to distinguish it from neighboring skills.
 
 ### Step 2 — Map the Domain
 
@@ -55,6 +55,7 @@ A complete skill folder with:
 ## Quality Criteria
 
 - [ ] Purpose is a single, clear sentence — no compound goals
+- [ ] Invocation mode and trigger description are clear; near-miss requests remain out of scope
 - [ ] Procedure steps each produce a visible deliverable
 - [ ] Quality Criteria are measurable or concretely observable
 - [ ] 4C Verification questions are domain-specific, not generic
