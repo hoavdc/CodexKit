@@ -62,12 +62,13 @@ for (const group of groups.groups) {
 }
 
 for (const skillId of summary.plugins.flatMap((entry) => entry.skillIds)) {
+  const pluginGroup = groupForSkill(summary.plugins, skillId);
+  const exportedSkill = await fs.readFile(path.join(root, "dist", "work", "plugins", pluginGroup, "skills", skillId, "SKILL.md"), "utf8");
   const frontmatter = exportedSkill.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-  assert(Boolean(frontmatter), \`Exported skill frontmatter is malformed for \${skillId}.\`);
-  assert(/^name:\s*\S+/m.test(frontmatter[1]) && /^description:\s*\S+/m.test(frontmatter[1]), \`Exported skill requires name and description for \${skillId}.\`);
-  assert(!/^version:|^category:/m.test(frontmatter[1]), \`CodexKit-only metadata was not normalized for \${skillId}.\`);
-  assert(frontmatter[1].includes("metadata:\n  version:") && frontmatter[1].includes("  category:"), \`Standard metadata block missing for \${skillId}.\`);
-  assert(exportedSkill.includes("metadata:\\n  version:") && exportedSkill.includes("  category:"), `Standard metadata block missing for ${skillId}.`);
+  assert(Boolean(frontmatter), "Exported skill frontmatter is malformed for " + skillId + ".");
+  assert(/^name:\s*\S+/m.test(frontmatter[1]) && /^description:\s*\S+/m.test(frontmatter[1]), "Exported skill requires name and description for " + skillId + ".");
+  assert(!/^version:|^category:/m.test(frontmatter[1]), "CodexKit-only metadata was not normalized for " + skillId + ".");
+  assert(frontmatter[1].includes("metadata:\n  version:") && frontmatter[1].includes("  category:"), "Standard metadata block missing for " + skillId + ".");
   const zipPath = path.join(workRoot, "skill-zips", `${skillId}.zip`);
   const names = zipEntryNames(await fs.readFile(zipPath));
   assert(names.includes(`${skillId}/SKILL.md`), `Missing single-skill ZIP for ${skillId}.`);
