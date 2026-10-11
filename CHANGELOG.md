@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.11.0] - 2026-10-11
+
+### Added
+
+- **ChatGPT Work export**: Build portable ZIPs for all 90 skills and 14 curated domain plugins, plus a local marketplace manifest, from the existing CodexKit sources.
+- **Routing coverage checks**: Add positive and near-miss fixtures for each plugin group, with validation of exported metadata, manifests, marketplace entries, and ZIP structure.
+- **ChatGPT Work guide**: Document single-skill uploads, local marketplace setup, explicit and automatic invocation, manual activation checks, and differences between Codex and Work updates.
+
+### Changed
+
+- Normalize CodexKit version and category metadata into Agent Skills fields in exported `SKILL.md` files without changing the Codex source layout.
+- Extend CI and release starter-pack contents to validate and ship the Work export, documentation, and test fixtures.
+- Update skill-authoring guidance for portable Work exports.
+
 ## [0.10.0] - 2026-05-15
 
 ### Added

@@ -1,6 +1,6 @@
 {
   "name": "codexkit",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "private": true,
   "repository": {
     "type": "git",
@@ -29,10 +29,12 @@
     "productivity"
   ],
   "scripts": {
-    "check": "node scripts/validate-pack.mjs && npm --prefix web run lint && npm --prefix web run build",
+    "check": "node scripts/validate-pack.mjs && npm run work:test && npm --prefix web run lint && npm --prefix web run build",
     "dev": "npm --prefix web run dev",
     "build": "npm --prefix web run build",
     "lint": "npm --prefix web run lint",
-    "validate": "node scripts/validate-pack.mjs"
+    "validate": "node scripts/validate-pack.mjs",
+    "work:build": "node ./scripts/build-work-plugins.mjs",
+    "work:test": "npm run work:build && node ./scripts/test-work-plugins.mjs"
   }
 }

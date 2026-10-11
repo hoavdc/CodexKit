@@ -105,6 +105,22 @@ node ./scripts/validate-pack.mjs`}</code>
       </section>
 
       <section className="mb-12 panel p-8">
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">ChatGPT Work and plugin exports</h2>
+        <p className="mt-4 text-sm leading-7 text-muted-foreground">
+          Build portable single-skill ZIPs and curated domain plugins from the same source skill folders. These exports do not change the existing Codex install.
+        </p>
+        <pre className="mt-5 overflow-x-auto rounded-3xl bg-[#161617] p-5 text-sm leading-7 text-[#f8f3ea]">
+          <code>{`npm run work:build
+npm run work:test`}</code>
+        </pre>
+        <ul className="mt-5 space-y-3 text-sm leading-7 text-muted-foreground">
+          <li>Use a ZIP in <code>dist/work/skill-zips/</code> when you want to upload one skill through the ChatGPT Skills interface.</li>
+          <li>Use generated domain plugin folders in <code>dist/work/plugins/</code> with a supported local marketplace workflow in ChatGPT desktop Work mode or Codex.</li>
+          <li>Installation options vary by plan, workspace settings, and client surface. Read <a href="https://github.com/hoavdc/CodexKit/blob/main/docs/chatgpt-work.md" target="_blank" rel="noreferrer" className="underline hover:text-zinc-900 dark:hover:text-zinc-50">the Work guide</a> for details and routing checks.</li>
+        </ul>
+      </section>
+
+      <section className="mb-12 panel p-8">
         <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Updating CodexKit</h2>
         <p className="mt-4 text-sm leading-7 text-muted-foreground">
           CodexKit ships with update scripts that auto-detect your install method and refresh the local pack without a manual reinstall.
