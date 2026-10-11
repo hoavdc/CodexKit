@@ -18,7 +18,7 @@ The build creates:
 
 **For one skill:** use the ChatGPT Skills interface and upload the corresponding ZIP from `dist/work/skill-zips/`. This keeps the installation small and focused. If your account does not show Skills, access may depend on plan, workspace settings, or rollout availability.
 
-**For a domain bundle in Codex:** add the repository as a plugin marketplace using Codex's supported plugin flow, then install only the plugin you need. The generated marketplace references local paths, so it is intended for a checkout on your machine and is not itself a public hosted marketplace. Restart or refresh the client if the newly installed skills do not appear.
+**For a domain bundle:** in ChatGPT desktop Work mode or Codex, add the repository as a plugin marketplace using the supported plugin flow, then install only the plugin you need. The generated marketplace references local paths, so it is intended for a checkout on your machine and is not itself a public hosted marketplace. Restart or refresh the client if the newly installed skills do not appear.
 
 **For teams:** commit the selected unpacked plugin package to a repository or publish it through the product's supported marketplace process. Do not distribute `.env` files, tokens, or other credentials with a skills package.
 
