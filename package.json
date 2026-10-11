@@ -33,6 +33,8 @@
     "dev": "npm --prefix web run dev",
     "build": "npm --prefix web run build",
     "lint": "npm --prefix web run lint",
-    "validate": "node scripts/validate-pack.mjs"
+    "validate": "node scripts/validate-pack.mjs",
+    "work:build": "node ./scripts/build-work-plugins.mjs",
+    "work:test": "npm run work:build && node ./scripts/test-work-plugins.mjs"
   }
 }
