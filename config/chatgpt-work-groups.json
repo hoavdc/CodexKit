@@ -1,0 +1,100 @@
+{
+  "📬 Daily Office & Communication": {
+    "slug": "daily-office",
+    "displayName": "CodexKit: Daily Office",
+    "description": "Draft and organize everyday work communication, meeting follow-ups, briefings, reports, and presentations.",
+    "shortDescription": "Clear everyday communication and meeting workflows",
+    "keywords": ["communication", "meetings", "office", "reports"]
+  },
+  "📊 Project Management": {
+    "slug": "project-management",
+    "displayName": "CodexKit: Project Management",
+    "description": "Plan and govern projects, improve backlogs and team flow, manage risks, and coordinate delivery work.",
+    "shortDescription": "Practical project and portfolio management workflows",
+    "keywords": ["project-management", "delivery", "agile", "risk"]
+  },
+  "💰 Finance": {
+    "slug": "finance",
+    "displayName": "CodexKit: Finance",
+    "description": "Explain financial performance, coordinate close, assess statements, and build forecasts and scenarios.",
+    "shortDescription": "Finance analysis, close, and planning workflows",
+    "keywords": ["finance", "forecasting", "budget", "analysis"]
+  },
+  "⚖️ Legal & Compliance": {
+    "slug": "legal-compliance",
+    "displayName": "CodexKit: Legal & Compliance",
+    "description": "Structure legal intake, review contracts and compliance gaps, and prepare risk-aware legal work products.",
+    "shortDescription": "Legal intake, contract, and compliance workflows",
+    "keywords": ["legal", "compliance", "contracts", "risk"]
+  },
+  "👥 HR & Talent": {
+    "slug": "hr-talent",
+    "displayName": "CodexKit: HR & Talent",
+    "description": "Support hiring, onboarding, performance feedback, interviews, and talent review with structured workflows.",
+    "shortDescription": "Hiring, onboarding, and talent workflows",
+    "keywords": ["hr", "hiring", "talent", "onboarding"]
+  },
+  "📈 Strategy & Executive": {
+    "slug": "strategy-executive",
+    "displayName": "CodexKit: Strategy",
+    "description": "Turn market, operating, and performance evidence into strategy options, executive briefs, and scorecards.",
+    "shortDescription": "Strategy, executive briefs, and scorecards",
+    "keywords": ["strategy", "executive", "leadership", "analysis"]
+  },
+  "🏭 Operations & Supply Chain": {
+    "slug": "operations-supply-chain",
+    "displayName": "CodexKit: Operations",
+    "description": "Improve operating processes, supplier decisions, S&OP, KPI reviews, and continuous improvement.",
+    "shortDescription": "Operations and supply chain workflows",
+    "keywords": ["operations", "supply-chain", "process", "procurement"]
+  },
+  "🎯 Marketing & Customer Success": {
+    "slug": "marketing-customer-success",
+    "displayName": "CodexKit: Marketing & CX",
+    "description": "Plan positioning, go-to-market, campaigns, customer journeys, support, and customer success reviews.",
+    "shortDescription": "Marketing, customer success, and CX workflows",
+    "keywords": ["marketing", "customer-success", "cx", "sales"]
+  },
+  "📊 Data & Analytics": {
+    "slug": "data-analytics",
+    "displayName": "CodexKit: Data & Analytics",
+    "description": "Design experiments, analyze survey and KPI data, improve data quality, and create reliable SQL queries.",
+    "shortDescription": "Reliable analysis and data workflows",
+    "keywords": ["data", "analytics", "sql", "experiments"]
+  },
+  "🔧 Engineering & Code": {
+    "slug": "engineering-code",
+    "displayName": "CodexKit: Engineering",
+    "description": "Understand repositories, review code and APIs, investigate bugs, harden tests, and improve technical delivery.",
+    "shortDescription": "Engineering, code review, and repo workflows",
+    "keywords": ["engineering", "code", "testing", "developer-tools"]
+  },
+  "🖥️ IT & Admin": {
+    "slug": "it-admin",
+    "displayName": "CodexKit: IT & Admin",
+    "description": "Compare vendors and plan organizational change for IT and administrative operations.",
+    "shortDescription": "IT and administrative decision workflows",
+    "keywords": ["it", "admin", "vendors", "change-management"]
+  },
+  "🎓 Training & Development": {
+    "slug": "training-development",
+    "displayName": "CodexKit: Learning & Development",
+    "description": "Identify workforce learning needs and design structured workshops and development activities.",
+    "shortDescription": "Training needs and workshop workflows",
+    "keywords": ["training", "development", "learning", "workshops"]
+  },
+  "🔗 Cross-Functional": {
+    "slug": "cross-functional",
+    "displayName": "CodexKit: Cross-Functional",
+    "description": "Create decision records, business cases, policy documents, and crisis communications across teams.",
+    "shortDescription": "Decision, policy, and cross-team workflows",
+    "keywords": ["decisions", "policy", "business-case", "communication"]
+  },
+  "📐 Skill Authoring": {
+    "slug": "skill-authoring",
+    "displayName": "CodexKit: Skill Authoring",
+    "description": "Author and review focused, reusable CodexKit skills with clear triggers, workflows, and verification.",
+    "shortDescription": "Create and review reusable skills",
+    "keywords": ["skills", "authoring", "workflows", "codex"]
+  }
+}
