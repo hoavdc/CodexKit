@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Human-reviewed routing fixtures; schema and coverage are tested, model behavior is not.",
+  "groups": [
+    { "slug": "daily-office", "positive": ["Summarize these meeting notes and assign owners to each follow-up."], "negative": ["Review this pull request for a race condition."] },
+    { "slug": "project-management", "positive": ["Build a risk register and delivery plan for a delayed project."], "negative": ["Explain the cash flow variance in this monthly financial statement."] },
+    { "slug": "finance", "positive": ["Explain why actual expenses are above budget and suggest corrective actions."], "negative": ["Draft a hiring scorecard for a senior engineer."] },
+    { "slug": "legal-compliance", "positive": ["Review this supplier agreement for unusual obligations and renewal risks."], "negative": ["Create a sprint plan from these backlog items."] },
+    { "slug": "hr-talent", "positive": ["Prepare structured interview questions for a product manager role."], "negative": ["Write a SQL query to compare monthly churn by cohort."] },
+    { "slug": "strategy-executive", "positive": ["Turn these market signals into strategic options for the leadership team."], "negative": ["Summarize these meeting notes and route action items."] },
+    { "slug": "operations-supply-chain", "positive": ["Assess these supplier delays and propose a recovery plan for the next S&OP review."], "negative": ["Review the wording of this employment contract."] },
+    { "slug": "marketing-customer-success", "positive": ["Create a launch message and customer success plan for this new product."], "negative": ["Calculate CPI and estimate the project cost at completion."] },
+    { "slug": "data-analytics", "positive": ["Analyze this experiment data and explain whether the conversion lift is reliable."], "negative": ["Draft a contract clause for late delivery penalties."] },
+    { "slug": "engineering-code", "positive": ["Investigate this failing test and propose a minimal code fix."], "negative": ["Prepare a quarterly business review for a customer account."] },
+    { "slug": "it-admin", "positive": ["Compare these endpoint management vendors against our IT requirements."], "negative": ["Write a customer email announcing a pricing change."] },
+    { "slug": "training-development", "positive": ["Design a workshop to help managers practice giving useful feedback."], "negative": ["Analyze the variance between forecast and actual revenue."] },
+    { "slug": "cross-functional", "positive": ["Create a decision record comparing the options and documenting owners and tradeoffs."], "negative": ["Review this pull request for a security bug."] },
+    { "slug": "skill-authoring", "positive": ["Help me write a focused reusable skill with a clear trigger and verification steps."], "negative": ["Use the existing meeting summary skill to extract decisions and actions."] }
+  ]
+}
