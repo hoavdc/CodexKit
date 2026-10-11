@@ -78,11 +78,14 @@ export default function SkillsPage() {
       </section>
 
       <section className="mb-12 panel p-8">
-        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Invocation model</h2>
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Invocation modes and routing</h2>
         <ul className="mt-5 space-y-3 text-sm leading-7 text-muted-foreground">
-          <li>Use <code>/skills</code> or type <code>$</code> in Codex CLI and IDE flows when you want to invoke a specific skill directly.</li>
-          <li>Implicit invocation depends on the skill <code>description</code>, so narrow descriptions matter more than clever naming.</li>
-          <li><code>codexkit-cloud-delegation</code>, <code>codexkit-automation-designer</code>, <code>codexkit-contract-risk-review</code>, and <code>codexkit-compliance-gap-review</code> are configured as explicit-only to reduce accidental activation.</li>
+          <li><strong>User-invoked:</strong> the person explicitly names or selects a skill. Use this for named workflows and multi-step orchestration.</li>
+          <li><strong>Model-invoked:</strong> the assistant selects a focused skill when the request matches its description. Keep descriptions concrete, scoped, and distinguishable from nearby skills.</li>
+          <li>A workflow may call a reusable model-invoked skill, but skill chains should have clear one-way handoffs instead of circular calls.</li>
+          <li>Use <code>/skills</code> or type <code>$</code> in Codex CLI and IDE flows to select a specific skill directly.</li>
+          <li><code>codexkit-cloud-delegation</code>, <code>codexkit-automation-designer</code>, <code>codexkit-contract-risk-review</code>, and <code>codexkit-compliance-gap-review</code> remain explicit-only to reduce accidental activation.</li>
+          <li>The Work export includes positive and near-miss routing examples; CI checks their coverage and shape, while activation quality still needs a manual check in the target client.</li>
         </ul>
       </section>
 
