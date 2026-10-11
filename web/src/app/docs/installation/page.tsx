@@ -115,7 +115,7 @@ npm run work:test`}</code>
         </pre>
         <ul className="mt-5 space-y-3 text-sm leading-7 text-muted-foreground">
           <li>Use a ZIP in <code>dist/work/skill-zips/</code> when you want to upload one skill through the ChatGPT Skills interface.</li>
-          <li>Use generated domain plugin folders in <code>dist/work/plugins/</code> with a supported local marketplace workflow in Codex.</li>
+          <li>Use generated domain plugin folders in <code>dist/work/plugins/</code> with a supported local marketplace workflow in ChatGPT desktop Work mode or Codex.</li>
           <li>Installation options vary by plan, workspace settings, and client surface. Read <a href="https://github.com/hoavdc/CodexKit/blob/main/docs/chatgpt-work.md" target="_blank" rel="noreferrer" className="underline hover:text-zinc-900 dark:hover:text-zinc-50">the Work guide</a> for details and routing checks.</li>
         </ul>
       </section>
