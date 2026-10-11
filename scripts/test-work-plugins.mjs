@@ -1,0 +1,65 @@
+import { promises as fs } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const workRoot = path.join(root, "dist", "work");
+const groups = JSON.parse(await fs.readFile(path.join(root, "tests", "skill-routing-evals.json"), "utf8"));
+const marketplace = JSON.parse(await fs.readFile(path.join(root, ".agents", "plugins", "marketplace.json"), "utf8"));
+const summary = JSON.parse(await fs.readFile(path.join(workRoot, "build-report.json"), "utf8"));
+
+function assert(condition, message) {
+  if (!condition) throw new Error(message);
+}
+
+function zipEntryNames(buffer) {
+  let end = -1;
+  for (let i = buffer.length - 22; i >= Math.max(0, buffer.length - 65_557); i -= 1) {
+    if (buffer.readUInt32LE(i) === 0x06054b50) { end = i; break; }
+  }
+  assert(end >= 0, "ZIP end record missing.");
+  const count = buffer.readUInt16LE(end + 10);
+  let cursor = buffer.readUInt32LE(end + 16);
+  const entries = [];
+  for (let i = 0; i < count; i += 1) {
+    assert(buffer.readUInt32LE(cursor) === 0x02014b50, "ZIP central directory is malformed.");
+    const nameLength = buffer.readUInt16LE(cursor + 28);
+    const extraLength = buffer.readUInt16LE(cursor + 30);
+    const commentLength = buffer.readUInt16LE(cursor + 32);
+    entries.push(buffer.subarray(cursor + 46, cursor + 46 + nameLength).toString("utf8"));
+    cursor += 46 + nameLength + extraLength + commentLength;
+  }
+  return entries;
+}
+
+const evalSlugs = groups.groups.map((group) => group.slug);
+assert(new Set(evalSlugs).size === evalSlugs.length, "Routing eval group slugs must be unique.");
+assert(groups.groups.length === marketplace.plugins.length, "Each plugin group must have routing evals.");
+assert(summary.pluginCount === marketplace.plugins.length, "Marketplace and build report plugin counts differ.");
+assert(summary.skillCount > 0, "No source skills were exported.");
+
+for (const group of groups.groups) {
+  assert(group.positive.length > 0 && group.negative.length > 0, `${group.slug} needs positive and negative prompts.`);
+  for (const prompt of [...group.positive, ...group.negative]) {
+    assert(typeof prompt === "string" && prompt.trim().length >= 20, `${group.slug} has an empty or too-short prompt.`);
+  }
+  const plugin = marketplace.plugins.find((item) => item.source.path.endsWith(`/${group.slug}`));
+  assert(plugin, `Marketplace is missing ${group.slug}.`);
+  const pluginDir = path.join(root, "dist", "work", "plugins", group.slug);
+  const manifest = JSON.parse(await fs.readFile(path.join(pluginDir, "plugin.json"), "utf8"));
+  assert(manifest.name === plugin.name, `Plugin name mismatch for ${group.slug}.`);
+  assert((await fs.stat(path.join(pluginDir, "skills"))).isDirectory(), `Plugin ${group.slug} has no skills directory.`);
+  const zipPath = path.join(workRoot, "plugin-zips", `${manifest.name}.zip`);
+  const names = zipEntryNames(await fs.readFile(zipPath));
+  assert(names.includes("plugin.json"), `Plugin ZIP missing plugin.json for ${group.slug}.`);
+  assert(names.some((name) => name.startsWith("skills/") && name.endsWith("/SKILL.md")), `Plugin ZIP has no skill for ${group.slug}.`);
+}
+
+for (const skillId of summary.plugins.flatMap((entry) => entry.skillIds)) {
+  const zipPath = path.join(workRoot, "skill-zips", `${skillId}.zip`);
+  const names = zipEntryNames(await fs.readFile(zipPath));
+  assert(names.includes(`${skillId}/SKILL.md`), `Missing single-skill ZIP for ${skillId}.`);
+}
+
+assert(groups.purpose.includes("not"), "Routing evaluation purpose must describe its limitation.");
+console.log(`Work plugin tests passed: ${marketplace.plugins.length} plugin groups, ${summary.skillCount} skills, and ${groups.groups.length} routing fixtures.`);
