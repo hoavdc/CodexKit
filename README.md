@@ -96,6 +96,17 @@ If the install completed but the skills do not appear:
 2. Check that the skills were copied into `%USERPROFILE%\.agents\skills` on Windows or `$HOME/.agents/skills` on macOS/Linux.
 3. In Codex, use `/skills` to verify discovery.
 
+### ChatGPT Work and plugin exports
+
+CodexKit also builds portable skill ZIPs and curated Work plugin packages from the same source skills. This export leaves the Codex install folders unchanged.
+
+```bash
+npm run work:build
+npm run work:test
+```
+
+See [ChatGPT Work and Codex plugin guide](./docs/chatgpt-work.md) for single-skill upload, local marketplace setup, routing design, and manual activation checks. Product access and install options vary by plan, workspace settings, and client surface.
+
 ### 2. Validate the pack
 
 ```bash
