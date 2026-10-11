@@ -32,6 +32,12 @@ function zipEntryNames(buffer) {
   return entries;
 }
 
+function groupForSkill(plugins, skillId) {
+  const entry = plugins.find((plugin) => plugin.skillIds.includes(skillId));
+  assert(entry, `Skill ${skillId} is missing from the build report.`);
+  return groups.groups.find((group) => group.slug === marketplace.plugins.find((plugin) => plugin.name === entry.name)?.source.path.split("/").at(-1))?.slug;
+}
+
 const evalSlugs = groups.groups.map((group) => group.slug);
 assert(new Set(evalSlugs).size === evalSlugs.length, "Routing eval group slugs must be unique.");
 assert(groups.groups.length === marketplace.plugins.length, "Each plugin group must have routing evals.");
@@ -56,10 +62,14 @@ for (const group of groups.groups) {
 }
 
 for (const skillId of summary.plugins.flatMap((entry) => entry.skillIds)) {
+  const exportedSkill = await fs.readFile(path.join(root, "dist", "work", "plugins", groupForSkill(summary.plugins, skillId), "skills", skillId, "SKILL.md"), "utf8");
+  assert(/^---\\nname:\\s*.+\\ndescription:\\s*.+/m.test(exportedSkill), `Exported skill metadata is malformed for ${skillId}.`);
+  assert(!/^version:|^category:/m.test(exportedSkill), `CodexKit-only metadata was not normalized for ${skillId}.`);
+  assert(exportedSkill.includes("metadata:\\n  version:") && exportedSkill.includes("  category:"), `Standard metadata block missing for ${skillId}.`);
   const zipPath = path.join(workRoot, "skill-zips", `${skillId}.zip`);
   const names = zipEntryNames(await fs.readFile(zipPath));
   assert(names.includes(`${skillId}/SKILL.md`), `Missing single-skill ZIP for ${skillId}.`);
 }
 
-assert(groups.purpose.includes("not"), "Routing evaluation purpose must describe its limitation.");
+assert(groups.purpose.includes("model behavior is not"), "Routing evaluation must disclose that it does not measure model behavior.");
 console.log(`Work plugin tests passed: ${marketplace.plugins.length} plugin groups, ${summary.skillCount} skills, and ${groups.groups.length} routing fixtures.`);
