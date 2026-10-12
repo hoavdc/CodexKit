@@ -2,11 +2,11 @@
 
 Open-source operating kit for people using OpenAI Codex and ChatGPT to think, write, analyze, decide, automate routine work, and ship better output with more consistency.
 
-CodexKit is a fresh project rebuilt around the surfaces that matter in Codex today: local Skills, high-signal playbooks, automation recipes, operational templates, department starter workspaces, repo guardrails, and MCP onboarding guidance. The pack covers 90 skills across 15 work domains: engineering workflows, high-reasoning work, and low-reasoning office automation across project management, finance, legal, HR, operations, supply chain, strategy, analytics, marketing, data, customer success, sales, IT & admin, training & development, founder workflows, and cross-functional work. It follows the official Codex Skills layout with `SKILL.md`, optional `agents/openai.yaml`, and standard `.agents/skills` discovery paths.
+CodexKit is a fresh project rebuilt around the surfaces that matter in Codex today: local Skills, high-signal playbooks, automation recipes, operational templates, department starter workspaces, repo guardrails, and MCP onboarding guidance. The pack covers 91 skills across 15 work domains: engineering workflows, high-reasoning work, and low-reasoning office automation across project management, finance, legal, HR, operations, supply chain, strategy, analytics, marketing, data, customer success, sales, IT & admin, training & development, founder workflows, and cross-functional work. It follows the official Codex Skills layout with `SKILL.md`, optional `agents/openai.yaml`, and standard `.agents/skills` discovery paths.
 
 ## What is included
 
-- `skills/`: 90 installable Codex Skills across 15 work domains — engineering, high-reasoning business work, and low-reasoning office automation.
+- `skills/`: 91 installable Codex Skills across 15 work domains — engineering, high-reasoning business work, and low-reasoning office automation.
 - `playbooks/`: copy-ready prompts for clarify, execute, review, decision, delegation, and release work.
 - `automations/`: 14 recurring task recipes for engineering plus weekly business, close, hiring, legal intake, operations, marketing, standups, meeting follow-ups, and OKR routines.
 - `mcp/`: practical guidance for choosing and rolling out MCP servers without overloading the team.
@@ -36,7 +36,7 @@ If you do not want to use Git commands or remember terminal steps, use the GitHu
 4. On Windows, double-click `START-HERE-WINDOWS.cmd`.
    - If Codex is not installed, the script will show installation instructions.
 5. Restart Codex.
-6. In Codex, type `/skills` to confirm all 90 skills appear.
+6. In Codex, type `/skills` to confirm all 91 skills appear.
 7. Open `skill-finder.md` to browse skills by situation.
 7. Optional: double-click `CREATE-WORKSPACE-WINDOWS.cmd` to create a starter workspace.
 
@@ -220,7 +220,7 @@ Every skill addresses five concerns: **Intent** (clear purpose), **Knowledge** (
 
 | Tier | Structure | Current coverage |
 |------|-----------|------------------|
-| **1** | `SKILL.md` + `agents/openai.yaml` | All 90 skills |
+| **1** | `SKILL.md` + `agents/openai.yaml` | All 91 skills |
 | **2** | + `verification/` + `examples/` | 26 high-value skills |
 | **3** | + `templates/` + `scripts/` | 5 technical skills |
 
@@ -231,7 +231,7 @@ Every skill addresses five concerns: **Intent** (clear purpose), **Knowledge** (
 | `knowledge` | 17 |
 | `data` | 16 |
 | `scaffolding` | 16 |
-| `runbook` | 10 |
+| `runbook` | 11 |
 | `verification` | 9 |
 | `automation` | 9 |
 | `review` | 9 |

@@ -1,6 +1,6 @@
 # Skill Finder — "I need to… → Use this skill"
 
-> Quick reference for all 90 CodexKit skills grouped by what you're trying to accomplish.
+> Quick reference for all 91 CodexKit skills grouped by what you're trying to accomplish.
 
 ---
 
@@ -14,7 +14,7 @@
 | `data` | Read, process, analyze, or visualize data | 16 |
 | `automation` | Chain repeatable steps into workflows | 9 |
 | `verification` | Validate, audit, or test outputs against standards | 9 |
-| `runbook` | Step-by-step procedures for recurring operational situations | 10 |
+| `runbook` | Step-by-step procedures for recurring operational situations | 11 |
 | `infra` | Technical delivery, CI/CD, system checks, governance | 4 |
 
 > Each skill's `SKILL.md` frontmatter includes a `category` field. See `templates/SKILL-TEMPLATE.md` for authoring guidelines.
@@ -161,6 +161,7 @@
 | I need to… | Skill | What it does |
 |---|---|---|
 | Onboard to a new codebase | `codexkit-repo-onboarding` | Map runtime model, risk zones, first next steps |
+| Answer codebase questions from a Software Graph | `codexkit-software-graph-analysis` | Uses Ontoly graph evidence for architecture, impact, routes, services, and dependencies |
 | Get started with MCP | `codexkit-mcp-onboarding` | Evaluate and phase MCP adoption |
 | Do a risk‑first code review | `codexkit-high-signal-review` | Bugs, regressions, missing tests, operational gaps |
 | Harden test coverage | `codexkit-test-hardening` | Edge cases and regressions without noisy tests |
